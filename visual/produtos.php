@@ -59,10 +59,7 @@
 
 
 
-
         <?php if (!isset($id) && !isset($excluir)): ?>
-
-
 
 
 
@@ -104,33 +101,12 @@
 <?php if (isset($id)): //se houver id siginifica que existira alteração  ?>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="form_editar_produto">     
 
 
 
         <form class="edit_form" enctype="multipart/form-data" method="POST" action="<?php URL_BASE ?>editar?id=<?php echo $id ?>">
-                
-
-
+        
 
             <input class="i" name="nomeimagem" type="text" value="<?php echo $selecionar_produtos['imagem'] ?>" placeholder="NOME DA IMAGEM">
             <input class="i bt_foto" type="file" name="arquivo"> 
@@ -255,7 +231,7 @@
 
                 <tbody>
                     <tr  align=center>
-                        <td class="cliente_ver" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/ver?ver=<?php echo $estoque_min['id'] ?>"target="_blank">info</a></td>
+                        <td class="cliente_ver" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/ver?ver=<?php echo $estoque_min['id'] ?>" target="_blank">info</a></td>
                         <td class="tamanho_caracteres"> <?php echo $estoque_min['id'] ?> </td>
                         <td class="tamanho_caracteres" id="color_preco"> <?php echo 'R$ ' . number_format($estoque_min['preco'], 2, ',', '.'); ?> </td>
                         <!--<td> <?php echo $estoque_min['preco_compra'] ?> </td>-->
@@ -274,8 +250,8 @@
         <!-- <td> <?php echo $estoque_min['categoria'] ?> </td> -->
 
 
-                        <td class="cliente_editar" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $estoque_min['id'] ?>">Editar</a></td>
-                        <td class="cliente_excluir" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/excluir?excluir=<?php echo $estoque_min['id'] ?>">Excluir</a></td>
+                        <td class="cliente_editar" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $estoque_min['id'] ?>" target="_blank">Editar</a></td>
+                        <td class="cliente_excluir" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/excluir?excluir=<?php echo $estoque_min['id'] ?>" target="_blank">Excluir</a></td>
 
 
 
@@ -359,8 +335,8 @@
                        <!-- <td> <?php echo $estoque_governo['categoria'] ?> </td> -->
 
 
-                        <td class="cliente_editar" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $estoque_governo['id'] ?>">Editar</a></td>
-                        <td class="cliente_excluir" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/excluir?excluir=<?php echo $estoque_governo['id'] ?>">Excluir</a></td>
+                        <td class="cliente_editar" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $estoque_governo['id'] ?>" target="_blank">Editar</a></td>
+                        <td class="cliente_excluir" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/excluir?excluir=<?php echo $estoque_governo['id'] ?>" target="_blank">Excluir</a></td>
 
 
 
@@ -522,7 +498,7 @@
 
 
                     <tr  align=center>
-                        <td class="cliente_ver"><a href="<?php echo URL_BASE; ?>produtos/ver?ver=<?php echo $exibir_p['id'] ?>"target="_blank">info</a></td>
+                        <td class="cliente_ver"><a href="<?php echo URL_BASE; ?>produtos/ver?ver=<?php echo $exibir_p['id'] ?>" target="_blank">info</a></td>
                        <!-- <td> <?php // echo $exibir_p['id']  ?> </td> -->
                         <td class="tamanho_caracteres"> <?php echo $exibir_p['nome'] ?> </td>                         
                         <td class="tamanho_caracteres" id="color_preco"> <?php echo 'R$ ' . number_format($exibir_p['preco'], 2, ',', '.'); ?> </td>
@@ -558,8 +534,8 @@
                        <!-- <td class="diminuir"> <?php echo $exibir_p['categoria'] ?> </td> -->
 
 
-                        <td class="cliente_editar" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $exibir_p['id'] ?>">Editar</a></td>
-                        <td class="cliente_excluir" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/excluir?excluir=<?php echo $exibir_p['id'] ?>">Excluir</a></td>
+                        <td class="cliente_editar" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $exibir_p['id'] ?>" target="_blank">Editar</a></td>
+                        <td class="cliente_excluir" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/excluir?excluir=<?php echo $exibir_p['id'] ?>" target="_blank">Excluir</a></td>
 
 
 
