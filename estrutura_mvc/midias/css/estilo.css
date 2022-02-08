@@ -1,0 +1,1859 @@
+body { overflow-x: hidden; }
+*{
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+}
+
+.bt_imprimir{
+    margin-top: 40px;
+    color:#fff;
+    background-color: #96ad03;
+    margin-left: 400px;
+    padding: 5px;
+    border: 1.5px solid #96ad03;
+    width: 200px;
+    float: left;
+    cursor: pointer;
+        
+}
+.tamanho_caracteres{
+   max-width: 25ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}
+
+#color_preco{
+    background-color: #059348;
+    color:#eee;
+}
+
+
+.bt_historico{
+    margin-top: 40px;
+    background-color: #376355;
+    color:#fff;
+}
+
+.n_meio{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.bt_imp_cupom{
+    margin-top: 40px;
+    text-align: center;
+      border:0;
+    float: left;
+    color:#fff;
+    background-color: #0f6677;
+    text-decoration: none;
+    width: 200px;
+    padding: 5px;
+    
+}
+
+. {   
+   padding: 4px;
+   color: #5a076b;
+   font-weight: bold;
+}
+.bt_serv_cupom{
+   margin-left: 600px;
+    width: 200px;   
+    float: left;
+}
+.bt_serv_cupom input{
+    border:0;
+    height: 30px;
+    background-color: #0F6677;
+    color:#fff;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.barra_cima{
+  width: 100%;
+  float: left;
+  height: 50px;
+
+ 
+}
+.barra_cima h1{
+    text-align: center;
+    width: 400px;
+    font-size: 30px;
+    line-height: 50px;
+    text-decoration: none; 
+    background-color: #FF9800;       
+    color:#fff;
+    text-shadow: 2px 1px 1px #000;
+
+}
+
+
+
+.topo_pgs{ 
+  width: 100%;
+  float: left;
+  min-height: 35px;
+  margin-bottom: 10px;
+  
+
+ 
+}
+
+.topo_pgs h1{
+  margin-left: 5px;
+  text-align: center;
+  width:100px;
+  color:#0F9D58;   
+ font-family: 'Miltonian', cursive;
+ font-family: 'Shadows Into Light', cursive;
+ line-height: 30px;
+  font-size:27px;  
+  padding: 1px;
+  border-bottom: 1px solid #0F9D58;
+  
+}
+
+.topo_pgs h4{
+    display: none;
+    font-size : 12px;
+   text-align: center;
+    width:300px;
+   color:#ccc;    
+   background-color: #00C0EF;  
+   text-transform: uppercase;
+   padding: 2px;
+   
+    
+}
+#nome_prod{
+    font-size: 12px;
+    width: 100px;
+}
+#pequenar{
+    font-size: 12px;
+    width: 80px;
+}
+
+#p_preco{
+   font-size: 12px;
+    width: 40px;  
+}
+
+#id_prod{
+    font-size: 14px;
+    width: 20px;  
+}
+.topo_geral h1{
+    margin-top: 80px;
+    width: 150px;
+    min-height:5000px;
+    float:left;
+    line-height: 16px;
+    color:#ffffcc;
+    background-color: #132450;   
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    font-style: normal;
+    
+}
+
+.topo_geral h1 a{   
+   
+    padding:12px;
+    float: left;
+    color:#fff;
+    text-decoration: none;
+    text-align: left;
+}
+.topo_geral h1 a:hover{   
+   color:#767475;
+    
+  
+}
+
+
+
+
+.menu_.sistema h2{
+    padding: 10px;
+    background-color: #bbb;
+    color:#fff;
+    text-align: center;
+}
+
+.tela_logar h3{
+   
+    text-align: center;
+    color:#fff;
+    background-color: #330033;
+}
+
+
+
+
+.bt_logar {
+    margin: 2px;
+    padding: 10px;
+    width: 65px;
+    float: left;
+    background-color: #010C26;
+
+}
+.bt_logar a {
+    color:#fff;
+    padding: 10px;
+    text-decoration: none;
+
+}
+
+.bt_logar:hover {
+    transition: 1s;
+    background-color: #010C26;
+    border-radius: 5px;
+
+
+
+}
+
+
+.email, .senha{ 
+   border:1px solid #ccc;
+ 
+}
+
+.email{
+   
+}
+
+.senha{
+   
+}
+
+.bt_entrar{
+   border:0;
+   width:70px;
+   padding: 4px;
+  background-color: #010C26;
+   text-transform: uppercase;
+   color:#fff;
+   height: 30px;
+   
+}
+
+.tela_logar form input{    
+    
+    text-align: center;
+    padding:2px;
+    outline: 0;
+}
+
+.bt_entrar, .tela_logar form a{
+  
+}
+
+
+.tela_logar{
+    
+    margin-left: 100px;
+    float: left;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.tela_logar form {
+    display: flex;    
+    flex-flow: row wrap;              
+    width: 100%;
+
+
+}
+
+
+
+.tela_logar form a{
+    width: 100%;   
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+
+}
+
+.cad_tela{
+     width: 50%;
+    margin-left: 100px;
+    float: left;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cad_tela form input{    
+    color:#F76701;
+    text-align: center;
+    padding:2px;
+    border:0;
+    outline: 0;
+}
+
+.cad_tela a{
+    width: 100%;   
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.cad_tela h3{
+   padding: 20px;
+    width: 100%;
+    text-align: center;
+    color:#fff;
+    background-color: #330033;
+}
+
+.cad_tela form{
+    display: flex;    
+    flex-flow: row wrap;              
+    width: 100%;
+
+
+}
+
+.bt_cad, .cad_tela form a{
+
+    height: 60px;
+    width: 100%;
+}
+
+.email_cad, .senha_cad{ 
+    
+     border:0;
+    height: 60px;
+    width: 50%;
+}
+
+.email_cad{
+    border-radius: 10px 0 0 0px;
+}
+
+.senha_cad{
+    border-radius: 0px 10px 0px 0px;
+}
+
+
+
+
+
+.bt_cad{
+    color:#F76701;
+    border:0;
+    background-color: #330033;
+    text-transform: uppercase;
+}
+
+
+
+.bt_cad:hover{
+    cursor: pointer;
+    background-color: #660066;
+
+}
+
+
+
+.mensagemerro{
+    font-size: 20px;
+    float: left;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+
+}
+
+/* ------------------------AREA LOGADA--------------------------------------------*/
+
+.menu{
+   float: left;
+    width: 100%;
+}
+
+.menu a{
+    color:#fff;
+}
+
+.menu ul{
+    width: 100%;    
+    float: left;   
+    line-height: 40px;
+    height: 115px;
+
+}
+
+.menu ul li{
+
+    list-style: none;
+    float: left;
+
+}
+
+.quadrados{
+    font-size:20px;
+    padding: 2px;
+    margin-top: 5px;
+    margin-left: 5px;
+   
+    width: 250px;
+    height:100px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background: #6666ff;
+    text-transform: uppercase;
+    
+}
+.quadrados p{
+    color:#fff;
+    margin-left: 37%;
+    margin-top: -65px;
+    
+    opacity: 0.9;
+    
+}
+.quadrados1{
+   
+   background-color: #3D018C;
+    
+}
+.quadrados2{
+    
+    background-color: #059348; 
+}
+.quadrados3{
+   
+    background-color: #39C4BF; 
+    
+}
+
+
+.quadrados img{
+ 
+ 
+}
+
+
+
+.menu ul li a{
+    
+    
+    height: 40px;   
+    text-decoration: none;
+    color:#fff;    
+  
+  
+}
+
+
+.sup_a{
+    
+  
+}
+.sup_b{ 
+
+}
+
+
+/* ------------------------AREA LOGADA--------------------------------------------*/
+.clientes{
+    
+}
+.clientes form{
+    
+    display: flex;
+    flex-flow: row wrap;   
+
+}
+
+.clientes form input{
+    text-transform: uppercase;
+    outline: none;
+     border: 0px solid #eee;
+    text-align: center;
+    width: 14.28%;
+    padding: 10px;
+
+}
+
+
+
+
+/* -------------   LISTA FINANCA     ---*/
+/*
+.lista_financa thead tr{
+     height: 40px;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+
+
+
+.lista_financa td a{
+    text-decoration: none;
+}
+
+.lista_financa thead th{   
+    background-color: #660066;
+    color:#fff;
+
+}
+
+.lista_financa tbody tr{    
+    height: 30px;
+    text-transform: uppercase;
+    font-size: 14px;
+    background-color: #eee;
+}
+*/
+/* ------------------------LISTA PRODUTOS--------------------------------------------*/
+table{
+  border-collapse: collapse;
+}
+
+
+
+
+
+
+
+.lista_produtos table{
+  
+   width: 1000px;
+   margin: 0 auto;
+   border:0px solid red;
+  
+   
+}
+
+.lista_produtos{
+     
+    margin-bottom: 20px;
+   
+}
+
+
+
+.lista_produtos thead{
+     border-radius: 20px;
+}
+.lista_produtos th {
+           
+    text-transform: uppercase;
+     font-weight: normal;
+     border-bottom: 12px solid #fff;
+     font-size: 11px;
+     background-color:#009999 ;
+     color:#fff;
+     padding: 10px;
+    
+     
+}
+
+.form_editar_produto{
+   width:  100%;
+    margin-top: 10px;
+     float: left;    
+     height: 500px;
+}
+
+.form_editar_produto form{
+  
+    width: 960px;
+    margin: 0 auto;
+    
+}
+.form_excluir_produto{
+     width:  100%;
+    margin-top: 10px;
+     float: left;    
+     height: 500px;
+}
+
+
+.excluir_form{
+   width: 960px;
+    margin: 0 auto;
+      
+}
+.lista_produtos td{
+    color:#3D018C;
+    font-size: 13px;
+    padding: 10px;
+    background-color: #eee;
+    border-bottom: 10px solid #fff;
+}
+
+.lista_produtos tr{
+    padding: 4px;   
+    text-transform: uppercase;
+}
+
+.lista_produtos td img , .lista_clientes td img , .lista_financa td img{
+width: 15px;
+height: 15px;
+}
+
+.lista_produtos tbody td{
+    color:#3D018C;
+    font-size: 13px;
+    padding: 10px;
+    background-color: #eee;    
+    border-bottom: 10px solid #fff;
+}
+
+.lista_produtos tbody{
+   
+}
+
+.diminuir{   
+    width: 10px;    
+    font-size: 9px;
+}
+
+.diminuir_g{
+    width: 5px;
+}
+
+
+
+.graficos{
+ margin-top: 50px; 
+ width: 100%;     
+ float: left; 
+
+
+}
+.contem_grafico{
+
+  
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.lista_clientes a{
+    
+}
+.cliente_editar a{
+    font-size: 8px;
+    border-radius: 3px ;
+    text-decoration: none;
+    background-color: #22b731;
+    padding: 7px;
+    color:#fff;
+}
+
+.cliente_excluir a{
+     font-size: 7px;
+     border-radius: 3px ;
+    text-decoration: none;
+    background-color: #EE3625;
+    padding: 7px;
+    color:#fff;
+}
+
+
+
+
+
+
+.cliente_ver a{
+     border-radius: 3px ;
+    text-decoration: none;
+    background-color: #00C0EF;
+    padding: 7px;
+    color:#fff;
+}
+
+.lista_clientes table{
+    margin-top: 20px;
+}
+
+.lista_clientes{
+   width: 1000px;
+   margin: 0 auto;
+   border:0px solid red;
+    
+    }
+    
+    .cor_lista_clientes{
+    
+    }
+    
+  
+  
+
+.lista_clientes tr{
+   
+    text-transform: uppercase;
+ 
+}
+.lista_clientes th {
+  
+     text-transform: uppercase;
+     font-weight: normal;
+     border-bottom: 12px solid #fff;
+     font-size: 11px;
+     background-color:#009999 ;
+     color:#fff;
+     padding: 10px;
+}
+.lista_clientes td{
+     color:#3D018C;
+    font-size: 13px;
+    padding: 10px;
+    background-color: #eee;
+    border-bottom: 10px solid #fff;
+}
+
+
+
+
+.lista_financa table{
+     
+   
+}
+
+.lista_financa{
+   
+    width: 960px;
+   margin: 0 auto;
+    margin-bottom: 20px;
+   
+}
+.lista_financa tr{
+    text-transform: uppercase;
+}
+.lista_financa th {
+   margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 12px;
+     background-color: #3d018c;
+     color:#fff;
+     padding: 10px;
+}
+.lista_financa td{
+    color:#3D018C;
+    font-size: 13px;
+    padding: 10px;
+    background-color: #eee;
+    border-bottom: 10px solid #fff;
+}
+
+.servicos_ver a{
+        border-radius: 3px ;
+    text-decoration: none;
+    background-color: #00C0EF;
+    padding: 7px;
+    color:#fff;
+}
+.servicos_editar a{
+       border-radius: 3px ;
+    text-decoration: none;
+    background-color: #22b731;
+    padding: 7px;
+    color:#fff;
+}
+.servicos_excluir a{
+      border-radius: 3px ;
+    text-decoration: none;
+    background-color: #EE3625;
+    padding: 7px;
+    color:#fff;
+}
+
+
+
+
+/*
+.lista_clientes thead tr{   
+    height: 40px;
+    text-transform: uppercase;
+    font-style: normal;
+
+
+
+}
+
+.lista_clientes td a{
+    text-decoration: none;
+}
+
+.lista_clientes thead th{   
+    background-color: #660066;
+    color:#fff;
+
+}
+
+.lista_clientes tbody tr{    
+    height: 30px;
+    text-transform: uppercase;
+    font-size: 14px;
+    background-color: #eee;
+}
+
+
+
+
+
+*/
+
+
+
+
+
+/*
+.lista_produtos{ 
+  
+    margin-bottom: 50px;
+}
+
+.lista_produtos table{
+    width: 500px;
+        margin: auto;
+}
+
+.lista_produtos thead tr{
+    font-size: 11px; 
+    
+    height: 40px;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+
+.lista_produtos td {
+word-wrap: break-word;
+}
+
+.lista_produtos td a{
+  
+    text-decoration: none;
+     background-color: #fff;
+}
+.lista_clientes td{
+    background-color: #fff;
+}
+.lista_financa td{
+    background-color: #fff;
+}
+.lista_produtos td img , .lista_clientes td img , .lista_financa td img{
+width: 15px;
+height: 15px;
+}
+
+.diminuir{
+    padding: 0;  
+    font-size: 9px;
+}
+
+
+.lista_produtos td {
+ 
+}
+
+.lista_produtos thead th{   
+    background-color: #660066;
+    color:#fff;
+   
+
+}
+
+.lista_produtos tbody tr{    
+    height: 30px;
+    text-transform: uppercase;
+    font-size: 12px;  	
+    border: 1px solid #ccc;
+}
+*/
+
+
+
+.exib_aplic{
+    
+}
+
+
+.exib_local{
+   
+}
+
+/* ------------------------PARTE DA NOTA--------------------------------------------*/
+
+.nota_cliente h1{
+
+    color: #660066;
+
+    font-size: 18px;
+    padding: 4px;
+    text-transform: uppercase;
+}
+
+.nota_cliente{
+    height: 60px;
+}
+
+.bt_voltar{ 
+  float: right;
+  margin-top: -35px; 
+  margin-right:  55px;
+
+  
+}
+
+.bt_voltar a{     
+    text-decoration: none;
+    background-color: #009999;
+    padding: 10px;
+     color:#fff;
+}
+
+
+.nota_cliente form{      
+
+
+}
+
+.nota{
+    
+    
+}
+
+.espaco{
+    
+}
+.espaco form{
+    margin: 0 auto;
+    width: 960px;
+}
+.espaco form input{
+   
+}
+
+.nota form input{
+    
+}
+.bt_cli{
+   background-color: #22B731;
+   color:#fff;
+     
+}
+.mover_form{
+    border:1px solid #22B731;
+    margin-left: 165px;
+}
+
+
+.nota_cliente input{      
+    text-transform: uppercase;
+    outline: none;
+    border:0;
+    text-align: center;
+    width: 20%;
+    padding: 10px;
+
+}
+.nota_cliente tr{      
+
+    height: 30px;
+    text-transform: uppercase;
+    font-size: 14px;
+    background-color: #eee;
+
+
+}
+.nota_cliente th{      
+
+    background-color: #660066;
+    color:#fff;
+
+
+}
+
+.nt_impressa_cupom{
+  
+  
+        
+       
+    }
+    
+    
+
+    .bt_cupom{
+        
+        width: 300px; 
+        height: 100px;
+      margin: 0 auto;  
+    }
+    
+    .bt_cupom input{
+        height: 30px;
+        border: 0;
+        width: 300px;        
+        background-color: #0F6677;
+        color:#fff;
+        cursor: pointer;
+    }
+. {
+    margin-top: 15px;
+    font-size: 15px;    
+    text-align: center;
+}
+
+.nt_topo{   
+  display: none;
+   background-color: #eee;
+   float: left;
+   
+}
+
+.nt_topo p{
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 12px;
+    width: 80%;
+    text-align: center;
+}
+.nt_topo div{
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 80%;
+    text-align: center;
+    font-size: 11px;
+}
+
+.nt_topo img{
+  margin-left: 40px;
+  float: left;  
+  width: 100px;
+  
+}
+
+.nt_topo h5, .nt_topo h3, .nt_topo h4{
+      margin-left: 40px;
+}
+.nt_topo H5{
+  
+    float: left;
+    font-family: courier;
+    text-align: center;
+    font-size: 15px;
+}
+.nt_topo h3{
+    float: left;
+    font-family: courier;
+    text-align: center;
+    font-size: 15px;
+}
+
+.nt_topo h4{
+    float: left;
+    font-family: courier;
+    text-align: center;
+    font-size: 15px;
+}
+
+.nt_corpo{
+    width: 95%;
+    text-transform: uppercase;
+    font-family: courier;
+    font-size: 13px; 
+    border-radius: 2px;     
+    float: left;
+   
+    
+}
+
+.exibe_nome_clinte{ 
+    background-color: #1a0591;
+    padding: 10px;
+    height: 15px;   
+    text-transform: uppercase;
+    float: left;
+    font-size: 6px;
+   
+    color:#fff;
+   
+}
+
+.exibe_nome_clinte h1{
+    margin-left: 40px;
+    float: left;
+    height: 50px;
+    
+}
+.nt_corpo_ {
+    margin: 0 auto;
+    width: 980px;
+  
+}
+
+.nt_corpo_ th {
+  
+    background-color: #0ECC66;
+    padding:4px;
+    font-size: 14px;
+    margin-bottom: 10px;
+   
+}
+.nt_corpo_ td {
+  padding: 5px;
+  background-color: #abc9b8;
+  color:#4f074f;
+
+   
+}
+
+
+
+.nt_corpo td, .nt_corpo_ td{
+    text-transform:uppercase;
+    font-size: 12px;
+}
+
+.nt_corpo td a , .nt_corpo_ td a{
+    text-decoration: none;
+    font-size: 12px;
+    background-color: #999;
+    padding: 2px;
+    text-transform: capitalize;
+    color:#fff; 
+
+}
+.nt_corpo td :hover{
+    background-color: #666;
+    border-radius: 2px;
+}
+
+.nt_corpo th{
+    font-size: 13px;  
+    padding: 5px;
+}
+ .nt_topo_cupom{
+         display: none;
+    }
+    
+    
+    hr{
+        display:none;
+    }
+    
+    .logo_nt{
+        display: none;
+    }
+    .observacao{
+        display: none;
+    }
+@media print {
+
+    .nt_corpo td a,  .nt_corpo_ td a, .remover, .nota_cliente h1, .topo_geral, .nota_cliente input, .bt_voltar , .n_imprimir , .toggle-1{
+        display: none;
+
+        
+    }
+    .logo_nt {
+        margin-left: 70px;
+        width: 30px;
+        display: block;
+    }
+    .data_nt{
+        text-transform: uppercase;
+        
+        font-size: 12px;
+    }
+     .observacao{
+         font-size: 10px;
+         text-align: center;
+         text-transform: uppercase;
+        display: block;
+    }
+    .logo_nt img{
+        text-align: center;
+        width: 100px;
+        
+    }
+    #mostra{
+        display: none;
+    }
+    #mostra1{
+        display: none;
+    }
+    #mostra2{
+        display: none;
+    }
+    .nt_topo{
+        margin: 0 auto;
+        
+        display: block;
+        text-transform: uppercase;
+    }
+    
+    hr{
+        border:1px solid #000;
+      display: block;  
+    }
+    .nt_topo h5{
+       font-size: 10px;
+     
+    }
+    .nt_topo h6{
+        font-style: normal;
+        text-align: center;
+       font-size: 15px;
+       text-transform: uppercase;
+     
+    }
+    .nt_topo h3{
+       font-size: 8px;
+        
+    }
+    .nt_topo h4{
+       font-size:10px;
+       
+    }
+    .nt_topo h2{
+       font-size:10px;
+       
+    }
+    .nt_corpo{
+       
+    }
+    
+    .nt_corpo tr{
+       font-size:9px;
+    }
+    .tamanho{
+        font-size:12px;
+    }
+
+      .nt_corpo td{
+       font-size:11px;
+    }
+    .nt_corpo_ td a{
+        background-color: red;
+    }
+   .nt_corpo th{
+       font-size:10px;
+       
+    }
+    .nt_impressa_cupom{
+        width: 250px;
+       
+    }
+ 
+ 
+   
+}
+
+
+/* ------------------------PESQUISA--------------------------------------------*/
+.pesquisa{
+background-color: #fff;
+}
+
+
+
+
+/* ------------------------historico--------------------------------------------*/
+
+.n_historico{
+    padding: 5px;
+    text-align: center;
+}
+.historico{   
+    color:#0F6677;
+   width: 960px;
+    margin: 20px auto;
+    border-radius: 4px;
+   
+    margin-bottom: 200px;
+    
+}
+
+.historico table{
+    
+    margin: 0  auto;
+   
+}
+.historico tr{
+    font-size: 12px;
+   
+}
+.historico th{
+    color:#4f074f;
+    background-color: #08ad55;
+  padding: 5px;
+   
+}
+.historico td{
+    text-transform: uppercase;
+  color:#4f074f;
+   background-color: #0ecc66;
+}
+
+
+.nt_corpo h4{
+    padding: 5px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+/* Checkbox Hack */
+#toggle-1 {
+   display:none;
+}
+
+label { 
+  -webkit-appearance: push-button;
+  -moz-appearance: button; 
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.estilo_inserir{
+    margin-bottom:10px;
+    border-radius: 2px;
+    margin-right: 50px;
+    float: right;
+    background-color: #8BC34A;
+}
+
+.estilo_inserir p{
+    color:#fff;
+   font-size: 14px; 
+}
+/* CSS padrão da div */
+#mostra {     
+   display:none;
+}
+#mostra1{     
+   display:none;
+}
+#mostra2{     
+   display:none;
+}
+#mostra4{     
+   display:none;
+}
+/* CSS quando o checkbox está marcado */
+#toggle-1:checked ~ #mostra {  
+    display:block;
+}
+#toggle-1:checked ~ #mostra1 {  
+    display:inline-flex;
+}
+#toggle-1:checked ~ #mostra2 {  
+    display:inline-flex;
+}
+#toggle-1:checked ~ #mostra4 {  
+    display:block;
+    
+}
+
+/* ------------------------PAGINA  DE PRODUTOS--------------------------------------------*/
+
+.produtos{
+   
+    
+}
+
+.produtos form{
+   margin: auto;
+   padding: 0;
+   width: 50%;
+
+}
+
+.i{
+    text-transform: uppercase; 
+    padding: 5px;
+     border:1px solid #eee;
+     width: 33.33%;
+     float: left;    
+     outline: 0;
+     text-align: center;
+      height: 40px;
+     
+}
+.n{
+    text-transform: uppercase; 
+    padding: 5px; 
+    width: 100%;
+    border:1px solid #eee;
+     outline: 0;
+     text-align: center;
+      height: 40px;
+    
+}
+.bt_prod{
+    background-color: #02823e;
+    color:#fff;
+    border:0;
+    width: 100%;
+    height: 40px;
+    text-transform: uppercase; 
+    cursor: pointer;
+}
+.bt_prod_edit{
+    background-color: #42a52c;
+    color:#fff;
+    border:0;
+    width: 100%;
+    height: 70px;
+    text-transform: uppercase; 
+    cursor: pointer;
+}
+.bt_prod_excluir{
+    background-color: #ff0505;
+    color:#fff;
+    border:0;
+    width: 100%;
+    height: 70px;
+    text-transform: uppercase; 
+    cursor: pointer;
+}
+
+
+.produtos h3{
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.pesquisa_prod{
+     margin-bottom: 35px;
+    border:0;
+    float: left;
+    width: 100%; 
+    height: 50px;
+  
+}
+
+.pesquisa_prod input{
+     float: left;
+     text-align: center;
+     font-size: 18px;
+     outline: none;
+     margin-bottom: 25px;   
+     margin-top: 5px;
+     height: 50px;
+    
+  
+}
+
+
+.pesquisa_prod input::-webkit-input-placeholder{     
+      color: #fff;
+      font-size: 13px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ip_pe{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    border:0px solid #3D018C; 
+    border-left: none;
+    border-right:  none;
+    text-transform: uppercase;
+    background-color: #99ccff;
+    color:#5a076b;
+   
+}
+
+.bt_pe{  
+    border:0;
+    width: 150px;
+    background-color:#059348;
+    color:#fff;
+     text-transform: capitalize;
+     cursor: pointer;
+     display: none;
+}
+
+
+
+.inserir_produto{
+     border: 0px solid #840b0b; 
+height: 35px;
+    width: 1000px;
+    margin:  auto;
+  
+ 
+}
+.bt_inserir_n{
+    color:#fff;
+    background-color: #352784;
+}
+
+.inserir_produto input{
+    
+   
+    float: left;
+    width: 200px;
+    
+
+    
+}
+
+.apresenta h5{
+    float: left;
+   width: 100%;
+   text-align: center;
+   font-weight: normal;
+   padding: 5px;
+   font-size: 18px;
+   
+   color:#E91E63;
+}
+
+
+.qtde_ins{
+  
+}
+
+
+.pesquisa_produto{
+    
+    border:0px solid #ccc;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+   
+}  
+.pesquisa_produto thead tr {
+    background-color: #010C26;
+     height: 35px;
+     color:#fff;
+}
+
+.pesquisa_produto th {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 14px;
+  
+}
+.pesquisa_produto td{
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 5px;
+}
+
+
+/*----------------------COMPRAS---------------*/
+
+.nota{
+ margin: 0 auto;
+ width: 960px;
+ 
+ 
+ background-color: pink;
+}
+.boleto form, .nota form{
+  border: 1px solid #059348;
+   float: left;
+   width: 960px;
+   margin-bottom: 20px;
+    
+
+}
+
+.boleto form input, .nota form input{
+    margin: 0;   
+    text-transform: uppercase;
+    outline: none;
+    border: 0px solid red;
+    text-align: center;    
+    padding: 10px;
+
+}
+
+.bt_serv{
+    color:#fff;
+    background-color: #059348;
+    width: 100%;
+    text-align: center;
+}
+/*----------------------Campo pesquisa---------------*/
+
+#filtro-nome{
+     margin-left: 300px;
+}
+
+#filtro-nome, #filtro-referencia{
+    
+    margin-bottom: 20px;   
+    text-transform: uppercase;
+    height: 35px;
+    width: 300px;
+    outline: 0;
+    text-align: center;
+  
+    border:1px solid #ccc;
+    color:#330033;
+}
+
+.sair img{
+    margin-top: 5px;
+    float: right;
+    padding: 5px;
+ width: 25px; 
+ height: 25px; 
+}
+
+.estoque_baixo{
+    margin-left: 240px;
+    float: left;
+    height: 40px;
+    
+    
+}
+.estoque_alto{
+   
+    float: left;
+    height: 40px;
+    
+}
+
+.estoq_ab{
+    float: left;
+    height: 60px;
+    width: 800px;
+  
+}
+
+.estoque_baixo input{
+    background-image: url("../../midias/imagens/baixo.png");
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-color: #fc5858;
+    background-position: center;
+    color:#fff;
+    line-height:85px;
+    border: 0;
+    float: left;
+    padding: 10px;
+    margin-left: 5px; 
+    height: 60px;
+    font-size: 10px;
+    width: 100px;
+    cursor: pointer;
+  
+}
+.estoque_alto input{
+   background-image: url("../../midias/imagens/alto.png");
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-color: #F28E09;
+    background-position: center;
+    color:#fff;
+    line-height:85px;
+    border: 0;
+    float: left;
+    padding: 10px;
+    margin-left: 5px; 
+    height: 60px;
+    font-size: 8px;
+    width: 100px;
+    cursor: pointer;
+  
+  
+}
+
+.bt_foto{
+  
+     
+}
+
+
+.ver_produtos_pg{
+    width: 1200px;
+    margin: auto;
+    background-color: green;
+  
+}
+
+
+
+.ver_prod_imagem img{
+     width: 100%;
+  
+}
+.img_verprod{
+   width: 600px;
+  margin-top: 60px;
+   float: left;
+}
+
+
+.ver_prod_imagem li{
+    list-style: none;   
+    width: 250px;
+    height: 100%;    
+    color:#000;
+    text-transform: uppercase;
+    padding: 2px;
+   
+    
+}
+.ver_prod_imagem li p{
+    float: left;
+   font-size: 12px;
+   padding: 5px;
+   background-color: #0ECC66;
+   border-radius: 5px;
+    
+}
+.ver_prod_imagem li div{
+  text-align: center;
+  background-color:#ccffcc;
+  color:#330033;
+  padding: 5px;
+  font-size: 14px;
+  font-family: courier;
+   
+    
+}
+
+.n_p{
+    background-color: pink;
+    width:1000px;
+    margin-top: 20px;
+    float: left; 
+}
+
+
+
+.estoque_min_personalizado td{
+    border-bottom: 1px solid red;
+}
+
+.opcoes_lst_prod{
+    text-align: center;
+    margin-bottom: 10px;
+   width: 100%;
+ 
+  float: left;
+}
+.opcoes_lst_prod p{
+    margin: 0 auto;
+    width: 300px;
+   padding: 10px;  
+   background-color: #00C0EF;
+   color:#fff;
+  
+}
+.qtde_clientes{   
+    margin:0 auto;
+    width: 980px;
+    
+}
+
+.quadros_dados{      
+    margin-top: 50px;
+    float: left;
+    width: 100%;  
+  
+    
+}
+
+.quadros_centralizado{
+   width: 1200px;   
+   margin: 0 auto;
+   background-color: #fff;
+}
+
+.qtde_prod_design, .valor_compra_design, .valor_venda_design, .cliente_cad_design{
+    
+    margin-left: 10px;
+    height: 100px;
+    float: left;
+    width: 250px;
+    background-color: #330033;
+    color:#fff;
+    border-radius: 25px;
+}
+.qtde_prod_design h5, .valor_compra_design h5, .valor_venda_design h5, .cliente_cad_design h5{
+   padding: 2px;
+    background-color: #39C4BF;
+    text-align: center;
+   font-size: 14px;
+   text-transform: uppercase;
+}
+.qtde_prod_design h4, .valor_compra_design h4, .valor_venda_design h4, .cliente_cad_design h4{
+    
+    margin-top: 15px;
+    font-weight: normal;
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    
+
+}
+.qtde_prod_design{
+     background-color: #637B85;
+}
+.qtde_prod_design h5{
+   
+}
+.valor_compra_design{
+    background-color: #637B85;
+}
+.valor_venda_design{
+    background-color: #637B85;
+}
+.cliente_cad_design{
+    background-color: #637B85;
+}
+
+
+.bt_inserir_n_r{
+    background-color: red;
+    width: 400px;
+}
