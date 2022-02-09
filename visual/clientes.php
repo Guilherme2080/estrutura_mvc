@@ -139,7 +139,7 @@
                         <td> <?php echo $lst_cliente['observacao']?> </td>
                         <td class="cliente_editar"><a href="<?php echo URL_BASE;?>clientes/editar?id=<?php echo $lst_cliente['id']?>">Editar</a></td>
           <td class="cliente_excluir"><a href="<?php echo URL_BASE;?>clientes/excluir?excluir=<?php echo $lst_cliente['id']?>">Excluir</a></td>
-          <td class="cliente_ver"><a href="<?php echo URL_BASE;?>clientes/ver?ver=<?php echo $lst_cliente['id']?>">Ver</a></td>
+          <td class="cliente_ver"><a href="<?php echo URL_BASE;?>clientes/ver?ver=<?php echo $lst_cliente['id']?>" target="_blank">Ver</a></td>
           
                         
                     </tr>
@@ -164,7 +164,7 @@
                         
                                         <td class="cliente_editar"><a href="<?php echo URL_BASE;?>clientes/editar?id=<?php echo $pesquis['id']?>">Editar</a></td>
           <td class="cliente_excluir"><a href="<?php echo URL_BASE;?>clientes/excluir?excluir=<?php echo $pesquis['id']?>">Excluir</a></td>
-          <td class="cliente_ver"><a href="<?php echo URL_BASE;?>clientes/ver?ver=<?php echo $pesquis['id']?>">Ver</a></td>
+          <td class="cliente_ver"><a href="<?php echo URL_BASE;?>clientes/ver?ver=<?php echo $pesquis['id']?>" target="_blank">Ver</a></td>
            <!--             
                         <td><a href="<?php echo URL_BASE;?>clientes/editar?id=<?php echo $pesquis['id']?>"><img class="hvr-wobble-skew" src="<?php echo URL_BASE; ?>midias/imagens/editar.png" ></a></td>
           <td><a href="<?php echo URL_BASE;?>clientes/excluir?excluir=<?php echo $pesquis['id']?>"><img class="hvr-wobble-skew" src="<?php echo URL_BASE; ?>midias/imagens/excluir.png" ></a></td>
