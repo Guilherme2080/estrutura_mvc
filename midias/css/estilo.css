@@ -587,11 +587,13 @@ table{
     color:#000;
 }
 .n_f_n_p{
+    max-height: 4ch;
     background-color: #3D018C;
     text-transform: uppercase;
     color:#fff;
 }
 .n_f_nt_p{
+    
     background-color: #39C4BF;
     text-transform: uppercase;  
     color:#fff;
@@ -610,7 +612,11 @@ table{
 }
 .estilo_aplic_p{
     color:#840b0b;
-    font-size: 10px; 
+    max-width: 500px;     
+   white-space: nowrap; 
+   overflow: hidden; 
+   text-overflow: ellipsis; 
+    font-size: 12px; 
     text-transform: uppercase;
 }
 
