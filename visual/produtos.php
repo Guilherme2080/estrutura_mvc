@@ -98,14 +98,18 @@
     </div> 
 
 </div>  
+
+
+
 <?php if (isset($id)): //se houver id siginifica que existira alteração  ?>
 
-
-    <div class="form_editar_produto">     
-
-
-
-        <form class="edit_form" enctype="multipart/form-data" method="POST" action="<?php URL_BASE ?>editar?id=<?php echo $id ?>">
+<style>
+    .opcoes_lst_prod, .comtem_quadros, .topo_pgs,.estoq_ab,.ip_pe,.estilo_inserir,.estoque_baixo,.pesquisa_prod,.estoque_alto{
+        display: none;
+    }
+</style>
+ <div  class="form_editar_produto"> 
+        <!-- <form class="edit_form" enctype="multipart/form-data" method="POST" action="<?php URL_BASE ?>editar?id=<?php echo $id ?>">
         
 
             <input class="i" name="nomeimagem" type="text" value="<?php echo $selecionar_produtos['imagem'] ?>" placeholder="NOME DA IMAGEM">
@@ -125,9 +129,147 @@
             <input class="i" type="text"   name="categoria" value="<?php echo $selecionar_produtos['categoria'] ?>" placeholder="CATEGORIA"><br>
 
             <input class="bt_prod_edit" type="submit" value="Atualizar"><br>
-        </form><br>
+        </form><br> -->
+
+
+  
+ <form class="edit_form" enctype="multipart/form-data" method="POST" action="<?php URL_BASE ?>editar?id=<?php echo $id ?>"
+ <div class="ver_produtos_pg">
+ 
+    
+ <div style="margin-left: -100px;  " class="ver_prod_imagem">
+    
+     
+     <div class="img_verprod">
+       <img src="<?php echo URL_BASE; ?>midias/imagens/produtos/<?php echo $selecionar_produtos['imagem']; ?>.jpg">  
+      
+       <input class="i" name="nomeimagem" type="text" value="<?php echo $selecionar_produtos['imagem'] ?>" placeholder="NOME DA IMAGEM">
+       <input class="i bt_foto" type="file" name="arquivo">  
+    </div>
+
+    
+     
+ <div class="dados_prod">
+         
+    
+   <li>
+       <article class="id_pg_prod">identificação: <?php echo $selecionar_produtos['id'] ?> </article> 
+       <article class="ref_pg_prod plus_size">referencia:  <input name="referencia" class="ref_pg_prod plus_size" value="<?php echo $selecionar_produtos['referencia'] ?>"> </article> 
+       <article class="nome_pg_prod"> <input name="nome" class="nome_pg_prod" value="<?php echo $selecionar_produtos['nome'] ?>"> / <input name="nome_tecnico" class="nome_pg_prod" value="<?php echo $selecionar_produtos['nome_tecnico'] ?>"></article>
+        <article></article>   
+
+     <div class="encapsula_precos">
+
+             <article  class="preco_comp_prod"> 
+
+                 <div class="preco_comp_prod_nome">
+                     Preço de Compra
+                 </div> 
+
+                 <div class="preco_comp_prod_nome_preco">
+                     <input name="preco_compra" class="preco_comp_prod_nome_preco" style=" color:#009999"; value=" <?php echo $selecionar_produtos['preco_compra']; ?>   ">
+                
+                 </div>
+
+             </article>
+
+             <article class="preco_vend_prod">
+
+                 <div class="preco_vend_prod_nome">
+                     Preço de Venda
+                 </div>
+
+                 <div class="preco_vend_prod_nome_preco">
+                     <input name="preco" class="preco_vend_prod_nome_preco" style="width: 200px; color:#009999"; value="<?php echo $selecionar_produtos['preco']; ?>">
+                         
+                 </div>
+
+             </article> 
+     </div>
+     
+    <div class="encapsulando_cat_fabr">
+
+      <div class="cat_for_fab"><b>categoria:</b> <input name="categoria" class="cat_for_fab" value="<?php echo $selecionar_produtos['categoria'] ?>"></div>
+      <div class="cat_for_fab"> <b>fornecedor: </b><input name="fornecedor" class="cat_for_fab" value="<?php echo  $selecionar_produtos['fornecedor'] ?>"></div>
+      <div class="cat_for_fab"><b>fabricante:</b><input name="fabricante" class="cat_for_fab" value=" <?php echo $selecionar_produtos['fabricante'] ?>"> </div>
+
+    </div>
+    
+    <div class="encapsula_aplic"> 
+
+        <div class="aplic_prod_nome">
+            aplicação
+        </div>
+
+        <div class="aplic_prod_prod">
+            <input name="aplicacao" style="padding: 2px; width: 450px; font-size: 20px; color:#009999"; value="<?php echo $selecionar_produtos['aplicacao'] ?>">
+        </div>
+        
+     </div>
+
+
+
+ <div class="encapsula_quantidades">
+
+     <div class="itens_qtde">
+         <p>quantidade</p> 
+
+         <div class="nome_qtde_item1"> 
+             <input name="quantidade" value="<?php echo $selecionar_produtos['quantidade'] ?>">
+         </div>
+     </div>
+
+     <div class="itens_qtde">
+         <p>qtde governo</p>
+          <div class="nome_qtde_item2"> 
+              <input name="quantidade_governo" value="<?php echo $selecionar_produtos['quantidade_governo'] ?>">
+         </div>
+     </div>
+
+     <div class="itens_qtde">
+         <p>qtde minima</p>
+          <div class="nome_qtde_item3">
+               <input name="quantidade_minima" value="<?php echo $selecionar_produtos['quantidade_minima'] ?>">
+          </div>
+     </div>
+ </div>
+
+     <div class="titulo_dados_prod">
+        
+     </div>
+    
+       
+      
+      <div class="local_prod_ind">
+
+          <p>Localização</p>
+
+          <div class="nome_loca_prod_ind">
+              <input name="local" class="nome_loca_prod_ind" style="width: 400px;"  value="<?php echo $selecionar_produtos['local'] ?>">
+          </div>
+      </div>
+      
+      
+   </li> 
+   <div class="bt_edit_pg_prod_ind">
+   <input  type="submit" value="Atualizar"><br>
+   </div>
+   
+ </div>
+
+ </div>
+
+ 
+
+
+
+</div>
+
 
 </div> 
+
+</form>
+
 
 
 
@@ -439,190 +581,70 @@
 
 
 
+<tbody>
 
 
 
 
-<div class="lista_produtos">    
-    <!-- SE EXISTIR ALGO DIGITADO NA PESQUISA MOSTRA O RESULTADO -->    
-<?php if (isset($pesquisa_prod)) { ?> 
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">   
-        <table width="100%" border="0" cellspacing="0">
 
-      <!-- <input id="filtro-nome" placeholder="buscar por nome"> -->
-      <!-- <input id="filtro-referencia" placeholder="buscar por referencia"> -->
 
 
-            <br>
-            <thead>
-                <tr >
-                    <th class="diminuir">mais</th>
-                    <!-- <th>id</th> -->
-                    <th><div>Nome</div><div></div></th>
-                    <th class="diminuir">preco</th>
-                    <!--<th class="diminuir">p. de compra</th>-->
 
-      <!--<th>n. tecnico</th>-->
-                    <th class="diminuir">Foto</th>
-                    <th><div>Ref</div><div></div></th>
-                    <th class="diminuir">aplicação</th>
-                    <th>qtd</th>
-                    <th>gov</th>
-                    <th>min</th>
-                   <!-- <th>Total Produto</th>-->
-                     <!--<th class="diminuir">fornecedor</th>-->
-                     <!--<th class="diminuir">fabricante</th>-->
-                    <!-- <th class="diminuir">categoria</th>-->
-                    <th>Edição</th>
-                    <th>apagão</th>
-                </tr>
 
-            </thead>
+    <td>  
 
 
+        
 
 
 
 
-    <?php foreach ($pesquisa_prod as $exibir_p): ?>
+<div class="lista_prod_novo">
+    <div class="comtem_quadros">
+    <?php if (isset($pesquisa_prod)) { ?>     
+        <?php foreach ($pesquisa_prod as $exibir_p): ?> 
+            <a href="<?php echo URL_BASE; ?>produtos/ver?ver=<?php echo $exibir_p['id'] ?>" 
+                target="_blank">
+         
+         
+        <div class="prod_quadro">
+               
+                <article class="todos_itens_quadro_prod font_item1 n_f_n_p"><?php echo $exibir_p['nome'] ?> </article>  
+                <article class="todos_itens_quadro_prod font_item2 n_f_nt_p"><?php echo $exibir_p['nome_tecnico'] ?></article>   
 
+                <div class="imagem_prod_novo">
+                    <img src="<?php echo URL_BASE; ?>midias/imagens/produtos/<?php echo $exibir_p['imagem']; ?>.jpg"">
+                </div>
+           
+          
+         
+         <div class="todos_itens_quadro_prod preco_estilo_prod">            
+            <div font_item2>preço: <?php echo 'R$ ' . number_format($exibir_p['preco'], 2, ',', '.'); ?></div>
+        </div> 
 
+          <div class="todos_itens_quadro_prod font_item1 estilo_ref">Ref: <?php echo $exibir_p['referencia'] ?></div>
+          <div class="todos_itens_quadro_prod font_item3 estilo_aplic_p">Aplicação: <?php echo $exibir_p['aplicacao'] ?></div>
+          <div class="todos_itens_quadro_prod font_item1 disponivel_estoque">disponivel: <?php echo $exibir_p['quantidade'] ?></div>
+                    
+         <div class="todos_itens_quadro_prod font_item1 op">
+         <a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $exibir_p['id'] ?>" target="_blank">Editar</a>
+         
+            <a href="<?php echo URL_BASE; ?>produtos/excluir?excluir=<?php echo $exibir_p['id'] ?>" target="_blank">Excluir</a>
+         </div>
+         </div>
+        
 
+        <?php endforeach; ?>
+        </a>
+        </div>
+        
+    <?php } ?>
+    </div>
 
-                <tbody>
 
 
 
 
-
-
-
-                    <tr  align=center>
-                        <td class="cliente_ver"><a href="<?php echo URL_BASE; ?>produtos/ver?ver=<?php echo $exibir_p['id'] ?>" target="_blank">info</a></td>
-                       <!-- <td> <?php // echo $exibir_p['id']  ?> </td> -->
-                        <td class="tamanho_caracteres"> <?php echo $exibir_p['nome'] ?> </td>                         
-                        <td class="tamanho_caracteres" id="color_preco"> <?php echo 'R$ ' . number_format($exibir_p['preco'], 2, ',', '.'); ?> </td>
-                        <!--<td> <?php // echo 'R$ '.number_format($exibir_p['preco_compra'], 2, ',', '.');   ?> </td>  -->                     
-                       <!-- <td> <?php //echo $exibir_p['nome_tecnico']  ?> </td>-->
-
-
-        <!-- <td class="diminuir"> <?php // echo $exibir_p['local']  ?> </td> -->
-
-
-
-
-
-
-                        <td>  
-
-
-                            <img src="<?php echo URL_BASE; ?>midias/imagens/produtos/<?php echo $exibir_p['imagem']; ?>.jpg" style="width:40%;cursor:zoom-in"
-                                 onclick="document.getElementById('modal01').style.display = 'block'">
-
-
-
-                        </td>
-
-                        <td class="tamanho_caracteres"> <?php echo $exibir_p['referencia'] ?> </td>
-                        <td class="tamanho_caracteres"> <?php echo $exibir_p['aplicacao'] ?> </td>
-                        <td class="tamanho_caracteres"> <?php echo $exibir_p['quantidade'] ?> </td>
-                        <td class="tamanho_caracteres"> <?php echo $exibir_p['quantidade_governo'] ?> </td>
-                        <td class="tamanho_caracteres"> <?php echo $exibir_p['quantidade_minima'] ?> </td>
-                        <!--<td class="diminuir"> <?php echo $exibir_p['total_produto'] ?> </td>-->
-                       <!-- <td class="diminuir"> <?php //echo $exibir_p['fornecedor']  ?> </td> -->
-                       <!-- <td class="diminuir"> <?php echo $exibir_p['fabricante'] ?> </td> -->
-                       <!-- <td class="diminuir"> <?php echo $exibir_p['categoria'] ?> </td> -->
-
-
-                        <td class="cliente_editar" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $exibir_p['id'] ?>" target="_blank">Editar</a></td>
-                        <td class="cliente_excluir" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/excluir?excluir=<?php echo $exibir_p['id'] ?>" target="_blank">Excluir</a></td>
-
-
-
-
-
-
-
-                    </tr>
-
-
-
-                </tbody>
-
-
-
-
-
-
-            <?php endforeach; ?>
-
-
-
-    <?php if (count($pesquisa_prod) == 1): ?>
-
-
-
-
-                <div class="w3-container">               
-
-
-
-                    <div id="modal01" class="w3-modal" onclick="this.style.display = 'none'">
-                        <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-                        <div class="w3-modal-content w3-animate-zoom">
-
-
-
-
-                            <img src="<?php URL_BASE; ?>midias/imagens/produtos/<?php echo $exibir_p['imagem']; ?>.jpg" style="width:100%">
-
-
-                        </div>
-                    </div>
-
-
-                </div>   
-
-
-    <?php endif; ?>     
-
-
-
-
-        </table>
-
-<?php } ?>
-
-</div>
-
-
-<script type="text/javascript">
-
-    var filtro = document.getElementById('filtro-nome');
-    var tabela = document.getElementById('lista');
-    filtro.onkeyup = function () {
-        var nomeFiltro = filtro.value;
-        for (var i = 1; i < tabela.rows.length; i++) {
-            var conteudoCelula = tabela.rows[i].cells[0].innerText;
-            var corresponde = conteudoCelula.toLowerCase().indexOf(nomeFiltro) >= 0;
-            tabela.rows[i].style.display = corresponde ? '' : 'none';
-        }
-    };
-
-    var filtro_ref = document.getElementById('filtro-referencia');
-    var tabela_ref = document.getElementById('lista');
-    filtro_ref.onkeyup = function () {
-        var nomeFiltroReferencia = filtro_ref.value;
-        for (var i = 1; i < tabela_ref.rows.length; i++) {
-            var conteudoCelula = tabela_ref.rows[i].cells[5].innerText;
-            var corresponde = conteudoCelula.toLowerCase().indexOf(nomeFiltroReferencia) >= 0;
-            tabela_ref.rows[i].style.display = corresponde ? '' : 'none';
-        }
-    };
-
-
-
-</script>
 
 
 </div>
