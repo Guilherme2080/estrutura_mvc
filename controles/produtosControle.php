@@ -179,7 +179,7 @@ class produtosControle extends controle{
 
 
                 $produtos->atualizarProdutos($id, $nomeimagem, $preco, $preco_compra, $nome, $nome_tecnico, $local, $referencia, $aplicacao, $quantidade, $quantidade_governo , $quantidade_minima , $fornecedor , $fabricante , $categoria);
-                header("Location: " . URL_BASE . "produtos");
+                header("Location: " . URL_BASE . "produtos/ver?ver=".$id);
             }
 
 

@@ -568,7 +568,7 @@ table{
     text-align: center;
     /* background-color: #ff0505; */
     float: left;
-    width: 100%; 
+    width: 95%; 
 }
 
 .font_item1{
@@ -588,7 +588,7 @@ table{
 }
 .n_f_n_p{
     max-height: 4ch;
-    background-color: #3D018C;
+    background-color: #000000;
     text-transform: uppercase;
     color:#fff;
     max-width: 500px;     
@@ -597,24 +597,29 @@ table{
     text-overflow: ellipsis; 
      font-size: 12px; 
      text-transform: uppercase;
+     padding: 5px;
+    
 }
 .n_f_nt_p{
+    padding: 5px;
     max-height: 4ch;
-    background-color: #39C4BF;
+    background-color: #4b6363;
     text-transform: uppercase;  
     color:#fff;
     max-width: 500px;     
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis; 
-     font-size: 12px; 
+     font-size: 10px; 
      text-transform: uppercase;
 }
 
 .preco_estilo_prod{
-    background-color: #059348;
+    background-color: #0fbd3a;
     color:#fff;
-    font-size: 20px;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 2px;
 }
 .estilo_ref{
     color:#840b0b;
@@ -634,9 +639,10 @@ table{
 
 .disponivel_estoque{
     text-transform: capitalize;
-    font-size: 14px;
+    font-size: 18px;
+    font-family: cursive;
     padding: 6px;
-   color: #0F6677;
+    color: #0b9cc9;
 }
 .op{
     padding: 5px;
@@ -648,9 +654,9 @@ table{
 
 .prod_quadro{
    /* background-color: #0ECC66;  */
-    width: 195px;
+    width: 196px;
     float: left;
-    height: 400px;
+    height: 370px;
     margin: 2px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
