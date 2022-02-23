@@ -625,7 +625,12 @@ table{
     color:#840b0b;
     padding: 5px;
     font-size: 14px;
-    text-transform: uppercase;
+    max-width: 500px;     
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+     font-size: 10px; 
+     text-transform: uppercase;
 }
 .estilo_aplic_p{
     color:#840b0b;
@@ -1897,8 +1902,7 @@ height: 35px;
     float: left;       
     width: 1100px;
     min-height: 300px;
-    border-radius: 10px;
-    
+    border-radius: 10px;    
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
    
 }
@@ -1927,7 +1931,20 @@ height: 35px;
     float: left;
     margin-left: 20px;
     /* background-color: #0ecc66; */
-    max-width: 400px;
+    max-width: 450px;    
+    padding: 4px;
+    height: 590px;
+   
+}
+.dados_prod_ver{
+    float: left;
+    margin-left: 20px;
+    /* background-color: #0ecc66; */
+    max-width: 450px;    
+    
+    padding: 4px;
+    height: 590px;
+    border:1px dashed rgb(6, 167, 46);
 }
 
 .ver_prod_imagem li{
@@ -1960,12 +1977,33 @@ height: 35px;
     float: left;
     /* background-color: #00C0EF; */
 }
+.id_pg_prod_ver{
+    color:#009999;
+    font-size: 12px;
+    padding: 5px;
+    width: 100px;
+    float: left;
+    /* background-color: #00C0EF; */
+}
+
+
+
 .ref_pg_prod{
     color:#009999;
     font-size: 12px;
     padding: 5px;
     width: 200px;
     float: left;
+    /* background-color: #00C0EF; */
+}
+
+.ref_pg_prod_ver{
+    color:#009999;
+    font-size: 12px;
+    padding: 5px;
+    width: 300px;
+    float: left;
+   
     /* background-color: #00C0EF; */
 }
 
@@ -1980,11 +2018,21 @@ height: 35px;
     font-size: 20px;
     padding: 5px;
 }
+.nome_pg_prod_2{
+    float: left;
+    width: 446px;
+    color:rgb(0, 0, 0);
+    font-size: 20px;    
+    font-family: cursive;
+    
+   margin-left: -5px;
+   padding: 5px;
+}
 .preco_vend_prod{
     text-align: center;
     float: left;
     width: 200px;
-    color:#009999
+    color:#990000;
     /* background-color: #00C0EF  ; */
 }
 .preco_comp_prod{
@@ -1992,6 +2040,16 @@ height: 35px;
     float: left;
     width: 200px;
     color:#009999
+    /* background-color: #00C0EF  ; */
+}
+.preco_comp_prod_ver{
+    text-align: center;
+
+    float: left;
+    width: 200px;
+    color:#990000;
+  
+
     /* background-color: #00C0EF  ; */
 }
 
@@ -2018,9 +2076,20 @@ height: 35px;
     float: left;
     /* background-color: #0ECC66; */
 }
+.encapsula_precos_ver{
+    margin-top: 10px;
+    width: 450px;
+    min-height: 20px;
+    float: left;
+   
+    /* background-color: #0ECC66; */
+}
 
 .preco_comp_prod_nome{
     font-size: 12px;
+}
+.preco_comp_prod_nome_ver{
+    font-size: 10px;
 }
 
 .preco_comp_prod_nome_preco{
@@ -2030,6 +2099,9 @@ height: 35px;
 .preco_vend_prod_nome{
     font-size: 12px; 
 }
+.preco_vend_prod_nome_ver{
+    font-size: 10px; 
+}
 
 .preco_vend_prod_nome_preco{
     font-size: 35px;
@@ -2037,10 +2109,12 @@ height: 35px;
 
 
 .encapsula_aplic{
+    margin-top: 10px;
     color:#009999;
     float: left;
     /* background-color: #00C0EF; */
     width: 450px;
+    text-align: center;
 }
 .aplic_prod_nome{
     text-align: center;
@@ -2048,10 +2122,9 @@ height: 35px;
     padding: 4px;
 }
 
-.aplic_prod_prod{
-    
+.aplic_prod_prod{    
     padding: 2px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .encapsula_quantidades{

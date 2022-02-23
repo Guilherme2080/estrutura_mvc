@@ -10,20 +10,20 @@
         </div>
          
         
-    <div class="dados_prod">
+    <div class="dados_prod_ver">
             
        
       <li>
-          <article class="id_pg_prod">identificação:  <?php echo $produto['id'] ?> </article> 
-          <article class="ref_pg_prod plus_size">referencia:  <?php echo $produto['referencia'] ?> </article> 
-          <article class="nome_pg_prod"><?php echo $produto['nome'] ?> / <?php echo $produto['nome_tecnico'] ?></article>
+          <article class="id_pg_prod_ver">id:  <?php echo $produto['id'] ?> </article> 
+          <article class="ref_pg_prod_ver plus_size">ref:  <?php echo $produto['referencia'] ?> </article> 
+          <article class="nome_pg_prod_2"><?php echo $produto['nome'] ?> / <?php echo $produto['nome_tecnico'] ?></article>
            <article></article>   
 
-        <div class="encapsula_precos">
+        <div class="encapsula_precos_ver">
 
-                <article  class="preco_comp_prod"> 
+                <article  class="preco_comp_prod_ver"> 
 
-                    <div class="preco_comp_prod_nome">
+                    <div class="preco_comp_prod_nome_ver">
                         Preço de Compra
                     </div> 
 
@@ -35,7 +35,7 @@
 
                 <article class="preco_vend_prod">
 
-                    <div class="preco_vend_prod_nome">
+                    <div class="preco_vend_prod_nome_ver">
                         Preço de Venda
                     </div>
 
@@ -46,6 +46,19 @@
                 </article> 
         </div>
         
+        <div class="encapsula_aplic"> 
+
+<div class="aplic_prod_nome">
+    aplicação
+</div>
+
+<div class="aplic_prod_prod">
+    <?php echo $produto['aplicacao'] ?>
+</div>
+
+</div>
+
+
        <div class="encapsulando_cat_fabr">
 
          <div class="cat_for_fab"><b>categoria:</b> <?php echo $produto['categoria'] ?></div>
@@ -54,17 +67,7 @@
 
        </div>
        
-       <div class="encapsula_aplic"> 
-
-           <div class="aplic_prod_nome">
-               aplicação
-           </div>
-
-           <div class="aplic_prod_prod">
-               <?php echo $produto['aplicacao'] ?>
-           </div>
-           
-        </div>
+      
 
 
 
