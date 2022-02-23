@@ -56,16 +56,7 @@
 
                 <img src="<?php echo URL_BASE; ?>midias/imagens/produtos/<?php echo $produto['imagem']; ?>.jpg">  
                 
-                    <div class="preco_comp_prod_nome_preco_ver">
-
-                      Compra:  <?php echo 'R$ '.number_format($produto['preco_compra'], 2, ',', '.'); ?> 
-
-                    </div>
-                    
-                    <div class="preco_vend_prod_nome_preco_ver">
-
-                         Venda:   <?php echo 'R$ '.number_format($produto['preco'], 2, ',', '.'); ?>
-                    </div>
+                   
          
         </div>  
 
@@ -103,6 +94,20 @@
             <p>p. total venda:  <?php echo 'R$ '.number_format($produto['total_produto'], 2, ',', '.'); ?></p>
         </div>  
             
+
+
+
+        <div class="preco_comp_prod_nome_preco_ver">
+
+        Compra:  <br> <?php echo 'R$ '.number_format($produto['preco_compra'], 2, ',', '.'); ?> 
+
+        </div>
+
+        <div class="preco_vend_prod_nome_preco_ver">
+
+        Venda:  <br> <?php echo 'R$ '.number_format($produto['preco'], 2, ',', '.'); ?>
+        </div>
+
     </div>
 
     
