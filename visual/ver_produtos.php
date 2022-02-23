@@ -5,6 +5,7 @@
        
         
         <div class="img_verprod">
+        <article class="nome_pg_prod_2"><?php echo $produto['nome'] ?> / <?php echo $produto['nome_tecnico'] ?></article>
           <img src="<?php echo URL_BASE; ?>midias/imagens/produtos/<?php echo $produto['imagem']; ?>.jpg">  
          
         </div>
@@ -16,7 +17,7 @@
       <li>
           <article class="id_pg_prod_ver">id:  <?php echo $produto['id'] ?> </article> 
           <article class="ref_pg_prod_ver plus_size">ref:  <?php echo $produto['referencia'] ?> </article> 
-          <article class="nome_pg_prod_2"><?php echo $produto['nome'] ?> / <?php echo $produto['nome_tecnico'] ?></article>
+          
            <article></article>   
 
         <div class="encapsula_precos_ver">
@@ -59,17 +60,6 @@
 </div>
 
 
-       <div class="encapsulando_cat_fabr">
-
-         <div class="cat_for_fab"><b>categoria:</b> <?php echo $produto['categoria'] ?></div>
-         <div class="cat_for_fab"> <b>fornecedor: </b><?php echo  $produto['fornecedor'] ?></div>
-         <div class="cat_for_fab"><b>fabricante:</b> <?php echo $produto['fabricante'] ?> </div>
-
-       </div>
-       
-      
-
-
 
     <div class="encapsula_quantidades">
 
@@ -96,6 +86,14 @@
         </div>
     </div>
 
+
+
+    <div class="local_prod_ind">
+
+             <p>Localização</p>
+
+             <div class="nome_loca_prod_ind"><?php echo $produto['local'] ?></div>
+         </div>
         <div class="titulo_dados_prod">
             <h2>Dados de compra desse produto</h2>
         </div>
@@ -106,20 +104,24 @@
         </div>  
           
          
-         <div class="local_prod_ind">
-
-             <p>Localização</p>
-
-             <div class="nome_loca_prod_ind"><?php echo $produto['local'] ?></div>
-         </div>
+         
          
          
       </li> 
-      <div class="bt_edit_pg_prod_ind">
+     
+      
+      <div class="encapsulando_cat_fabr">
+
+    <div class="cat_for_fab"><b>categoria:</b> <?php echo $produto['categoria'] ?></div>
+    <div class="cat_for_fab"> <b>fornecedor: </b><?php echo  $produto['fornecedor'] ?></div>
+    <div class="cat_for_fab"><b>fabricante:</b> <?php echo $produto['fabricante'] ?> </div>
+
+        </div>
+        <div class="bt_edit_pg_prod_ind">
         <a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $produto['id'] ?>" target="_blank">Editar</a>
       </div>
-      
     </div>
+   
 
     </div>
    
