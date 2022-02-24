@@ -1875,36 +1875,51 @@ height: 35px;
 .ver_produtos_pg_ver{
     width: 100%;
     float: left;
-    height:500px;
+    height:600px;
     margin-top: 15px;
     margin-bottom: 200px;    
     
 }
 
 
-
 .ver_prod_container_ver{
     width: 1100px;
     margin: 0 auto;
-    height: 100%;
-    background-color: #020816;
+    height: 100%;    
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 
+.parte_cima_nome_ver{
+    float: left;
+    width: 100%;
+    /* background-color: #0b9cc9; */
+    height: 60px;
+    border-bottom: 1px solid rgb(122, 66, 255);
+}
+.parte_cima_nome_ver p{
+    font-size: 17px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
 .ver_prod_imagem_ver{
     /* background-color: red; */
     margin-left: 5px;
     width: 40%;
-    height: 100%;
-    color: #fff;
+    height: 100%;    
     float: left;
+    
 }
 
 .img_verprod_ver{
     /* background-color: #42a52c; */
-    height: 80%;
+    height: 87%;
+   
 }
 .img_verprod_ver article{
     padding: 5px;
@@ -1920,6 +1935,7 @@ height: 35px;
     width: 100%;
     height: 100%;
     border-radius: 20px;
+    /* border : 1px solid #00C0EF; */
     
 }
 
@@ -1931,57 +1947,201 @@ float: left;
 text-align: center;
 font-size: 16px;
 line-height: 30px;
-color: rgb(255, 8, 8);
+color: rgb(85, 85, 85);
+
 
 
 }
 
 .preco_vend_prod_nome_preco_ver{
     margin-top: 10px;
-    /* background-color: #47fdfd; */
     width: 45%;
     float: left;
     text-align: center;
-    font-size: 25px;    
-    color: rgb(96, 247, 9);
-    /* border: 1px solid #fff; */
-    margin-left: 2px;
-    border-radius: 5px;
+    font-size: 16px;
+    line-height: 30px;
+    color: rgb(0, 153, 38);
+    border-bottom: 1px solid rgb(122, 66, 255);
+    
+}
+.preco_vend_prod_nome_preco_ver p{
+   
+    width: 100%;
+    text-align: center;
+    font-size: 19px;
+   
     
 }
 
-.id_pg_prod_ver{
-    width: 20%;
-    /* background-color: red; */
-    color:#fff;
-    float: left;
+
+.preco_vend_prod_nome_preco_ver img{
     padding: 5px;
+    float: left;
+    width: 45px;
+    height: 45px;
+    margin-top: 2px;
+    
+}
+
+
+
+.id_pg_prod_ver{
+    width: 15%;
+    margin-left: 40px;
+    /* background-color: red;     */
+    float: left;
+    padding: 3px;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 14px;
 }
 
 .ref_pg_prod_ver{
-    width: 70%;
-    /* background-color: #02823e; */
-    color:#fff; 
+    width: 50%;
+    /* background-color: #02823e; */    
     float: left;
-    padding: 5px;
+    padding: 3px;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .aplic_prod_prod_ver{
     float: left;
-    background-color: rgb(133, 105, 105);
-    color: #fff;
-    text-transform: capitalize;
-    text-align: center;
-    margin-top: 50px;
-    padding: 5px;
-    font-size: 18px;
-    margin-bottom: 100px;
-    border-radius: 10px;
+    width: 100%;
+    height: 30%;
+    /* background-color: #42a52c; */
 }
+
+.aplic_prod_prod_ver p{
+    padding: 3px;
+    width: 100%;
+    text-align: center;
+    float: left;
+    text-transform: uppercase;
+    font-size: 12px;
+    /* background-color: #000000; */
+}
+
+.quadro_info_estoque{
+    float: left;
+    width: 100%;
+    height: 30%;
+    /* background-color: #9ddf8f; */
+}
+
+.titulo_quadros_ver{
+    width: 100%;
+    height: 30%;
+    /* background-color: #fd0000; */
+}
+
+.titulo_quadros_ver h1{
+    margin-left: 10px;
+    float: left;
+    width: 40px;
+    line-height: 40px;
+    height: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 17px;
+    /* background-color: #009999; */
+}
+
+.aplic_prod_prod_ver h1{
+    margin-left: 30px;
+    float: left;    
+    line-height: 40px;
+    height: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 17px;
+    /* background-color: #009999; */
+}
+.aplic_prod_prod_ver img{
+    margin-left: 40px;
+    float: left;
+    /* background-color: #010C26; */
+    width:40px;
+    height: 40px;
+}
+
+.quadro_info_estoque img{
+    margin-left: 45px;
+    float: left;
+    /* background-color: #010C26; */
+    width:40px;
+    height: 40px;
+}
+.quadro_info_estoque h1{
+    margin-left: 30px;
+    width: 60%;
+    float: left;    
+    line-height: 40px;
+    height: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 17px;
+    /* background-color: #009999; */
+}
+
+
+.cat_for_fab img{
+    margin-top: 5px;
+    margin-left: 45px;
+    float: left;
+    /* background-color: #010C26; */
+    width:40px;
+    height: 40px;
+}
+.cat_for_fab h1{
+    margin-left: 30px;
+    width: 60%;
+    float: left;    
+    line-height: 40px;
+    height: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 17px;
+    color:#000;
+    /* background-color: #009999; */
+}
+
+
+.titulo_quadros_ver img{
+    margin-left: 40px;
+    float: left;
+    /* background-color: #010C26; */
+    width: 40px;
+    height: 40px;
+}
+
+.nome_loca_prod_ind_ver h1{
+    margin-left: -20px;
+    width: 60%;
+    float: left;    
+    line-height: 40px;
+    height: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 17px;
+    color:#000;
+    /* background-color: #009999; */
+}
+.nome_loca_prod_ind_ver img{
+    margin-left: 55px;
+    float: left;
+    /* background-color: #010C26; */
+    width: 40px;
+    height: 40px;
+}
+.nome_loca_prod_ind_ver p{
+    width: 100%;
+    margin-top: 3px;
+    float: left;
+    /* background-color: #352784; */
+    text-align: center;
+    font-size: ;
+}
+
 
 
 .dados_prod_ver_outro_lado{
@@ -1993,47 +2153,43 @@ color: rgb(255, 8, 8);
     border-left:1px solid #fff; */
 }
 
-.cat_cat_ver{
-    color:#fff;
+.cat_cat_ver{  
+    margin-top: 20px;  
+    margin-left: -35px;
     /* background-color: red; */
-    width: 31%;
+    width: 25%;
     float: left;
     text-transform: uppercase;
-    font-size: 11px;
-    padding: 2px;
-    margin-top: 5px;
-    margin-left: 2px;
+    font-size: 12px;
+   
+    color:#000;
 }
 .cat_for_ver{
-    color:#fff;
+    margin-top: 20px;  
     /* background-color: red; */
-    width: 31%;
+    width: 20%;
     float: left;
     text-transform: uppercase;
-    font-size: 11px;
-    padding: 2px;
-    margin-left: 2px;
-    margin-top: 5px;
+    font-size: 12px;
+     
+    color:#000;
 }
 .cat_fab_ver{
-    color:#fff;
+    margin-top: 20px;  
     /* background-color: red; */
-    width: 31%;
+    width: 20%;
     float: left;
     text-transform: uppercase;
-    font-size: 11px;
-    padding: 2px;
-    margin-left: 2px;
-    margin-top: 5px;
+    font-size: 12px;
+       
+    color:#000;
 }
 
 .nome_loca_prod_ind_ver{
     text-transform: uppercase;
-    width: 100%;
-    /* background-color: rgb(0, 0, 0); */
+    width: 100%;   
     float: left;
-    margin-top: 50px;      
-    color:#fff;
+   
     font-size: 14px;
     text-align: center;
 }
@@ -2041,34 +2197,72 @@ color: rgb(255, 8, 8);
 .encapsula_precos_dados_ver{
     text-transform: uppercase;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     width: 100%;
     float: left;
     /* background-color: #00C0EF; */
     text-align: center;
-    color:rgb(145, 139, 139);
+    
+}
+.encapsula_precos_dados_ver p{
+  width: 40%;
+  float: left;
+  margin-left: 15px;
+  text-transform: uppercase;
+  color:rgb(145, 139, 139);
 }
 
 
 .nome_qtde_item1_ver{
-    margin-top: 20px;
-    color:#fff;
+    float: left;
+    width: 30%;   
+    margin-left: 10px; 
     text-align: center;
-    padding: 15px;
+    padding: 3px;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 12px;
+    /* background-color: #e46e6e; */
 }
 .nome_qtde_item2_ver{
-    color:#fff;
+   
+    float: left;
+    width: 30%;    
     text-align: center;
-    padding: 15px;
+    padding: 3px;
     text-transform: uppercase;
+    font-size: 12px;
+    /* background-color: #e46e6e; */
 }
 .nome_qtde_item3_ver{
-    color:#fff;
+    float: left;
+    width: 30%;    
     text-align: center;
-    padding: 15px;
+    padding: 3px;
     text-transform: uppercase;
+    font-size: 12px;
+    /* background-color: #e46e6e; */
+}
+
+
+.nome_referencia{
+    width: 100%;
+    height: 30%;
+    /* background-color: #3D018C; */
+}
+
+
+.cat_for_fab{
+    width: 100%;
+    height: 30%;
+    /* background-color: #3D018C;  */
+}
+
+.preco_comp_prod_nome_preco_ver img{
+    padding: 5px;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-top: 2px;
 }
 
 
@@ -2231,6 +2425,7 @@ color: rgb(255, 8, 8);
     margin-left: 5px;
     color:#ccc;
     text-transform: uppercase;
+    /* background-color: #000000; */
 }
 
 
@@ -2365,14 +2560,23 @@ color: rgb(255, 8, 8);
     padding: 4px; ;
     
 }
+.bt_edit_pg_prod_ind img{
+    margin-top: 55px;
+    float: left;
+    /* background-color: red; */
+    
+}
 .bt_edit_pg_prod_ind a{
-    background-color: #ef0000;
+   
+    margin-top: 60px;
+    /* background-color: #2196F3; */
     font-size: 12px;
     text-transform: uppercase;
     text-decoration: none;
     color:#009999;
     padding: 4px;
-    color:#fff;
+    
+    float: left;
 }
 
 
