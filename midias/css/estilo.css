@@ -54,7 +54,69 @@ body { overflow-x: hidden; }
     
 }
 
-. {   
+
+.input_img_edit{
+    border: 0;
+    outline: 0;
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-color: red;
+}
+
+
+.img_verprod input[type="file"] {
+   display: none;
+   float: left;
+   
+}
+
+.img_verprod label{
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(8, 6, 143);
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin-left: 28px;
+    margin-top: 2px;
+    cursor: pointer;
+    float: left;
+    line-height: 30px;
+    
+}
+
+.img_verprod h3{
+    text-align: center;
+    width: 300px;
+    font-size: 12px;
+    height: 12px;
+    float: left;
+    margin-top: 10px;
+    color: red;
+    /* background-color: #ccc; */
+}
+
+.input_name_edit{
+    padding: 5px;
+    width: 130px;
+    height: 40px;    
+    background-color: rgb(105, 103, 233);
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin-left: 30px;
+    margin-top: 2px;
+    cursor: pointer;
+    float: left;
+    border:0;
+}
+
+
+.{   
    padding: 4px;
    color: #5a076b;
    font-weight: bold;
@@ -78,8 +140,7 @@ body { overflow-x: hidden; }
   float: left;
   height: 50px;
 
- 
-}
+ }
 .barra_cima h1{
     text-align: center;
     width: 400px;
@@ -740,6 +801,9 @@ table{
    
     
 }
+
+
+
 .form_excluir_produto{
      width:  100%;
     margin-top: 10px;
@@ -1939,6 +2003,32 @@ height: 35px;
     
 }
 
+
+.img_verprod{
+    width: 300px;
+    height: 350px;  
+    margin-left: 20px; 
+    float: left;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    /* background-color: #000000; */
+    padding: 10px;
+   
+    
+ }
+
+.img_verprod img{
+    width: 100%;
+    height: 100%;
+    
+    border: 1px solid #000;
+    /* border : 1px solid #00C0EF; */
+    
+}
+
+
+
 .preco_comp_prod_nome_preco_ver{
 /* background-color: #009999; */
 margin-top: 10px;
@@ -2313,33 +2403,29 @@ color: rgb(85, 85, 85);
     background-size:contain;
 }
 
-.img_verprod{
-   width: 600px;  
-   margin-left: 20px; 
-   float: left;
-   text-align: center;
-   text-transform: uppercase;
-   font-size: 12px;
-   
-}
+
 
 .dados_prod{
     float: left;
     margin-left: 20px;
     /* background-color: #0ecc66; */
-    max-width: 450px;    
+    width: 700px;    
     padding: 4px;
     height: 590px;
    
 }
 .dados_prod_ver{
     float: left;
-   margin-left: 5px;
-   width: 29%;
-   height: 100%;
+    margin-left: 5px;
+    width: 29%;
+    height: 100%;
    /* border-right:1px solid #fff;
    border-left:1px solid #fff; */
   
+}
+.posicao_input_envia{
+    background-color: #840b0b;
+  margin-left:100px ;
 }
 
 .ver_prod_imagem li{
@@ -2376,11 +2462,25 @@ color: rgb(85, 85, 85);
 
 
 .ref_pg_prod{
-        font-size: 12px;
-    padding: 5px;
-    width: 200px;
+    text-align: center;
+    font-size: 14px;
+    padding: 2px;
+    text-transform: uppercase;
+    width: 100%;
     float: left;
+    border: 0;
+    outline: 0;
+    color: #b3aeae;
     /* background-color: #00C0EF; */
+}
+.dados_prod p{
+    /* background-color: #009999; */
+    padding: 2px;
+    color: #000000;
+    font-size: 12px;
+    width: 100%;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .plus_size{
@@ -2389,10 +2489,10 @@ color: rgb(85, 85, 85);
 
 .nome_pg_prod{
     float: left;
-    width: 400px;
+    width: 48%;
     color:#009999;
     font-size: 20px;
-    padding: 5px;
+    
 }
 
 .preco_vend_prod{

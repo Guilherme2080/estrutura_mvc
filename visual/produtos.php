@@ -101,7 +101,7 @@
 
 
 
-<?php if (isset($id)): //se houver id siginifica que existira alteração  ?>
+<?php if (isset($id)): //SE EXISTIR ID SERÁ FEITO EDIÇÃO  ?>
 
 <style>
     .opcoes_lst_prod, .comtem_quadros, .topo_pgs,.estoq_ab,.ip_pe,.estilo_inserir,.estoque_baixo,.pesquisa_prod,.estoque_alto{
@@ -133,140 +133,84 @@
 
 
   
- <form class="edit_form" enctype="multipart/form-data" method="POST" action="<?php URL_BASE ?>editar?id=<?php echo $id ?>"
- <div class="ver_produtos_pg">
- 
+    <form class="edit_form" enctype="multipart/form-data" method="POST" action="<?php URL_BASE ?>editar?id=<?php echo $id ?>"
+    <div class="ver_produtos_pg">
     
- <div style="margin-left: -100px;  " class="ver_prod_imagem">
-    
-     
-     <div class="img_verprod">
-       <img src="<?php echo URL_BASE; ?>midias/imagens/produtos/<?php echo $selecionar_produtos['imagem']; ?>.jpg">  
-      
-       <input class="i" name="nomeimagem" type="text" value="<?php echo $selecionar_produtos['imagem'] ?>" placeholder="NOME DA IMAGEM">
-       <input class="i bt_foto" type="file" name="arquivo">  
-    </div>
-
-    
-     
- <div class="dados_prod">
-         
-    
-   <li>
-       <article class="id_pg_prod">identificação: <?php echo $selecionar_produtos['id'] ?> </article> 
-       <article class="ref_pg_prod plus_size">referencia:  <input name="referencia" class="ref_pg_prod plus_size" value="<?php echo $selecionar_produtos['referencia'] ?>"> </article> 
-       <article class="nome_pg_prod"> <input name="nome" class="nome_pg_prod" value="<?php echo $selecionar_produtos['nome'] ?>"> / <input name="nome_tecnico" class="nome_pg_prod" value="<?php echo $selecionar_produtos['nome_tecnico'] ?>"></article>
-        <article></article>   
-
-     <div class="encapsula_precos">
-
-             <article  class="preco_comp_prod"> 
-
-                 <div class="preco_comp_prod_nome">
-                     Preço de Compra
-                 </div> 
-
-                 <div class="preco_comp_prod_nome_preco">
-                     <input name="preco_compra" class="preco_comp_prod_nome_preco" style=" color:#009999"; value=" <?php echo $selecionar_produtos['preco_compra']; ?>   ">
+        
+    <div style="margin-left: -100px;  " class="ver_prod_imagem">
+        
+        
+        <div class="img_verprod">
+             <img src="<?php echo URL_BASE; ?>midias/imagens/produtos/<?php echo $selecionar_produtos['imagem']; ?>.jpg">  
                 
-                 </div>
+              <h3>ESCREVA O NOME DA IMAGEM </h3>   
+             <input class="input_name_edit" name="nomeimagem" type="text" value="<?php echo $selecionar_produtos['imagem'] ?>" placeholder="NOME DA IMAGEM">
+             <label for="arquivo">Enviar</label>
+             <input class="input_img_edit" bt_foto" type="file" name="arquivo" id="arquivo">  
+             <input class="input_name_edit posicao_input_envia" type="submit" value="Atualizar">
+        </div>
 
-             </article>
+        
+        
+    <div class="dados_prod">                    
+            
+         <p>referencia: </p>
+         <input name="referencia" class="ref_pg_prod" value="<?php echo $selecionar_produtos['referencia'] ?>"> </article> 
+       
+        <p>Nome:</p>
+        <input name="nome" class="ref_pg_prod" value="<?php echo $selecionar_produtos['nome'] ?>">
 
-             <article class="preco_vend_prod">
+        <p>Nome Tecnico:</p>
+        <input name="nome_tecnico" class="ref_pg_prod" value="<?php echo $selecionar_produtos['nome_tecnico'] ?>">
+        
+                   
+        <p>Preço de Compra</p>
+        <input name="preco_compra" class="ref_pg_prod"  value=" <?php echo $selecionar_produtos['preco_compra']; ?>">
+                    
+                                  
+         <p>Preço de Venda </p> 
+         <input name="preco" class="ref_pg_prod" value="<?php echo $selecionar_produtos['preco']; ?>">
+                  
 
-                 <div class="preco_vend_prod_nome">
-                     Preço de Venda
-                 </div>
+        <p>categoria:</p>
+        <input name="categoria" class="ref_pg_prod" value="<?php echo $selecionar_produtos['categoria'] ?>">
 
-                 <div class="preco_vend_prod_nome_preco">
-                     <input name="preco" class="preco_vend_prod_nome_preco" style="width: 200px; color:#009999"; value="<?php echo $selecionar_produtos['preco']; ?>">
-                         
-                 </div>
+        <p>fornecedor: </p>
+        <input name="fornecedor" class="ref_pg_prod" value="<?php echo  $selecionar_produtos['fornecedor'] ?>">
+   
+        <p>fabricante:</p>
+        <input name="fabricante" class="ref_pg_prod" value=" <?php echo $selecionar_produtos['fabricante'] ?>"> 
+ 
+       
 
-             </article> 
-     </div>
+        <p>aplicação </p>  
+        <input name="aplicacao" class="ref_pg_prod" value="<?php echo $selecionar_produtos['aplicacao'] ?>">
+         
+                   
+         <p>quantidade</p>             
+         <input name="quantidade" class="ref_pg_prod" value="<?php echo $selecionar_produtos['quantidade'] ?>">
+           
      
-    <div class="encapsulando_cat_fabr">
+         <p>qtde governo</p>           
+         <input name="quantidade_governo" class="ref_pg_prod" value="<?php echo $selecionar_produtos['quantidade_governo'] ?>">
+         
+       
+         <p>qtde minima</p>         
+         <input name="quantidade_minima" class="ref_pg_prod" value="<?php echo $selecionar_produtos['quantidade_minima'] ?>">
+            
 
-      <div class="cat_for_fab"><b>categoria:</b> <input name="categoria" class="cat_for_fab" value="<?php echo $selecionar_produtos['categoria'] ?>"></div>
-      <div class="cat_for_fab"> <b>fornecedor: </b><input name="fornecedor" class="cat_for_fab" value="<?php echo  $selecionar_produtos['fornecedor'] ?>"></div>
-      <div class="cat_for_fab"><b>fabricante:</b><input name="fabricante" class="cat_for_fab" value=" <?php echo $selecionar_produtos['fabricante'] ?>"> </div>
+         <p>Localização</p>           
+         <input name="local" class="ref_pg_prod"  value="<?php echo $selecionar_produtos['local'] ?>">
+   
+    
+    </div>
 
     </div>
-    
-    <div class="encapsula_aplic"> 
 
-        <div class="aplic_prod_nome">
-            aplicação
-        </div>
-
-        <div class="aplic_prod_prod">
-            <input name="aplicacao" style="padding: 2px; width: 450px; font-size: 20px; color:#009999"; value="<?php echo $selecionar_produtos['aplicacao'] ?>">
-        </div>
-        
-     </div>
+    </div>
 
 
-
- <div class="encapsula_quantidades">
-
-     <div class="itens_qtde">
-         <p>quantidade</p> 
-
-         <div class="nome_qtde_item1"> 
-             <input name="quantidade" value="<?php echo $selecionar_produtos['quantidade'] ?>">
-         </div>
-     </div>
-
-     <div class="itens_qtde">
-         <p>qtde governo</p>
-          <div class="nome_qtde_item2"> 
-              <input name="quantidade_governo" value="<?php echo $selecionar_produtos['quantidade_governo'] ?>">
-         </div>
-     </div>
-
-     <div class="itens_qtde">
-         <p>qtde minima</p>
-          <div class="nome_qtde_item3">
-               <input name="quantidade_minima" value="<?php echo $selecionar_produtos['quantidade_minima'] ?>">
-          </div>
-     </div>
- </div>
-
-     <div class="titulo_dados_prod">
-        
-     </div>
-    
-       
-      
-      <div class="local_prod_ind">
-
-          <p>Localização</p>
-
-          <div class="nome_loca_prod_ind">
-              <input name="local" class="nome_loca_prod_ind" style="width: 400px;"  value="<?php echo $selecionar_produtos['local'] ?>">
-          </div>
-      </div>
-      
-      
-   </li> 
-   <div class="bt_edit_pg_prod_ind">
-   <input  type="submit" value="Atualizar"><br>
-   </div>
-   
- </div>
-
- </div>
-
- 
-
-
-
-</div>
-
-
-</div> 
+    </div> 
 
 </form>
 
