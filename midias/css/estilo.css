@@ -504,11 +504,23 @@ body { overflow-x: hidden; }
     background-color: #39C4BF; 
     
 }
+.quadrados4{
+   
+    background-color: #c5c5c5; 
+    
+}
 
 
-.quadrados img{
- 
- 
+.quadrados4 img{
+    margin-top: 15px;
+    float: left;
+    
+}
+.quadrados4 p{
+    line-height: 70px;
+    /* background-color: #08ad55; */
+   float: left;
+   
 }
 
 
@@ -1148,6 +1160,7 @@ height: 15px;
     background-color: #009999;
     padding: 10px;
      color:#fff;
+     display: none;
 }
 
 
@@ -2775,4 +2788,25 @@ color: rgb(85, 85, 85);
 .bt_inserir_n_r{
     background-color: red;
     width: 400px;
+}
+
+.pg_parceiros{    
+    width: 100%;
+    height: 700px;
+    float: left;
+    /* background-color: #00C0EF; */
+
+}
+
+.main_pg_parceiros{
+
+    margin: 0 auto;
+    width: 1200px;
+    height: 100%;
+    /* background-color: #0f6677; */
+}
+.main_pg_parceiros img{
+    float: left;
+    width: 33%;
+    height: 300px;
 }

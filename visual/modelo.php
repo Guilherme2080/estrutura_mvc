@@ -82,6 +82,15 @@
         
         </li>
         </a>
+
+         <a href="<?php echo URL_BASE;?>parceiros">
+         <li class="quadrados quadrados4">           
+           
+              <img src="<?php echo URL_BASE;?>midias/imagens/parceiros.png">
+              <p> Parceiros</p>
+        
+        </li>
+        </a>
         
         
         
