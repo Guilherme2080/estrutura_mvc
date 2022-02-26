@@ -1,20 +1,19 @@
 
 
-<div class="topo_pgs remover">
-    <h1>Conta individual de cada cliente<h4>Aqui se encontra a nota em detalhes</h4></h1>
-
     
 <div class="bt_voltar hvr-bounce-out">
         <a href="<?php echo URL_BASE ?>clientes">Voltar</a> 
 </div>
 
-</div>
+
+
+
 <div class="exibe_nome_clinte remover">
-  <h1> Nome Cliente: <?php echo " ". $nota[0]['nome']; ?> </h1>   
-  <h1>  Telefone: <?php echo $nota[0]['telefone']; ?> </h1>   
-  <h1>  Placa: <?php echo $nota[0]['placa']; ?> </h1>   
-  <h1>  Endereço: <?php echo $nota[0]['endereco']; ?> </h1>   
-  <h1>  Observação: <?php echo $nota[0]['observacao']; ?> </h1>   
+    <h1>  Cliente:    <p><?php echo " ". @$nota[0]['nome']; ?></p> </h1>   
+    <h1>  Telefone:   <p><?php echo @$nota[0]['telefone']; ?></p> </h1>   
+    <h1>  Placa:      <p><?php echo @$nota[0]['placa']; ?></p> </h1>   
+    <h1>  Endereço:   <p><?php echo @$nota[0]['endereco']; ?></p> </h1>   
+    <h1>  Observação: <p><?php echo @$nota[0]['observacao']; ?></p> </h1>   
 </div>
 
 
@@ -80,10 +79,7 @@
 
 
                
-               
-               
-               
-               
+             
                
                
                
@@ -201,8 +197,8 @@ uma edição, nesse caso ela está vazia , logo será feita a inserção e não 
                         <th>VALOR</th>
                         <th>V.TOTAL</th>
                         <th>DATA</th>                       
-                        <th class="remover">DEVOLVER AO ESTOQUE</th>                       
-                        <th class="remover">APAGAR SEM DEVOLVER</th>                       
+                        <th class="remover">DEVOLVER</th>                       
+                        <th class="remover">SÓ APAGAR</th>                       
                      
              </tr>
         </thead>
@@ -223,8 +219,8 @@ uma edição, nesse caso ela está vazia , logo será feita a inserção e não 
                 <td>   <?php echo $not['preco'] ?>          </td>
                 <td> <?php echo 'R$' . number_format($not['valor_total'], 2, ',', '.') ?> </td>
                 <td> <?php echo date("d/m/Y H:i:s", strtotime($not['data'])); ?>  </td>
-                <td ><a style="background-color:#01560b; padding: 2px" href="<?php echo URL_BASE; ?>clientes/ver?ver=<?php echo $ver ?>&editar=<?php echo $not['id'] ?>">VOLTAR AO ESTOQUE</a></td>
-                <td><a style="background-color: #003d07" href="<?php echo URL_BASE; ?>clientes/ver?ver=<?php echo $ver ?>&excluir=<?php echo $not['id'] ?>">APAGAR SEM DEVOLVER</a></td>
+                <td ><a style="background:#7CB2D5; border-radius:2px; color:#fff; href="<?php echo URL_BASE; ?>clientes/ver?ver=<?php echo $ver ?>&editar=<?php echo $not['id'] ?>">DEVOLVER</a></td>
+                <td><a style="background-color: #5CB85C; border-radius:2px; color:#fff;"  href="<?php echo URL_BASE; ?>clientes/ver?ver=<?php echo $ver ?>&excluir=<?php echo $not['id'] ?>">SÓ APAGAR</a></td>
               
             </tr>
         </tbody>

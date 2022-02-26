@@ -1137,7 +1137,6 @@ height: 15px;
 .nota_cliente h1{
 
     color: #660066;
-
     font-size: 18px;
     padding: 4px;
     text-transform: uppercase;
@@ -1320,14 +1319,13 @@ height: 15px;
 }
 
 .exibe_nome_clinte{ 
-    background-color: #1a0591;
+    /* background-color: #1a0591; */
     padding: 10px;
     height: 15px;   
     text-transform: uppercase;
     float: left;
-    font-size: 6px;
-   
-    color:#fff;
+    font-size: 6px;   
+    color:rgb(0, 0, 0);
    
 }
 
@@ -1335,26 +1333,42 @@ height: 15px;
     margin-left: 40px;
     float: left;
     height: 50px;
+    font-size: 16px;
+    color: #6666FF;
+    
+}
+.exibe_nome_clinte p{
+    margin-left: 5px;
+    font-family: cursive;
+    font-size: 13px;
+    float: right;
+    color: #020574;
+
     
 }
 .nt_corpo_ {
-    margin: 0 auto;
+margin: 0 auto;
     width: 980px;
   
 }
 
-.nt_corpo_ th {
-  
-    background-color: #0ECC66;
+.nt_corpo_ th {  
+    background-color: #b8b9b9;
     padding:4px;
     font-size: 14px;
     margin-bottom: 10px;
    
 }
+.nt_corpo_ table {  
+    border: 1px solid #ccc;
+   
+}
+
 .nt_corpo_ td {
   padding: 5px;
-  background-color: #abc9b8;
+  background-color: #ffffff;
   color:#4f074f;
+  border-bottom: 1px solid #ccc;
 
    
 }
@@ -1406,6 +1420,34 @@ height: 15px;
 
         
     }
+
+
+
+
+    .nt_corpo_ th {  
+        background-color: none;
+        padding:4px;
+        font-size: 14px;
+        margin-bottom: 10px;
+       
+    }
+    .nt_corpo_ table {  
+        border: 0px solid #ccc;
+       
+    }
+    
+    .nt_corpo_ td {
+      padding: 5px;
+      background-color: #ffffff;
+      color:#4f074f;
+      border-bottom: 0px solid #ccc;
+    
+       
+    }
+
+
+
+
     .logo_nt {
         margin-left: 70px;
         width: 30px;
@@ -1795,30 +1837,36 @@ height: 35px;
 }
 
 
-.pesquisa_produto{
-    
-    border:0px solid #ccc;
-    width: 800px;
+.pesquisa_produto{    
+   
+    width: 1200px;
     margin: 0 auto;
     margin-top: 20px;
    
 }  
+
+.pesquisa_produto table{
+    border:1px solid #ccc;
+}
 .pesquisa_produto thead tr {
-    background-color: #010C26;
+    background-color: #3D018C;
      height: 35px;
      color:#fff;
+     
 }
 
 .pesquisa_produto th {
     text-transform: uppercase;
     font-weight: normal;
     font-size: 14px;
+    
   
 }
 .pesquisa_produto td{
     text-transform: uppercase;
     font-size: 13px;
     padding: 5px;
+    border-bottom:1px solid #ccc;
 }
 
 
