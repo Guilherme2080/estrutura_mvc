@@ -219,8 +219,8 @@ uma edição, nesse caso ela está vazia , logo será feita a inserção e não 
                 <td>   <?php echo $not['preco'] ?>          </td>
                 <td> <?php echo 'R$' . number_format($not['valor_total'], 2, ',', '.') ?> </td>
                 <td> <?php echo date("d/m/Y H:i:s", strtotime($not['data'])); ?>  </td>
-                <td ><a style="background:#7CB2D5; border-radius:2px; color:#fff; href="<?php echo URL_BASE; ?>clientes/ver?ver=<?php echo $ver ?>&editar=<?php echo $not['id'] ?>">DEVOLVER</a></td>
-                <td><a style="background-color: #5CB85C; border-radius:2px; color:#fff;"  href="<?php echo URL_BASE; ?>clientes/ver?ver=<?php echo $ver ?>&excluir=<?php echo $not['id'] ?>">SÓ APAGAR</a></td>
+                <td ><a style="background:#7CB2D5; border-radius:2px; color:#fff;" href="<?php echo URL_BASE; ?>clientes/ver?ver=<?php echo $ver ?>&editar=<?php echo $not['id'] ?>">DEVOLVER</a></td>
+                <td> <a style="background-color: #5CB85C; border-radius:2px; color:#fff;"  href="<?php echo URL_BASE; ?>clientes/ver?ver=<?php echo $ver ?>&excluir=<?php echo $not['id'] ?>">SÓ APAGAR</a></td>
               
             </tr>
         </tbody>
