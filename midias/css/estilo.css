@@ -661,7 +661,7 @@ table{
 }
 .n_f_n_p{
     max-height: 4ch;
-    background-color: #000000;
+    background-color: #06532a;
     text-transform: uppercase;
     color:#fff;
     max-width: 500px;     
@@ -676,7 +676,7 @@ table{
 .n_f_nt_p{
     padding: 5px;
     max-height: 4ch;
-    background-color: #4b6363;
+    background-color: #587c44;
     text-transform: uppercase;  
     color:#fff;
     max-width: 500px;     
@@ -688,11 +688,14 @@ table{
 }
 
 .preco_estilo_prod{
+    margin-top: 2px;
+    margin-left: 20px;
     background-color: #0fbd3a;
     color:#fff;
     font-size: 16px;
     padding: 5px;
     border-radius: 2px;
+    width: 150px;
 }
 .estilo_ref{
     color:#840b0b;
@@ -706,7 +709,8 @@ table{
      text-transform: uppercase;
 }
 .estilo_aplic_p{
-    color:#840b0b;
+    background-color: #dadada;
+    color:#030442;
     max-width: 500px;     
    white-space: nowrap; 
    overflow: hidden; 
@@ -736,6 +740,7 @@ table{
     float: left;
     height: 370px;
     margin: 2px;
+    border-radius: 5px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 

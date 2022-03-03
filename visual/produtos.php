@@ -331,9 +331,9 @@
                         <td class="tamanho_caracteres"> <?php echo $estoque_min['quantidade_minima'] ?> </td>
                        <!-- <td> <?php echo $estoque_min['total_produto'] ?> </td>-->
 
-        <!-- <td> <?php echo $estoque_min['fornecedor'] ?> </td>-->
-        <!-- <td> <?php echo $estoque_min['fabricante'] ?> </td>-->
-        <!-- <td> <?php echo $estoque_min['categoria'] ?> </td> -->
+                        <!-- <td> <?php echo $estoque_min['fornecedor'] ?> </td>-->
+                        <!-- <td> <?php echo $estoque_min['fabricante'] ?> </td>-->
+                        <!-- <td> <?php echo $estoque_min['categoria'] ?> </td> -->
 
 
                         <td class="cliente_editar" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $estoque_min['id'] ?>" target="_blank">Editar</a></td>
@@ -562,7 +562,7 @@
         </div> 
 
           <div class="todos_itens_quadro_prod font_item1 estilo_ref">Ref: <?php echo $exibir_p['referencia'] ?></div>
-          <div class="todos_itens_quadro_prod font_item3 estilo_aplic_p">Aplicação: <?php echo $exibir_p['aplicacao'] ?></div>
+          <div class="todos_itens_quadro_prod font_item3 estilo_aplic_p">Aplic: <?php echo $exibir_p['aplicacao'] ?></div>
           <div class="todos_itens_quadro_prod font_item1 disponivel_estoque">disponivel: <?php echo $exibir_p['quantidade'] ?></div>
                     
          <div class="todos_itens_quadro_prod font_item1 op">
