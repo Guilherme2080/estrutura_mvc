@@ -11,7 +11,7 @@
 <div class="dados_prod_ver">   
 
 
-    <!------------------------ QUADRADO DO NOME E DA REFERENCIA INICIO ------------------------->
+    <!------------------------ QUADRADO DO NOME E DA REFERENCIA INÍCIO ------------------------->
         <div class="nome_referencia">
 
                 <div class="titulo_quadros_ver">
