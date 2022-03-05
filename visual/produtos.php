@@ -145,7 +145,7 @@
                 
               <h3>ESCREVA O NOME DA IMAGEM </h3>   
              <input class="input_name_edit" name="nomeimagem" type="text" value="<?php echo $selecionar_produtos['imagem'] ?>" placeholder="NOME DA IMAGEM">
-             <label for="arquivo">Enviar</label>
+             <label for="arquivo">Buscar</label>
              <input class="input_img_edit" bt_foto" type="file" name="arquivo" id="arquivo">  
              <input class="input_name_edit posicao_input_envia" type="submit" value="Atualizar">
         </div>
