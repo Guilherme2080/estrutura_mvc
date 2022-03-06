@@ -67,7 +67,7 @@ class produtosControle extends controle{
                  
                  $total_venda = $produtos->selecionarProdutosMinimoSomaVenda();
                  $total_compra = $produtos->selecionarProdutosMinimoSomaCompra();
-                 $total_itens = $produtos->qtdeItensProdutosMinimo();
+                 $total_itens_min = $produtos->qtdeItensProdutosMinimo();
                  
             
         }
@@ -78,18 +78,30 @@ class produtosControle extends controle{
                 $estoque_gov = $produtos->selecionarProdutosGov();
                 
                 
-                 $total_venda = $produtos->selecionarProdutosGovSomaVenda();
-                 $total_compra = $produtos->selecionarProdutosGovSomaCompra();
-                 $total_itens = $produtos->qtdeItensProdutosGov();
+                 $total_venda = $produtos->selecionarProdutosGovSomaVenda();                
+                 $total_itens_gov = $produtos->qtdeItensProdutosGov();
                 
                 
             }
+
+            if(isset($_POST['eletrica'])) {
+
+                $produtos = new Produtos();
+
+                $estoque_eletrica = $produtos->selecionarProdutosEletrica();
+                
+                $total_itens_elet = $produtos->selecionarProdutosEletrica();
+                
+            }
+
+
+            
 
         
            
            
             $produtos->exibirProdutos();
-          $exibir_produtos =  $produtos->exibirProdutos();
+           $exibir_produtos =  $produtos->exibirProdutos();
             
             
             
@@ -126,7 +138,8 @@ class produtosControle extends controle{
             
             'estoque_gov' => @$estoque_gov,
             'soma_total_prod' => @$soma_total_prod,
-            'total_itens' => @$total_itens,
+            'total_itens_gov' => @$total_itens_gov,
+            'total_itens_min' => @$total_itens_min,
             'total_venda' => @$total_venda,           
             'total_compra' => @$total_compra,
             'estoque_minimo' => @$estoque_minimo,
@@ -134,7 +147,9 @@ class produtosControle extends controle{
             'exibir' => $exibir_produtos,
             'arquivo' => @$arquivo,
             'nomearquivo' => @$nomearquivo,
-            'nomeimagem' => @$nomeimagem
+            'nomeimagem' => @$nomeimagem,
+            'categoria_eletrica' =>  @$estoque_eletrica,
+            'total_itens_elet' => @$total_itens_elet
         );
         
         $this->carregarModelo('produtos', $dados);
@@ -196,12 +211,18 @@ class produtosControle extends controle{
                
                 
             }
+
+
+
+
+
+
             
             
             
                @$arquivo = $_FILES['arquivo']; 
                        
-         //o envio da imagem
+                //o envio da imagem
             if(isset($arquivo['tmp_name'])&& empty($arquivo['tmp_name']) == false){
            
                $nomeimg = $nomeimagem.'.jpg';
