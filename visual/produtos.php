@@ -127,6 +127,9 @@
     .opcoes_lst_prod, .comtem_quadros, .topo_pgs,.estoq_ab,.ip_pe,.estilo_inserir,.estoque_baixo,.pesquisa_prod,.estoque_alto{
         display: none;
     }
+    table,tr,td{
+        display:none;
+    }
 </style>
  <div  class="form_editar_produto"> 
         <!-- <form class="edit_form" enctype="multipart/form-data" method="POST" action="<?php URL_BASE ?>editar?id=<?php echo $id ?>">
