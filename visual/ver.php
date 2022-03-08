@@ -29,10 +29,20 @@
 
 
 
-<div class="pesquisa_produto remover">
+<div class="pesquisa_produto remover barra_de_rolagem">
    
     <table width="100%" border="0" cellspacing="0">
    <?php   if(isset($pesquisa1)){  ?>
+
+
+    <style>
+            .barra_de_rolagem{
+        overflow-y: auto;
+        height: 200px;
+}
+    </style>
+
+
         <thead>
                     <tr>
                         <th>ID</th>
@@ -54,7 +64,7 @@
     foreach($pesquisa1 as $pesquisa):?>
                
       
-                <tbody>
+                <tbody >
                     <tr align=center>
                         <td  onclick="enviar(<?php echo $pesquisa['id'] ?>, '<?php echo $pesquisa['nome'] ?>',<?php echo $pesquisa['preco'] ?>)" > <?php echo $pesquisa['id']?> </td>
                         <td  > <?php echo $pesquisa['nome']?> </td>

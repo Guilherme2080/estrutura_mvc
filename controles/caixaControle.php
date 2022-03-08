@@ -5,13 +5,12 @@ class caixaControle extends controle {
     public function inicial() {
       
       
-        //SÓ ENTRA CASO EXISTA A SESSÃO 
+       
         if (isset($_SESSION['entrar']) && !empty($_SESSION['entrar'])) {
 
                 $caixa = new Caixa();
 
-                if(isset($_POST['data_caixa'])){                       
-
+                if(isset($_POST['data_caixa'])){  
                         
                     $data_caixa = addslashes($_POST['data_caixa']);
                     $descricao_caixa = addslashes($_POST['descricao_caixa']);
@@ -28,9 +27,7 @@ class caixaControle extends controle {
                  $soma_caixa = $caixa->somaCaixa();
 
                
-
-              
-
+                  
 
 
         } else {
