@@ -2923,3 +2923,100 @@ color: rgb(85, 85, 85);
     width: 33%;
     height: 300px;
 }
+
+
+
+/*------------------- COMEÇA AQUI O ESTILO DA PAGINA CAIXA */
+.pg_caixa{
+    margin-top: 20px;
+    /* background-color: #6666FF; */
+    float: left;
+    width: 100%;
+}
+
+.main_caixa{
+    background-color: #010C26;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.main_caixa input{
+    width: 200px;
+   float: left;
+   padding: 2px;
+   text-align: center;
+}
+.main_caixa form{
+    margin: 0 auto;
+    width: 1000px;
+    height: 50px;
+   background-color: #637B85;
+   
+}
+
+.data_caixa{
+    width: 200px;
+    height: 50px;
+    float: left;
+    
+}
+.data_caixa p{
+    background-color: red;
+    width: 200px;
+    text-align: center;
+    
+}
+
+.desc_caixa{
+    width: 200px;
+    height: 50px;
+    float: left;
+}
+.desc_caixa p{
+    background-color: red;
+    width: 200px;
+    text-align: center;
+}
+.valor_caixa{
+    width: 200px;
+    height: 50px;
+    float: left;
+}
+.valor_caixa p{
+    background-color: red;
+    width: 200px;
+    text-align: center;
+}
+.option_caixa{
+    width: 200px;
+    height: 50px;
+    float: left;
+}
+
+.bt_enviar_caixa{
+    width: 200px;
+    height: 50px;
+    float: left;
+}
+
+.tabela_caixa{
+    margin: 0 auto;
+    width: 1200px;
+    /* background: #08ad55; */
+}
+
+.tabela_caixa thead{
+    width: 1100px;
+    background-color: #00C0EF;
+    margin-bottom: 5px;
+}
+.tabela_caixa th{
+    padding: 5px;
+    width: 200px;
+    text-transform: uppercase;
+    font-weight: normal;
+   
+}
+
+
+

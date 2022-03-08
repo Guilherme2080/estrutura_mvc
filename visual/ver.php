@@ -56,12 +56,12 @@
       
                 <tbody>
                     <tr align=center>
-                        <td id="id_prod" onclick="enviar()" > <?php echo $pesquisa['id']?> </td>
-                        <td id="nome_prod" > <?php echo $pesquisa['nome']?> </td>
+                        <td  onclick="enviar(<?php echo $pesquisa['id'] ?>, '<?php echo $pesquisa['nome'] ?>',<?php echo $pesquisa['preco'] ?>)" > <?php echo $pesquisa['id']?> </td>
+                        <td  > <?php echo $pesquisa['nome']?> </td>
                         <td id="nome_prod" > <?php echo $pesquisa['quantidade']?> </td>
                         <!--<td> <?php// echo $pesquisa['nome_tecnico']?> </td> -->
                         <td id="pequenar" > <?php echo $pesquisa['local']?> </td>
-                        <td id="p_preco" > <?php echo $pesquisa['preco']?> </td>                      
+                        <td id="p_preco" onclick="enviar(<?php echo $pesquisa['preco']?>)"> <?php echo $pesquisa['preco']?> </td>                      
                         <td id="pequenar"> <?php echo $pesquisa['referencia']?> </td>
                         <td id="pequenar"> <?php echo $pesquisa['aplicacao']?> </td> 
                        <!-- <td> <?php// echo $pesquisa['fornecedor']?> </td>  -->
