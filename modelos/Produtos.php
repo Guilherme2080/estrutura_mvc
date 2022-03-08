@@ -64,6 +64,20 @@ class Produtos extends modelo {
             return $dados;
         }
     }
+      public function selecionarProdutosEletrica(){
+        $sql = "SELECT * FROM produtos WHERE categoria = 'eletrica' ";
+        $sql = $this->banco->query($sql);
+        $dados = array();
+        //se houver resultados retorna true
+        if ($sql->rowCount() > 0) {
+            $sql = $sql->fetchAll();
+
+            $dados = $sql;
+            return $dados;
+        }
+    }
+
+
       public function selecionarProdutosGovSomaCompra(){
         $sql = "SELECT SUM(preco_compra)* quantidade FROM produtos WHERE quantidade_governo > quantidade"; 
     
@@ -146,6 +160,19 @@ class Produtos extends modelo {
     }
     public function qtdeItensProdutosGov() {
         $sql = "SELECT COUNT(*) FROM produtos WHERE quantidade_governo > quantidade";        
+        
+        $sql = $this->banco->query($sql);
+        $dados = array();
+        //se houver resultados retorna true
+        if ($sql->rowCount() > 0) {
+            $sql = $sql->fetchAll();
+
+            $dados = $sql;
+            return $dados;
+        }
+    }
+    public function qtdeItensEletrica() {
+        $sql = "SELECT COUNT(*) FROM produtos WHERE categoria = 'eletrica' ";        
         
         $sql = $this->banco->query($sql);
         $dados = array();

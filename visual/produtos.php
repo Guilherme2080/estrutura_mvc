@@ -1,3 +1,8 @@
+<style>
+    table{
+        display:none;
+    }
+</style>
 <div class="topo_pgs">
     <h1>Produtos<h4>Para encontrar um produto no estoque realize uma pesquisa</h4></h1>
 
@@ -26,21 +31,36 @@
     <br>
 </div>   
 
+<!-- -----------------DIV QUE CONTEM TODOS BOTOES DE PESQUISA DE ESTOQUE------------ -->
 <div class="estoq_ab">
+<!------------------------------ INICIO BOTAO DE ESTOQUE BAIXO-------------------------------- -->
+    <div class="estoque_baixo remover">
+        <form method="POST" action="<?php echo URL_BASE ?>produtos">
+            <p>Estoque Baixo</p>
+            <input name="estoque_minimo"  type="submit" value="">              
+        </form>      
+
+    </div>
+    <!------------------------------ FIM BOTAO DE ESTOQUE BAIXO-------------------------------- -->
+
+    <!------------------------------ INICIO BOTAO DE ESTOQUE GOVERNO-------------------------------- -->
+    <div class="estoque_alto remover">
+        <form method="POST" action="<?php echo URL_BASE ?>produtos">    
+            <p>Estoque Gov</p>            
+            <input name="estoque_gov" type="submit" value="">               
+        </form> 
+
+    </div>
     
+    <!------------------------------ INICIO BOTAO DE ELETRICA-------------------------------- -->
+    <div class="estoque_eletrica remover">
+        <form method="POST" action="<?php echo URL_BASE ?>produtos">    
+            <p>Eletrica</p>            
+            <input name="eletrica" type="submit" value="">               
+        </form> 
 
-<div class="estoque_baixo remover">
-    <form method="POST" action="<?php echo URL_BASE ?>produtos">                
-        <input name="estoque_minimo"  type="submit" value="ESTOQUE BAIXO">              
-    </form>      
-
-</div>
-<div class="estoque_alto remover">
-    <form method="POST" action="<?php echo URL_BASE ?>produtos">                
-        <input name="estoque_gov" type="submit" value="ESTOQUE ALTO GOV">               
-    </form> 
-
-</div>
+    </div>
+    <!------------------------------ FIM BOTAO DE ELETRICA-------------------------------- -->
 </div>
 
 <div id="mostra">
@@ -145,7 +165,7 @@
                 
               <h3>ESCREVA O NOME DA IMAGEM </h3>   
              <input class="input_name_edit" name="nomeimagem" type="text" value="<?php echo $selecionar_produtos['imagem'] ?>" placeholder="NOME DA IMAGEM">
-             <label for="arquivo">Enviar</label>
+             <label for="arquivo">Buscar</label>
              <input class="input_img_edit" bt_foto" type="file" name="arquivo" id="arquivo">  
              <input class="input_name_edit posicao_input_envia" type="submit" value="Atualizar">
         </div>
@@ -252,35 +272,15 @@
 
 
 
-<br>
+<br><br>
 
-
-
-
-
-
-<div class="opcoes_lst_prod">
-  <!--  <p>Total - Venda <?php // echo 'R$ '.number_format($total_venda[0][0], 2, ',', '.');  ?></p> -->
-    <!-- <p>Total - Compra <?php //echo 'R$ '.number_format($total_compra[0][0], 2, ',', '.');  ?></p> -->           
-    <?php if (isset($total_itens)): ?>  
-
-        <p>Total de Produtos: <?php echo $total_itens[0][0]; ?></p> 
-
-    <?php endif; ?>
-
-<!-- <p>Preço de Venda - Total  <?php //echo 'R$ '.number_format($soma_total_prod[0][0], 2, ',', '.');  ?></p>   -->
- <!-- <p>Preço de Compra - Total <?php //echo 'R$ '.number_format($soma_total_prod_compra[0][0], 2, ',', '.');  ?></p>   -->
-
-
-
-
-</div>
-
-
-
-
-<br>
-<?php if (isset($estoque_minimo)) { ?> 
+<!-- ----------------------------------AQUI COMEÇA A SEÇÃO DO ESTOQUE MINIMO------------------- -->
+<?php if (!empty($estoque_minimo)) { ?> 
+    <style>
+    table{
+        display:block;
+    }
+</style>
     <div class="lista_produtos estoque_min_personalizado">
         <!-- TEM QUE FICAR ANTES DO FOREACH PRA NÃO FICAR REPETINDO  -->
         <table  border="0" cellspacing="0">
@@ -311,10 +311,14 @@
 
 
         <?php if (isset($estoque_minimo)) {
+            
+            echo ("<p class='itens_falta_p'>Existem ".$total_itens_min[0][0]." Produtos em falta</p>");
+            
+
             foreach ($estoque_minimo as $estoque_min):
                 ?>
 
-
+                   
                 <tbody>
                     <tr  align=center>
                         <td class="cliente_ver" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/ver?ver=<?php echo $estoque_min['id'] ?>" target="_blank">info</a></td>
@@ -331,9 +335,9 @@
                         <td class="tamanho_caracteres"> <?php echo $estoque_min['quantidade_minima'] ?> </td>
                        <!-- <td> <?php echo $estoque_min['total_produto'] ?> </td>-->
 
-        <!-- <td> <?php echo $estoque_min['fornecedor'] ?> </td>-->
-        <!-- <td> <?php echo $estoque_min['fabricante'] ?> </td>-->
-        <!-- <td> <?php echo $estoque_min['categoria'] ?> </td> -->
+                        <!-- <td> <?php echo $estoque_min['fornecedor'] ?> </td>-->
+                        <!-- <td> <?php echo $estoque_min['fabricante'] ?> </td>-->
+                        <!-- <td> <?php echo $estoque_min['categoria'] ?> </td> -->
 
 
                         <td class="cliente_editar" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $estoque_min['id'] ?>" target="_blank">Editar</a></td>
@@ -353,18 +357,17 @@
 
 </div>
 
+<!-- ----------------------------------AQUI TERMINA A SEÇÃO DO ESTOQUE MINIMO------------------- -->
 
 
 
-
-
-
-
-
-
-
-
-<?php if (isset($estoque_gov)) { ?> 
+<!-- ----------------------------------AQUI COMEÇA A SEÇÃO DO ESTOQUE GOVERNO------------------- -->
+<?php if (!empty($estoque_gov)) echo ("<p class='itens_falta_p'>Existem ".$total_itens_gov[0][0]." Produtos mudar Gov</p>"); { ?> 
+    <style>
+    table{
+        display:block;
+    }
+</style>
     <div class="lista_produtos estoque_min_personalizado">
         <!-- TEM QUE FICAR ANTES DO FOREACH PRA NÃO FICAR REPETINDO  -->
         <table  width="100%" border="0" cellspacing="0">
@@ -437,6 +440,7 @@
     </table>
 
 </div>
+<!-- ----------------------------------AQUI TERMINA A SEÇÃO DO ESTOQUE GOVERNO------------------- -->
 
 
 
@@ -445,102 +449,109 @@
 
 
 
-<!--               
-<div class="lista_produtos">    
-     
-<?php //  if(!isset($pesquisa_prod) && !isset($estoque_minimo) && !isset($estoque_gov)){   ?> 
-<table width="100%" border="0" cellspacing="0">
-
-  <!-- <input id="filtro-nome" placeholder="buscar por nome"> -->
-  <!-- <input id="filtro-referencia" placeholder="buscar por referencia"> -->
-<!--  
-
- <br>
-      <thead>
-             <tr >
-                  <th>ver</th>
-                  <th>ID</th>
-                 <th><div>Nome</div><div></div></th>
-                 <th class="diminuir">preco</th>
-                 <!--<th class="diminuir">p. de compra</th>-->
-
-  <!--  <th>n. tecnico</th> -->
-<!--  <th class="diminuir">local</th>
-   <th><div>Referencia</div><div></div></th>
-   <th class="diminuir">aplicação</th>
-  <th>qtd</th>
-  <th >qtde governo</th>
-  <th>qtde minima</th>
-  <!--<th>Total Produto</th>-->
-  <!--<th class="diminuir">fornecedor</th>-->
-  <!--<th class="diminuir">fabricante</th>-->
-  <!--<th class="diminuir">categoria</th>-->
-<!--  <th>editar</th>
-  <th>excluir</th>
-</tr>
-
-</thead>
 
 
 
 
 
-<?php // foreach ($exibir as $exibir_prod):  ?>
-
-<tbody>
-  <tr  align=center>
-       <td class="diminuir_g"><a href="<?php //echo URL_BASE; ?>produtos/ver?ver=<?php echo $exibir_prod['id'] ?>"><img class="hvr-wobble-skew" src="<?php echo URL_BASE; ?>midias/imagens/ver.png" ></a></td>
-      
-       <td class="diminuir_g"> <?php //echo $exibir_prod['id']  ?> </td>                         
-       <td class="diminuir_g"> <?php // echo $exibir_prod['nome']  ?> </td>                         
-      <td> <?php // echo 'R$ '.number_format($exibir_prod['preco'], 2, ',', '.');  ?> </td>
-      <!--<td> <?php // //echo 'R$ '.number_format($exibir_prod['preco_compra'], 2, ',', '.');   ?> </td>   -->                    
-     <!--  <td> <?php // //echo $exibir_prod['nome_tecnico']  ?> </td> -->
-     <!-- <td class="diminuir"> <?php // echo $exibir_prod['local']  ?> </td>
-      <td class="diminuir_g"> <?php // echo $exibir_prod['referencia']  ?> </td>
-      <td class="diminuir_g"> <?php // echo $exibir_prod['aplicacao']  ?> </td>
-      <td class="diminuir"> <?php //echo $exibir_prod['quantidade']  ?> </td>
-      <td class="diminuir_g"> <?php // echo $exibir_prod['quantidade_governo']  ?> </td>
-      <td class="diminuir_g"> <?php // echo $exibir_prod['quantidade_minima']  ?> </td>
-     <!-- <td class="diminuir_g"> <?php //echo $exibir_prod['total_produto']  ?> </td>-->
-       <!--<td class="diminuir"> <?php // echo $exibir_prod['fornecedor']  ?> </td>-->
-       <!--<td class="diminuir"> <?php // echo $exibir_prod['fabricante']  ?> </td>-->
-       <!--<td class="diminuir"> <?php //echo $exibir_prod['categoria']  ?> </td> -->
 
 
-                        <!--<td><a href="<?php // echo URL_BASE;  ?>produtos/editar?id=<?php // echo $exibir_prod['id']  ?>"><img class="hvr-wobble-skew" src="<?php //echo URL_BASE;  ?>midias/imagens/editar.png" ></a></td>
-                        <td><a href="<?php //echo URL_BASE;  ?>produtos/excluir?excluir=<?php //echo $exibir_prod['id']  ?>"><img class="hvr-wobble-skew" src="<?php // echo URL_BASE;  ?>midias/imagens/excluir.png" ></a></td>
-                       
-
-
-
--->
-</tr>
-</tbody>
-<?php // endforeach; ?>
-
-</table>
-
-<?php // }  ?>
-
-
-
-<tbody>
-
-
-
-
-    <td>  
-
-
-        
 
 
 
 
 <div class="lista_prod_novo">
+
     <div class="comtem_quadros">
-    <?php if (isset($pesquisa_prod)) { ?>     
+
+        <?php if (isset($categoria_eletrica))  { ?>  
+            <style>
+                 table{
+                    display:none;
+                 }
+        </style>   
+           <?php echo ("<p class='itens_elet_qt'>Existem ".$total_itens_elet[0][0]." Itens Eletricos</p>");?> 
+           
+        <?php foreach ($categoria_eletrica as $cat_eletrica): ?> 
+
+            <a href="<?php echo URL_BASE; ?>produtos/ver?ver=<?php echo $cat_eletrica['id'] ?>" 
+                target="_blank">
+         
+         
+        <div class="prod_quadro">
+               
+                <article class="todos_itens_quadro_prod font_item1 n_f_n_p">
+                    <?php echo $cat_eletrica['nome'] ?>
+                 </article>  
+
+                <article class="todos_itens_quadro_prod font_item2 n_f_nt_p">
+                    <?php echo $cat_eletrica['nome_tecnico'] ?>
+                
+                </article>   
+
+                <div class="imagem_prod_novo">
+                    <img src="<?php echo URL_BASE; ?>midias/imagens/produtos/<?php echo $cat_eletrica['imagem']; ?>.jpg"">
+                </div>
+           
+          
+            
+            <div class="todos_itens_quadro_prod preco_estilo_prod">            
+                <div>
+                    preço: <?php echo 'R$ ' . number_format($cat_eletrica['preco'], 2, ',', '.'); ?>
+                </div>
+            </div> 
+
+             <div class="todos_itens_quadro_prod font_item1 estilo_ref">
+                 Ref: <?php echo $cat_eletrica['referencia'] ?>
+             </div>
+
+            <div class="todos_itens_quadro_prod font_item3 estilo_aplic_p">
+              Aplic: <?php echo $cat_eletrica['aplicacao'] ?>
+            </div>
+
+            <div class="todos_itens_quadro_prod font_item1 disponivel_estoque">
+                disponivel: <?php echo $cat_eletrica['quantidade'] ?>
+            </div>
+                    
+            <div class="todos_itens_quadro_prod font_item1 op">
+
+                <a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $cat_eletrica['id'] ?>" target="_blank">
+                Editar
+                </a>
+         
+                <a href="<?php echo URL_BASE; ?>produtos/excluir?excluir=<?php echo $cat_eletrica['id'] ?>" target="_blank"> 
+                Excluir
+                </a>
+            </div>
+
+        </div>
+        
+
+        <?php endforeach; ?>
+        </a>
+    </div>
+        
+    <?php } ?>
+</div>
+
+
+
+
+
+<!-- 
+AQUI INICIA A LISTAGEM DE PRODUTOS PARA O TERMO PESQUISADO ----- EM QUADRADOS -->
+<?php if (isset($pesquisa_prod)) { ?>  
+ <div class="lista_prod_novo">
+    <div class="comtem_quadros">
+         
+          <style>
+              body{
+                  margin:0;
+              }
+              table{
+                  display:none;
+              }
+          </style>     
         <?php foreach ($pesquisa_prod as $exibir_p): ?> 
             <a href="<?php echo URL_BASE; ?>produtos/ver?ver=<?php echo $exibir_p['id'] ?>" 
                 target="_blank">
@@ -562,7 +573,7 @@
         </div> 
 
           <div class="todos_itens_quadro_prod font_item1 estilo_ref">Ref: <?php echo $exibir_p['referencia'] ?></div>
-          <div class="todos_itens_quadro_prod font_item3 estilo_aplic_p">Aplicação: <?php echo $exibir_p['aplicacao'] ?></div>
+          <div class="todos_itens_quadro_prod font_item3 estilo_aplic_p">Aplic: <?php echo $exibir_p['aplicacao'] ?></div>
           <div class="todos_itens_quadro_prod font_item1 disponivel_estoque">disponivel: <?php echo $exibir_p['quantidade'] ?></div>
                     
          <div class="todos_itens_quadro_prod font_item1 op">
@@ -577,10 +588,11 @@
         </a>
         </div>
         
-    <?php } ?>
+        <?php } ?>
     </div>
+ 
 
-
+    <!-- AQUI TERMINA A LISTAGEM DE PRODUTOS PARA O TERMO PESQUISADO ----- EM QUADRADOS -->
 
 
 

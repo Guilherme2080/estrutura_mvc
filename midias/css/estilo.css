@@ -611,9 +611,9 @@ table{
 
 
 
-.lista_prod_novo{
+.lista_prod_novo{    
     width: 100%;
-  float: left;
+    float: left;
 }
 
 .imagem_prod_novo{
@@ -633,7 +633,8 @@ table{
     margin: auto;
     width: 1200px;
     text-transform: capitalize;
-    min-height: 500px;
+   
+    /* background-color: #009999; */
     
 }
 
@@ -661,7 +662,7 @@ table{
 }
 .n_f_n_p{
     max-height: 4ch;
-    background-color: #000000;
+    background-color: #06532a;
     text-transform: uppercase;
     color:#fff;
     max-width: 500px;     
@@ -676,7 +677,7 @@ table{
 .n_f_nt_p{
     padding: 5px;
     max-height: 4ch;
-    background-color: #4b6363;
+    background-color: #587c44;
     text-transform: uppercase;  
     color:#fff;
     max-width: 500px;     
@@ -688,11 +689,14 @@ table{
 }
 
 .preco_estilo_prod{
+    margin-top: 2px;
+    margin-left: 20px;
     background-color: #0fbd3a;
     color:#fff;
     font-size: 16px;
     padding: 5px;
     border-radius: 2px;
+    width: 150px;
 }
 .estilo_ref{
     color:#840b0b;
@@ -706,7 +710,8 @@ table{
      text-transform: uppercase;
 }
 .estilo_aplic_p{
-    color:#840b0b;
+    background-color: #dadada;
+    color:#030442;
     max-width: 500px;     
    white-space: nowrap; 
    overflow: hidden; 
@@ -735,7 +740,8 @@ table{
     width: 196px;
     float: left;
     height: 370px;
-    margin: 2px;
+    margin-left: 2px;
+    border-radius: 5px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
@@ -1932,37 +1938,61 @@ height: 35px;
 }
 
 .estoque_baixo{
-    margin-left: 240px;
+    margin-left: 140px;
     float: left;
     height: 40px;
     
     
 }
-.estoque_alto{
-   
+.estoque_baixo p{
+    text-align: center;
+   font-size: 11px;
+    
+    
+}
+.estoque_alto{   
     float: left;
     height: 40px;
     
 }
-
+.estoque_eletrica{   
+    float: left;
+    height: 40px;
+    
+}
+.estoque_alto p{
+    /* background-color: #000000; */
+    text-align: center;
+   font-size: 11px;
+    
+    
+}
+.estoque_eletrica p{
+    /* background-color: #000000; */
+    text-align: center;
+   font-size: 11px;
+    
+    
+}
 .estoq_ab{
     float: left;
     height: 60px;
     width: 800px;
+    /* background-color: rgb(0, 153, 38); */
+    margin-bottom: 50px;
   
 }
 
 .estoque_baixo input{
-    background-image: url("../../midias/imagens/baixo.png");
+    background-image: url("../../midias/imagens/estoque_baixo.png");
     background-repeat: no-repeat;
-    background-size: 35px;
-    background-color: #fc5858;
+    background-size: 35px;   
+    background-color: #fff;
     background-position: center;
     color:#fff;
     line-height:85px;
     border: 0;
-    float: left;
-    padding: 10px;
+    float: left;    
     margin-left: 5px; 
     height: 60px;
     font-size: 10px;
@@ -1970,29 +2000,64 @@ height: 35px;
     cursor: pointer;
   
 }
+
 .estoque_alto input{
-   background-image: url("../../midias/imagens/alto.png");
+   background-image: url("../../midias/imagens/estoque_gov.png");
     background-repeat: no-repeat;
     background-size: 35px;
-    background-color: #F28E09;
+    background-color: #fff;   
     background-position: center;
     color:#fff;
+    margin-left: 5px;
     line-height:85px;
     border: 0;
-    float: left;
-    padding: 10px;
-    margin-left: 5px; 
+    float: left;        
     height: 60px;
     font-size: 8px;
-    width: 100px;
+    width: 50px;
     cursor: pointer;
+    
   
   
 }
 
-.bt_foto{
+.estoque_eletrica input{
+   background-image: url("../../midias/imagens/eletrica.png");
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-color: #fff;   
+    background-position: center;
+    color:#fff;
+    margin-left: 5px;
+    line-height:85px;
+    border: 0;
+    float: left;        
+    height: 60px;
+    font-size: 8px;
+    width: 50px;
+    cursor: pointer;
+    
   
-     
+  
+}
+.itens_falta_p{
+    margin-right: 10px;
+    font-family: cursive;
+    color:rgb(255, 255, 255);
+    padding: 5px;
+    float: right;
+    background-color: #ff5b63;
+    border-radius: 4px;
+}
+.itens_elet_qt{
+    margin-top: -110px;
+    margin-right: -50px;
+    font-family: cursive;
+    color:rgb(255, 255, 255);
+    padding: 5px;
+    float: right;
+    background-color: #ff5b63;
+    border-radius: 4px;
 }
 
 /* --------------------DAQUI PRA BAIXO PAGINA INDIVIDUAL DE PRODUTOS NA PARTE DE VER ---------- */
