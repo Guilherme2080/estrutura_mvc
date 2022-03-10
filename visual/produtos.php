@@ -1,8 +1,13 @@
+
+<?php if(!isset($estoque_governo)) {?>
 <style>
-    table{
+    thead{
         display:none;
     }
 </style>
+<?php } ?>
+
+
 <div class="topo_pgs">
     <h1>Produtos<h4>Para encontrar um produto no estoque realize uma pesquisa</h4></h1>
 
@@ -164,13 +169,13 @@
         
         
         <div class="img_verprod">
-             <img src="<?php echo URL_BASE; ?>midias/imagens/produtos/<?php echo $selecionar_produtos['imagem']; ?>.jpg">  
+            <img src="<?php echo URL_BASE; ?>midias/imagens/produtos/<?php echo $selecionar_produtos['imagem']; ?>.jpg">  
                 
-              <h3>ESCREVA O NOME DA IMAGEM </h3>   
-             <input class="input_name_edit" name="nomeimagem" type="text" value="<?php echo $selecionar_produtos['imagem'] ?>" placeholder="NOME DA IMAGEM">
-             <label for="arquivo">Buscar</label>
-             <input class="input_img_edit" bt_foto" type="file" name="arquivo" id="arquivo">  
-             <input class="input_name_edit posicao_input_envia" type="submit" value="Atualizar">
+            <h3>ESCREVA O NOME DA IMAGEM </h3>   
+            <input class="input_name_edit" name="nomeimagem" type="text" value="<?php echo $selecionar_produtos['imagem'] ?>" placeholder="NOME DA IMAGEM">
+            <label for="arquivo">Buscar</label>
+            <input class="input_img_edit" bt_foto" type="file" name="arquivo" id="arquivo">  
+            <input class="input_name_edit posicao_input_envia" type="submit" value="Atualizar">
         </div>
 
         
@@ -190,10 +195,10 @@
         <p>Preço de Compra</p>
         <input name="preco_compra" class="ref_pg_prod"  value=" <?php echo $selecionar_produtos['preco_compra']; ?>">
                     
-                                  
-         <p>Preço de Venda </p> 
-         <input name="preco" class="ref_pg_prod" value="<?php echo $selecionar_produtos['preco']; ?>">
-                  
+                          
+        <p>Preço de Venda </p> 
+        <input name="preco" class="ref_pg_prod" value="<?php echo $selecionar_produtos['preco']; ?>">
+        
 
         <p>categoria:</p>
         <input name="categoria" class="ref_pg_prod" value="<?php echo $selecionar_produtos['categoria'] ?>">
@@ -238,38 +243,11 @@
 </form>
 
 
-
-
     <?php endif; ?>
 
 
 
-    <?php if (isset($excluir)): //se houver id siginifica que existira alteração  ?>
-<div class="form_excluir_produto">  
-        <form class="excluir_form" method="POST" action="<?php URL_BASE ?>excluir?excluir=<?php echo $excluir ?>">
-
-            <input class="i" name="preco" type="text" value="<?php echo $selecionar_produtos['preco'] ?>" placeholder="PREÇO">
-            <input class="i" name="preco_compra" type="text" value="<?php echo $selecionar_produtos['preco_compra'] ?>" placeholder="PREÇO DE COMPRA">
-            <input class="i" required=""   name="nome" type="text" value="<?php echo $selecionar_produtos['nome'] ?>" placeholder="NOME DO PRODUTO"><br>
-            <input class="n"  type="text" name="nome_tecnico" value="<?php echo $selecionar_produtos['nome_tecnico'] ?>" placeholder="NOME TECNICO OU DA NOTA"><br>
-            <input class="i" type="text"  name="local" value="<?php echo $selecionar_produtos['local'] ?>"  placeholder="LOCAL NO ESTOQUE">   
-            <input class="i" type="text"  name="referencia" value="<?php echo $selecionar_produtos['referencia'] ?>"  placeholder="REFERENCIA">  
-            <input class="i" type="text"  name="aplicacao" value="<?php echo $selecionar_produtos['aplicacao'] ?>"  placeholder="APLICAÇÃO EM VEICULOS"><br>  
-            <input class="i" type="text"  name="quantidade"  value="<?php echo $selecionar_produtos['quantidade'] ?>" placeholder="QUANTIDADE">  
-            <input class="i" type="text"   name="quantidade_governo" value="<?php echo $selecionar_produtos['quantidade_governo'] ?>" placeholder="QUANTIDADE GOVERNO">  
-            <input class="i" type="text"   name="quantidade_minima" value="<?php echo $selecionar_produtos['quantidade_minima'] ?>" placeholder="QUANTIDADE MINIMA">   <br>
-            <input class="i" type="text"   name="fornecedor" value="<?php echo $selecionar_produtos['fornecedor'] ?>" placeholder="FORNECEDOR">     
-            <input class="i" type="text"   name="fabricante" value="<?php echo $selecionar_produtos['fabricante'] ?>" placeholder="FABRICANTE">   
-            <input class="i" type="text"   name="categoria" value="<?php echo $selecionar_produtos['categoria'] ?>" placeholder="CATEGORIA"><br>
-
-            <input class="bt_prod_excluir" type="submit" value="Excluir"><br>
-
-
-        </form>
-        <br>
-        </div>
-    <?php endif; ?>
- 
+   
 
 
 
@@ -345,6 +323,7 @@
 
                         <td class="cliente_editar" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $estoque_min['id'] ?>" target="_blank">Editar</a></td>
                         <td class="cliente_excluir" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/excluir?excluir=<?php echo $estoque_min['id'] ?>" target="_blank">Excluir</a></td>
+                      
 
 
 
@@ -365,11 +344,27 @@
 
 
 <!-- ----------------------------------AQUI COMEÇA A SEÇÃO DO ESTOQUE GOVERNO------------------- -->
-<?php if (!empty($estoque_gov)) echo ("<p class='itens_falta_p'>Existem ".$total_itens_gov[0][0]." Produtos mudar Gov</p>"); { ?> 
+<?php if (isset($estoque_gov)) echo ("<p class='itens_falta_p'>Existem ".$total_itens_gov[0][0]." Produtos mudar Gov</p>"); { ?> 
+   
+
     <style>
-    table{
-        display:block;
-    }
+
+table{
+    display:table;
+}
+
+td , th{
+    display: table-cell;
+}
+
+tr{
+    display: table-row;
+}
+
+tbody{
+   
+}
+
 </style>
     <div class="lista_produtos estoque_min_personalizado">
         <!-- TEM QUE FICAR ANTES DO FOREACH PRA NÃO FICAR REPETINDO  -->
@@ -380,7 +375,7 @@
                     <th>ID</th>
                     <th>preco</th>
 
-      <!-- <th>p. de compra</th>-->
+           <!-- <th>p. de compra</th>-->
                     <th>nome</th>
                     <!--<th>n. tecnico</th> -->
                   <!--  <th>local</th> -->
@@ -398,7 +393,7 @@
                 </tr>
             </thead>
         <?php } ?>
-
+     
 
 <?php if (isset($estoque_gov)) {
     foreach ($estoque_gov as $estoque_governo):
@@ -566,6 +561,13 @@ AQUI INICIA A LISTAGEM DE PRODUTOS PARA O TERMO PESQUISADO ----- EM QUADRADOS --
                 <article class="todos_itens_quadro_prod font_item2 n_f_nt_p"><?php echo $exibir_p['nome_tecnico'] ?></article>   
 
                 <div class="imagem_prod_novo">
+                    <div class="opflutuante">
+
+                        <a style="margin-bottom: 10px; heigth:30px;" href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $exibir_p['id'] ?>" target="_blank"><img src="<?php echo URL_BASE;?>midias/imagens/editar.png"></a> <br><br>
+         
+                        
+                        <td><a href="<?php echo URL_BASE;?>produtos/excluir?excluir=<?php echo $exibir_p['id']?>" onclick="return confirm('Deseja excluir o registro : <?php echo $exibir_p['nome'] ?>')"><img src="<?php echo URL_BASE;?>midias/imagens/excluir.png"></a></td> 
+                    </div>
                     <img src="<?php echo URL_BASE; ?>midias/imagens/produtos/<?php echo $exibir_p['imagem']; ?>.jpg"">
                 </div>
            
@@ -579,11 +581,7 @@ AQUI INICIA A LISTAGEM DE PRODUTOS PARA O TERMO PESQUISADO ----- EM QUADRADOS --
           <div class="todos_itens_quadro_prod font_item3 estilo_aplic_p">Aplic: <?php echo $exibir_p['aplicacao'] ?></div>
           <div class="todos_itens_quadro_prod font_item1 disponivel_estoque">disponivel: <?php echo $exibir_p['quantidade'] ?></div>
                     
-         <div class="todos_itens_quadro_prod font_item1 op">
-         <a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $exibir_p['id'] ?>" target="_blank">Editar</a>
          
-            <a href="<?php echo URL_BASE; ?>produtos/excluir?excluir=<?php echo $exibir_p['id'] ?>" target="_blank">Excluir</a>
-         </div>
          </div>
         
 

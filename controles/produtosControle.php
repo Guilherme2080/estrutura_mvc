@@ -298,7 +298,7 @@ class produtosControle extends controle{
             $selecionar_produtos = $produtos->selecionarProdutosDel($excluir);
 
 
-            if (isset($_POST['nome'])) {
+            if (isset($_GET['excluir'])) {
 
                 $produtos->excluirProdutos($excluir);
                 header("Location: " . URL_BASE . "produtos");

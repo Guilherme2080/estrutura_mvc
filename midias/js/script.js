@@ -1,17 +1,27 @@
 
+
+
+function datas(){
+
+    var dt_hoje = document.getElementById("data_hoje").value;
+    var dt_vencimento = document.getElementById("d_vencimento").value;
+    
+   
+        
+    if(dt_hoje < dt_vencimento ){
+        
+        checked_lancamento.checked = true;
+        
+
+    } else{
+        checked_lancamento.checked = false;
+    }
+    
+   
+}
+
+
 function enviar(parametro, parametro2, parametro3){
-
-//     var idDigitado = document.getElementById("id_prod").innerHTML; 
-//     document.getElementById("recebe_id").value = idDigitado;
-
-//     var nomeDigitado = document.getElementById("nome_prod").innerHTML; 
-//      document.getElementById("recebe_nome").value = nomeDigitado;
-
-//      var precoDigitado = document.getElementById("p_preco").innerHTML; 
-//      document.getElementById("recebe_preco").value = precoDigitado;
-
-
-     
 
     var idDigitado = parametro;
     document.getElementById("recebe_id").value = idDigitado;
@@ -27,6 +37,31 @@ function enviar(parametro, parametro2, parametro3){
 }
 
 
+function inserirSinal(elem) {
+
+    //selecioando o valor do campo escolhido
+    var indiceDoSelectEscolhido = elem.selectedIndex;
+    var valorDoElementoEscolhido = elem.options[indiceDoSelectEscolhido].value;
+
+    //se for o option de boleto
+    if(valorDoElementoEscolhido == 'boleto'){
+        
+        valor = document.getElementById("valor_caixa").value;
+        document.getElementById('valor_caixa').value = '-'+valor;
+
+    }
+    
+    
+    
+
+}
+
+
+
+
+
+
+    
 
 
 

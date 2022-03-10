@@ -2,17 +2,43 @@
 
 class caixa extends modelo{
     
-    public function inserirCaixa($data_caixa, $descricao_caixa, $valor_caixa, $tipo) {
+    public function inserirCaixa($data_caixa, $data_vencimento, $descricao_caixa, $valor_caixa, $tipo) {
 
-        $sql = "INSERT INTO caixa SET data = '$data_caixa' , valor = '$valor_caixa', descricao = '$descricao_caixa' , tipo = '$tipo' ";
+        $sql = "INSERT INTO caixa SET data = '$data_caixa' , data_vencimento = '$data_vencimento', valor = '$valor_caixa', descricao = '$descricao_caixa' , tipo = '$tipo' ";
+        $sql = $this->banco->query($sql);
+    }
+    
+    public function inserirCaixaLancamento($data_caixa, $data_vencimento, $descricao_caixa, $valor_caixa, $tipo) {
+
+        $sql = "INSERT INTO lancar_caixa SET data = '$data_caixa' , data_vencimento = '$data_vencimento', valor = '$valor_caixa', descricao = '$descricao_caixa' , tipo = '$tipo' ";
         $sql = $this->banco->query($sql);
     }
 
-      
+    public function inserirLancados($id_lancado) {
+    
+        $sql = "INSERT INTO caixa(data, data_vencimento, valor, descricao, tipo)
+            (SELECT data, data_vencimento, valor, descricao, tipo FROM lancar_caixa WHERE id = '$id_lancado' ) ";
+
+            $sql = $this->banco->query($sql);
+    }
+
+    
 
 
         public function selecionarCaixa() {
             $sql = "SELECT * FROM caixa ORDER BY id DESC";
+            $sql = $this->banco->query($sql);
+            $dados = array();
+            //se houver resultados retorna true
+            if ($sql->rowCount() > 0) {
+                $sql = $sql->fetchAll();
+    
+                $dados = $sql;
+                return $dados;
+            }
+        }
+        public function selecionarCaixaLancamento() {
+            $sql = "SELECT * FROM lancar_caixa ORDER BY id DESC";
             $sql = $this->banco->query($sql);
             $dados = array();
             //se houver resultados retorna true
@@ -41,6 +67,10 @@ class caixa extends modelo{
 
         public function excluirItemCaixa($excluir) {
             $sql = "DELETE FROM caixa WHERE id = '$excluir' ";
+            $sql = $this->banco->query($sql);
+        }
+        public function excluirItemCaixa_Lanc($excluir_lanc) {
+            $sql = "DELETE FROM lancar_caixa WHERE id = '$excluir_lanc' ";
             $sql = $this->banco->query($sql);
         }
       
