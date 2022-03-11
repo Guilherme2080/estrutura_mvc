@@ -1,32 +1,47 @@
-<div class="topo_pgs">
-   <h1>Inicio<h4>Para acessar o sistema realize o login</h4></h1>
 
+<style>
+    .menu{
+        display: none;
+    }
+</style>
+
+<div class="pagina_login">
     
-<div class="bt_voltar hvr-bounce-out">
-    <a href="<?php echo URL_BASE ?>arealogada">Voltar</a> 
-</div>   
+    <div class="tela_logar">
+
+            <div class="nome_marca_login">
+                <article>Lourenço AutoPeças</article>
+            </div>
+
+            <div class="info_para_dados">
+               <article>Informe seus dados  abaixo</article> 
+            </div>
+
+    <!-- ------------------------------------------------------------------------- -->
+            <form method="POST" action="<?php URL_BASE ?>entrar/login">  
+                <p>Email *</p>
+                <input  required="" type="email" name="email" >
+                
+                <p>Senha *</p>
+                <input  required="" type="password" name="senha" ><br>
+
+                <input class="bt_entrar_login"  type="submit" value="entrar"><br>
+               
+                <aside>Itens com * é obrigato preencher</aside>
+                <div class="mensagemerro">
+                    <?php echo @$mensagem; ?>
+                </div>
+            </form>
+    <!-- ---------------------------------------------------------------------------- -->
+
+    </div>
+
+    <div class="tela_apresentacao">
+
+
+
+    </div>
+
 </div>
-<div class="tela_logar">
 
-   
-    <form method="POST" action="<?php URL_BASE ?>entrar/login">   
-
-
-        <input class="email" required="" type="email" name="email" placeholder="INSIRA SEU EMAIL">
-        <input  class="senha" required="" type="password" name="senha" placeholder="INSIRA SUA SENHA"><br>
-
-        <input class="bt_entrar" type="submit" value="entrar"><br>
-
-        <!--    <a href="<?php echo URL_BASE ?>cadastrar">Cadastrar</a> -->
-
-        <div class="mensagemerro">
-            <?php echo @$mensagem; ?>
-        </div>
-
-    </form>
-
-
-
-
-</div>
 

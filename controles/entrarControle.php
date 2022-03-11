@@ -13,7 +13,7 @@ class entrarControle extends controle {
     }
 
     public function login() {
-       
+    
         $entrar = new Entrar();
 
         if (isset($_POST['email']) && !empty($_POST['senha'])) {
@@ -27,17 +27,17 @@ class entrarControle extends controle {
         if (isset($_SESSION['entrar']) && !empty($_SESSION['entrar'])) {
             header("Location: " . URL_BASE . "arealogada");
         } else {
- 
+
           // header("Location: " . URL_BASE . "entrar");
             $mensagem = "Dados informados Invalidos!";
             header("Refresh: 2;url=".URL_BASE."entrar");
-           
+        
         }
         
         $dados = array(
             'mensagem' => $mensagem
         );
-      
+    
         $this->carregarModelo('entrar', $dados);
     }
 

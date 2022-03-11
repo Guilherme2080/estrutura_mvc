@@ -251,12 +251,7 @@ body { overflow-x: hidden; }
     text-align: center;
 }
 
-.tela_logar h3{
-   
-    text-align: center;
-    color:#fff;
-    background-color: #330033;
-}
+
 
 
 
@@ -299,58 +294,6 @@ body { overflow-x: hidden; }
    
 }
 
-.bt_entrar{
-   border:0;
-   width:70px;
-   padding: 4px;
-  background-color: #010C26;
-   text-transform: uppercase;
-   color:#fff;
-   height: 30px;
-   
-}
-
-.tela_logar form input{    
-    
-    text-align: center;
-    padding:2px;
-    outline: 0;
-}
-
-.bt_entrar, .tela_logar form a{
-  
-}
-
-
-.tela_logar{
-    
-    margin-left: 100px;
-    float: left;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.tela_logar form {
-    display: flex;    
-    flex-flow: row wrap;              
-    width: 100%;
-
-
-}
-
-
-
-.tela_logar form a{
-    width: 100%;   
-    line-height: 50px;
-    height: 50px;
-    text-align: center;
-    text-decoration: none;
-    padding: 10px;
-
-}
 
 .cad_tela{
      width: 50%;
@@ -3056,11 +2999,7 @@ inputs_inser_caixa p{
     text-align: center;
 }
 
-.exibir_soma{
-    
-     
-   
-}
+
 .exibir_soma p{
     margin: 0 auto;
     text-align: center;
@@ -3190,3 +3129,92 @@ inputs_inser_caixa p{
     
     color:rgb(224, 216, 216);
 }
+
+
+/* -----------------------pagina de login inicio-------------------------- */
+
+.pagina_login{
+    height: 100%;
+    float: left;
+    width: 100%;
+    
+}
+
+.tela_logar{
+    float: left;
+    background-color: #ffffff;
+    height: 100%;
+    width: 33.3%;
+}
+.tela_apresentacao{
+    float: left;
+    background-color: #022c85;
+    height: 100%;
+    width: 66.7%;
+}
+
+.nome_marca_login{
+    margin-left: 65px;
+    color:#0c328b;
+    /* background-color: #009999; */
+    margin-top: 65px;
+    height: 30px;
+    width: 290px;
+}
+.nome_marca_login article{
+    line-height: 25px;
+    font-size: 30px;
+    font-family: cursive;
+    font-weight: bolder;
+}
+
+.info_para_dados{
+    /* background-color: #009999; */
+    margin-top: 65px;
+    margin-left: 65px;
+    float: left;
+    width: 290px;
+    height: 75px;
+}
+.info_para_dados article{
+    line-height: 35px;
+    font-size: 30px;
+    font-family: cursive;
+    font-weight: bolder;
+}
+
+.tela_logar form{
+    margin-left: 65px;
+    margin-top: 30px;
+    float: left;
+    /* background-color: #00C0EF; */
+    width: 330px;
+}
+.tela_logar p{
+    font-family: cursive;
+   color:#7D5C57;
+}
+
+.tela_logar input{
+    padding: 10px;
+    font-size: 14px;
+    border:1px solid rgb(155, 151, 151);
+    border-radius: 4px;
+    margin-bottom: 40px;
+    height: 45px;
+    width: 330px;
+}
+.tela_logar aside{
+  
+    color:#1397D5;
+}
+
+.bt_entrar_login{
+    text-transform: capitalize;
+    color:#fff;
+    background-color: #188d34;
+}
+
+
+
+/* -----------------------pagina de login fim -------------------------- */

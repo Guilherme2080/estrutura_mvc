@@ -322,7 +322,8 @@
 
 
                         <td class="cliente_editar" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $estoque_min['id'] ?>" target="_blank">Editar</a></td>
-                        <td class="cliente_excluir" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/excluir?excluir=<?php echo $estoque_min['id'] ?>" target="_blank">Excluir</a></td>
+                        <td class="cliente_excluir" class="tamanho_caracteres"><a href="<?php echo URL_BASE;?>produtos/excluir?excluir=<?php echo $estoque_min['id']?>" onclick="return confirm('Deseja excluir o registro : <?php echo $estoque_min['nome'] ?>')">Excluir</a></td> 
+                        
                       
 
 
@@ -423,7 +424,7 @@ tbody{
 
 
                         <td class="cliente_editar" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $estoque_governo['id'] ?>" target="_blank">Editar</a></td>
-                        <td class="cliente_excluir" class="tamanho_caracteres"><a href="<?php echo URL_BASE; ?>produtos/excluir?excluir=<?php echo $estoque_governo['id'] ?>" target="_blank">Excluir</a></td>
+                        <td class="cliente_excluir" class="tamanho_caracteres"><a href="<?php echo URL_BASE;?>produtos/excluir?excluir=<?php echo $estoque_governo['id']?>" onclick="return confirm('Deseja excluir o registro : <?php echo $estoque_governo['nome'] ?>')">Excluir</a></td>
 
 
 
@@ -488,6 +489,13 @@ tbody{
                 </article>   
 
                 <div class="imagem_prod_novo">
+                <div class="opflutuante">
+
+                    <a style="margin-bottom: 10px; heigth:30px;" href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $cat_eletrica['id'] ?>" target="_blank"><img src="<?php echo URL_BASE;?>midias/imagens/editar.png"></a> <br><br>
+
+
+                    <td><a href="<?php echo URL_BASE;?>produtos/excluir?excluir=<?php echo $cat_eletrica['id']?>" onclick="return confirm('Deseja excluir o registro : <?php echo $cat_eletrica['nome'] ?>')"><img src="<?php echo URL_BASE;?>midias/imagens/excluir.png"></a></td> 
+</div>
                     <img src="<?php echo URL_BASE; ?>midias/imagens/produtos/<?php echo $cat_eletrica['imagem']; ?>.jpg"">
                 </div>
            
@@ -516,8 +524,9 @@ tbody{
                 <a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $cat_eletrica['id'] ?>" target="_blank">
                 Editar
                 </a>
-         
-                <a href="<?php echo URL_BASE; ?>produtos/excluir?excluir=<?php echo $cat_eletrica['id'] ?>" target="_blank"> 
+                
+
+             <a href="<?php echo URL_BASE; ?>produtos/excluir?excluir=<?php echo $cat_eletrica['id'] ?>" onclick="return confirm('Deseja excluir o registro : <?php echo $cat_eletrica['nome'] ?>')""> 
                 Excluir
                 </a>
             </div>

@@ -13,7 +13,7 @@ class inicioControle extends controle{
     //visual que será mostrado, que vem la da pasta visual
       //um segundo parametro está sendo enviado que são os dados do array acima
        $dados = array();
-        $this->carregarModelo('inicio', $dados);
+        $this->carregarModelo('entrar', $dados);
     }
     
   
