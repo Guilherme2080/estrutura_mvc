@@ -4,7 +4,7 @@
 
 <!-- ------------------------------INSERÇÃO DOS DADOS ---------------------------------------- -->
     <div class="main_caixa">
-
+        <div class="manter_layout_caixa">
         <form method="POST"  action="<?php URL_BASE ?>caixa">
 
             <div class="data_caixa alinha_inputs_data inputs_inser_caixa">
@@ -56,7 +56,7 @@
 
 
         </form>
-    
+        </div>
 
 <!-- ------------------------------ FIM DA INSERÇÃO DOS DADOS ---------------------------------------- -->
 
@@ -66,11 +66,11 @@
 
         <!-- --------------------------------------------------EXIBIÇÃO DOS DADOS -----------------------------           -->
         <div class="exibir_soma"  <?php if($soma_caixa[0][0] < 0){ ?> id="exibir_soma_negativa"; style=".exibir_soma{display:none;}" <?php } ?>  >
-            <p>Saldo em Caixa <?php  echo $soma_caixa[0][0]; ?></p>
+            <p>Saldo em Caixa:  R$ <?php  echo $soma_caixa[0][0]; ?></p>
         </div>
 
 
-        <div class="tabela_caixa cor_a_lancar_caixa">
+        <div class="tabela_caixa cor_a_lancar_caixa estilo_componentes_alancar">
 
          <h3 class="h3_tabel_a_lancar">Itens Aguardando a data de lançamento</h3>
          <table id="lista"  border="0" cellspacing="0">
@@ -95,15 +95,15 @@
             
                         <tbody>
                             <tr  align=center>
-                                <td> <?php echo $result_caixa_lanc['data']?> </td>
+                                <td style="border-radius: 4px 0px 0px 4px ;"> <?php echo $result_caixa_lanc['data']?> </td>
                                 <td> <?php echo $result_caixa_lanc['data_vencimento']?> </td>
                                 <td> <?php echo $result_caixa_lanc['descricao']?> </td>
                                 <td> <?php echo $result_caixa_lanc['valor']?> </td>
                                 <td> <?php echo $result_caixa_lanc['tipo']?> </td>
                                 <!-- <td><a href="<?php echo URL_BASE;?>caixa/excluir?excluir=<?php echo $result_caixa['id']?>">Excluir</a></td>
                                 <a href="excluir.php" onclick="return confirm('Deseja excluir esse registro ?')">Excluir</a> -->
-                                <td><a href="<?php echo URL_BASE;?>caixa/excluir?excluir_lanc=<?php echo $result_caixa_lanc['id']?>" onclick="return confirm('Deseja excluir o registro : <?php echo $result_caixa_lanc['descricao'] ?>??')">Excluir</a></td>
-                                <td><a href="<?php echo URL_BASE;?>caixa/lancar?lancar=<?php echo $result_caixa_lanc['id']?>" onclick="return confirm('Deseja Lançar : <?php echo $result_caixa_lanc['descricao'] ?>??')">Lançar</a></td>  
+                                <td class="bt_excluir_caixa"><a href="<?php echo URL_BASE;?>caixa/excluir?excluir_lanc=<?php echo $result_caixa_lanc['id']?>" onclick="return confirm('Deseja excluir o registro : <?php echo $result_caixa_lanc['descricao'] ?>??')">Excluir</a></td>
+                                <td class="bt_lancar_caixa" style="border-radius: 0px 4px 4px 0px ;"><a href="<?php echo URL_BASE;?>caixa/lancar?lancar=<?php echo $result_caixa_lanc['id']?>" onclick="return confirm('Deseja Lançar : <?php echo $result_caixa_lanc['descricao'] ?>??')">Lançar</a></td>  
                                                             
                             </tr>
                     </tbody>
@@ -122,7 +122,7 @@
 
 
 
-        <div class="tabela_caixa">
+        <div class="tabela_caixa estilo_componentes_lancados">
 
          <h3>Itens lançados</h3>
          <table id="lista"  border="0" cellspacing="0">
@@ -153,7 +153,7 @@
                                 <td> <?php echo $result_caixa['tipo']?> </td>
                                 <!-- <td><a href="<?php echo URL_BASE;?>caixa/excluir?excluir=<?php echo $result_caixa['id']?>">Excluir</a></td>
                                 <a href="excluir.php" onclick="return confirm('Deseja excluir esse registro ?')">Excluir</a> -->
-                                <td><a href="<?php echo URL_BASE;?>caixa/excluir?excluir=<?php echo $result_caixa['id']?>" onclick="return confirm('Deseja excluir o registro : <?php echo $result_caixa['descricao'] ?>')">Excluir</a></td>  
+                                <td class="bt_excluir_caixa"><a href="<?php echo URL_BASE;?>caixa/excluir?excluir=<?php echo $result_caixa['id']?>" onclick="return confirm('Deseja excluir o registro : <?php echo $result_caixa['descricao'] ?>')">Excluir</a></td>  
                                                             
                             </tr>
                     </tbody>

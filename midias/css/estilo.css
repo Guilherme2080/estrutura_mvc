@@ -2952,12 +2952,22 @@ color: rgb(85, 85, 85);
 .main_caixa form{
     float: left;
     padding: 2px;
-    min-height: 400px;
-    width: 25%;
+    min-height: 500px;
+    width: 100%;
     background-color: #5a7bc4;
     border-radius:5px; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
    
+}
+
+
+.manter_layout_caixa{
+    float: left;;
+    width: 300px;
+    /* background-color: #3c5488; */
+    height: 99999999px;
+  
+    
 }
 
 
@@ -3039,8 +3049,9 @@ inputs_inser_caixa p{
 .tabela_caixa h3{
     margin: 0 auto;
     width: 200px;
-    border:1px solid rgb(2, 140, 253);
-    color: rgb(111, 32, 240);
+    border-bottom: 1px solid #fff;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(146, 95, 228);
     text-transform: uppercase;
     text-align: center;
 }
@@ -3053,9 +3064,9 @@ inputs_inser_caixa p{
 .exibir_soma p{
     margin: 0 auto;
     text-align: center;
-    width: 300px;
+    width: 250px;
     padding: 5px;
-    background-color: rgb(6, 156, 14);
+    background-color: rgb(10, 122, 16);
     color:#fff;
     font-size: 14px;
     font-family: cursive;
@@ -3089,7 +3100,7 @@ inputs_inser_caixa p{
    text-transform: uppercase;
    font-size: 12px;
    font-family: cursive;   
-   color:#020574
+   color:#4247a0
 }
 
 .h3_tabel_a_lancar{
@@ -3127,4 +3138,55 @@ inputs_inser_caixa p{
     width: 30px;
     margin: 1px;
     
+}
+
+.estilo_componentes_alancar td{
+    border-bottom:1px solid #C5C5C5;
+   padding: 2px;
+    margin-top: 10px;
+    background-color: #b8aec5; 
+    
+    color:rgb(238, 237, 237);
+}
+
+.estilo_componentes_alancar tr{
+    
+    border-radius: 50px;
+    
+}
+
+.estilo_componentes_alancar td a{
+    
+   
+    text-decoration: none;    
+    
+}
+
+.bt_excluir_caixa a{
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 3px;
+    font-weight: bold;
+    
+    color:rgb(255, 0, 0);
+    background-color: #fff;
+}
+
+.bt_lancar_caixa a{
+    text-transform: uppercase;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 4px;
+    color:#fff;
+    background-color: #5735f1;
+}
+
+.estilo_componentes_lancados td{
+    border-bottom:1px solid #C5C5C5;
+   padding: 2px;
+    margin-top: 10px;
+    background-color: #646d67; 
+    
+    color:rgb(224, 216, 216);
 }
