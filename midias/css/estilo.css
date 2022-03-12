@@ -3148,7 +3148,7 @@ inputs_inser_caixa p{
 }
 .tela_apresentacao{
     float: left;
-    background-color: #022c85;
+    background-color: #5d11a3;
     height: 100%;
     width: 66.7%;
 }
@@ -3216,5 +3216,82 @@ inputs_inser_caixa p{
 }
 
 
+.descricao_tel_ap{
+    float: left;
+    /* background-color: #60aa84; */
+    width: 35%;
+    height: 100%;
+}
+.descricao_img_tel_ap{
+    float: left;
+    /* background-color: #22B731; */
+    width: 65%;
+    height: 100%;
+}
 
+
+.img_tel_login1{
+    float: left;
+    margin-left: 95px;
+    margin-top: 20px;
+    width: 400px;
+}
+.img_tel_login2{
+    float: left;
+    margin-left: 75px;
+    margin-top: 20px;
+    width: 200px;
+}
+.img_tel_login3{
+    float: left;
+    margin-left: 75px;
+    margin-top: 20px;
+    width: 200px;
+}
+.img_tel_login4{
+    float: left;
+    margin-left: 75px;
+    margin-top: 100px;
+    width: 190px;
+}
+.novo_designe_tel_ap{
+    color:#0b7939;
+    line-height: 22px;
+    font-family: cursive;
+    font-size: 14px;
+    text-align: center;
+    background-color: #D8FAD2;
+    border-radius: 4px;
+    width: 120px;
+    margin-left: 30px;
+    margin-top: 55px;
+    height: 22px;
+}
+.descricao_1_terl_ap{
+    color:#fff;
+    line-height:35px;
+    margin-top: 10px;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.descricao_2_terl_ap{
+    margin-left: 20px;
+    font-size: 16px;
+    color:rgb(223, 215, 215);
+}
+
+.descricao_3_terl_ap{
+    text-align: center;
+    text-transform: capitalize;
+    color:#15427c;
+    line-height: 20px;
+    border-radius: 3px;
+    height: 20px;
+    width: 200px;
+    font-size: 13px;
+    background-color: #D3F1FD;
+    margin-left: 20px;
+    margin-top: 20px;
+}
 /* -----------------------pagina de login fim -------------------------- */

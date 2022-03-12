@@ -38,7 +38,19 @@
 
     <div class="tela_apresentacao">
 
-
+        <div class="descricao_tel_ap">
+            <p class="novo_designe_tel_ap">Novo Design</p>
+            
+            <p class="descricao_1_terl_ap">Veja os produtos em estoque, os clientes cadastrados e realize vendas</p>
+            <p class="descricao_2_terl_ap">Realize o login para ter acesso a todas as funções de maneira prática</p>
+            <p class="descricao_3_terl_ap">sistema Lourenço AutoPeças</p>
+            <img class="img_tel_login4" src="<?php echo URL_BASE;?>midias/imagens/faturamento.png">
+        </div>
+        <div class="descricao_img_tel_ap">
+            <img class="img_tel_login1" src="<?php echo URL_BASE;?>midias/imagens/computador.png">
+            <img class="img_tel_login2" src="<?php echo URL_BASE;?>midias/imagens/carteira.png">
+            <img class="img_tel_login3" src="<?php echo URL_BASE;?>midias/imagens/estoque.png">
+        </div>
 
     </div>
 
