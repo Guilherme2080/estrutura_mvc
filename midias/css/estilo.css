@@ -394,6 +394,7 @@ body { overflow-x: hidden; }
 .menu{
    float: left;
     width: 100%;
+    
 }
 
 .menu a{
@@ -401,10 +402,12 @@ body { overflow-x: hidden; }
 }
 
 .menu ul{
+    
     width: 100%;    
     float: left;   
     line-height: 40px;
-    height: 115px;
+    height: 50px;
+    background-color: #0c447c;
 
 }
 
@@ -412,67 +415,15 @@ body { overflow-x: hidden; }
 
     list-style: none;
     float: left;
+   
 
 }
 
-.quadrados{
-    font-size:20px;
-    padding: 2px;
-    margin-top: 5px;
-    margin-left: 5px;
-   
-    width: 250px;
-    height:100px;
-    box-shadow: 0 2px 2px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    background: #6666ff;
-    text-transform: uppercase;
-    
-}
-.quadrados p{
-    color:#fff;
-    margin-left: 37%;
-    margin-top: -65px;
-    
-    opacity: 0.9;
-    
-}
-.quadrados1{
-   
-   background-color: #3D018C;
-    
-}
-.quadrados2{
-    
-    background-color: #059348; 
-}
-.quadrados3{
-   
-    background-color: #39C4BF; 
-    
-}
-.quadrados4{
-   
-    background-color: #c5c5c5; 
-    
-}
 
-
-.quadrados4 img{
-    margin-top: 15px;
-    float: left;
-    
-}
-.quadrados4 p{
-    line-height: 70px;
-    /* background-color: #08ad55; */
-   float: left;
-   
-}
 
 
 
 .menu ul li a{
-    
     
     height: 40px;   
     text-decoration: none;
@@ -480,8 +431,26 @@ body { overflow-x: hidden; }
   
   
 }
-
-
+.menu a{
+    float: left;
+    line-height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+.menu a:hover{
+   
+    background-color: #098aaa;
+}
+.lap_na_barra{
+    font-weight: bold;
+    color:#fff;
+    font-size: 22px;
+    margin-left: 10px;
+    padding-right: 100px;
+    line-height: 50px;
+    /* background-color: #010C26; */
+}
 .sup_a{
     
   

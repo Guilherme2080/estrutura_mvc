@@ -21,80 +21,69 @@
     
     </head>
     <body>
-    <!-- <div class="topo_geral">
-            
-            <h1> 
-                <a href="<?php //echo URL_BASE; ?>">Inicio</a>
-                <a href="<?php //echo URL_BASE; ?>produtos">Produtos </a>
-                <a href="<?php //echo URL_BASE; ?>clientes">Clientes</a>
-                <a href="<?php //echo URL_BASE; ?>servicos">Serviços</a>
-                <a href="<?php //echo URL_BASE; ?>dados">dados</a>
-            
-            </h1>
-            <!--  URL_BASE irá puxar o caminho definido previamente no arquivo config.php  -->
-    <!-- </div> -->
-    
-    <a href="<?php echo URL_BASE;?>arealogada"> 
-        <!--  <div class="barra_cima remover"> -->
-        <!-- <h1>Lourenço Auto Peças</h1> -->
-        <!-- </div> -->
-    </a>
-    
+        
+        
         <div class="menu remover">
     
             <ul>
         
-    
-            <a href="<?php echo URL_BASE;?>clientes">
-            <li class="quadrados">           
-        
-            
-            <img src="<?php echo URL_BASE;?>midias/imagens/clientes.png">
-            <p>Clientes</p>
-                        
-            </li>
-            </a> 
-        
-        <a href="<?php echo URL_BASE;?>produtos">
-        <li class="quadrados quadrados1">
-            <img src="<?php echo URL_BASE;?>midias/imagens/produtos.png">
-            <p>Estoque</p>
-        
-            
-        </li>
-        </a>
-        
-    <a href="<?php echo URL_BASE; ?>servicos">
-        <li class="quadrados quadrados2">
-            
-            <img src="<?php echo URL_BASE;?>midias/imagens/servicos.png">
-            <p> Serviços </p>      
-        
-        
-        </li>
-        </a>
-        
-        <a href="<?php echo URL_BASE;?>dados">
-        <li class="quadrados quadrados3">           
-        
-                <img src="<?php echo URL_BASE;?>midias/imagens/dados.png">
-            <p> dados</p>
-        
-        </li>
-        </a>
 
-        <a href="<?php echo URL_BASE;?>parceiros">
-        <li class="quadrados quadrados4">           
+                <li class="lap_na_barra">
+                   Lourenço AutoPeças
+                </li>
+
+                <a href="<?php echo URL_BASE;?>clientes">
+                    <li class="">   
+                                
+                        Clientes
+                                
+                    </li>
+                </a> 
+            
+
+
+                <a href="<?php echo URL_BASE;?>produtos">
+                    <li>
+                        
+                        Estoque
+                    
+                        
+                    </li>
+                </a>
+                
+                <a href="<?php echo URL_BASE; ?>servicos">
+                    <li class="">
+                        
+                    
+                        Serviços     
+                    
+                    
+                    </li>
+                </a>
+                
+                <a href="<?php echo URL_BASE;?>dados">
+
+                    <li class=" ">           
+                    
+                        
+                        dados
+                    
+                    </li>
+                </a>
+
+                <a href="<?php echo URL_BASE;?>parceiros">
+
+                    <li class="">           
+                    
+                    
+                        Parceiros
+                    
+                    </li>
+                </a>
+                
         
-            <img src="<?php echo URL_BASE;?>midias/imagens/parceiros.png">
-            <p> Parceiros</p>
         
-        </li>
-        </a>
-        
-        
-        
-    </ul>
+            </ul>
     
     </div>
 
