@@ -1,3 +1,25 @@
+<!-- -------------------------------------menu selecionado estilo INICIO------------------------------ -->
+<?php  
+
+$url = ($_SERVER['REQUEST_URI']); 
+  $url_final = explode("/", $url);
+    
+?>
+<?php if($url_final[1] == "produtos"){ ?>
+
+<style>
+    .p_sele{        
+        float: left;
+        line-height: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #098aaa;
+    }
+</style>
+
+<?php }?>
+<!-- -------------------------------------menu selecionado estilo FIM------------------------------ -->
+
 
 <?php if(!isset($estoque_governo)) {?>
 <style>
@@ -519,17 +541,7 @@ tbody{
                 disponivel: <?php echo $cat_eletrica['quantidade'] ?>
             </div>
                     
-            <div class="todos_itens_quadro_prod font_item1 op">
-
-                <a href="<?php echo URL_BASE; ?>produtos/editar?id=<?php echo $cat_eletrica['id'] ?>" target="_blank">
-                Editar
-                </a>
-                
-
-             <a href="<?php echo URL_BASE; ?>produtos/excluir?excluir=<?php echo $cat_eletrica['id'] ?>" onclick="return confirm('Deseja excluir o registro : <?php echo $cat_eletrica['nome'] ?>')""> 
-                Excluir
-                </a>
-            </div>
+          
 
         </div>
         

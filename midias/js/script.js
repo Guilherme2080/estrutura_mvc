@@ -1,6 +1,5 @@
 
 
-
 function datas(){
 
     var dt_hoje = document.getElementById("data_hoje").value;
@@ -52,9 +51,10 @@ function inserirSinal(elem) {
     }
     
     
-    
+       
 
 }
+
 
 
 

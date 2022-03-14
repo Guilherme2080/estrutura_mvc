@@ -1,3 +1,5 @@
+
+
 <html>
     <!--  o que estiver nesse arquivo será mostrado 
     em todas as páginas que ultilize o carregarModelo  -->
@@ -29,11 +31,11 @@
         
 
                 <li class="lap_na_barra">
-                   Lourenço AutoPeças
+                    Lourenço AutoPeças
                 </li>
 
-                <a href="<?php echo URL_BASE;?>clientes">
-                    <li class="">   
+                <a class="c_sele" href="<?php echo URL_BASE;?>clientes">
+                    <li>   
                                 
                         Clientes
                                 
@@ -42,8 +44,8 @@
             
 
 
-                <a href="<?php echo URL_BASE;?>produtos">
-                    <li>
+                <a class="p_sele" href="<?php echo URL_BASE;?>produtos">
+                    <li  >
                         
                         Estoque
                     
@@ -51,8 +53,8 @@
                     </li>
                 </a>
                 
-                <a href="<?php echo URL_BASE; ?>servicos">
-                    <li class="">
+                <a class="s_sele" href="<?php echo URL_BASE; ?>servicos">
+                    <li  >
                         
                     
                         Serviços     
@@ -61,23 +63,25 @@
                     </li>
                 </a>
                 
-                <a href="<?php echo URL_BASE;?>dados">
+                <a class="d_sele" href="<?php echo URL_BASE;?>dados">
 
-                    <li class=" ">           
+                    <li>           
                     
-                        
-                        dados
+                        Dados
                     
                     </li>
                 </a>
 
-                <a href="<?php echo URL_BASE;?>parceiros">
+                <a class="pa_sele" href="<?php echo URL_BASE;?>parceiros">
 
-                    <li class="">           
-                    
-                    
-                        Parceiros
-                    
+                    <li>     
+                        Parceiros                    
+                    </li>
+                </a>
+                <a class="ca_sele" href="<?php echo URL_BASE;?>caixa">
+
+                    <li>     
+                        Caixa                    
                     </li>
                 </a>
                 
@@ -88,8 +92,7 @@
     </div>
 
         
-        
-    
+
     
 <!--  funcao advinda do controle.php  está integrando o modelo fixo geral com os variaveis  --> 
         <?php $this->carregarVisualNoModelo($visualNome, $visualDados);?>

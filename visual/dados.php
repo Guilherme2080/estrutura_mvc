@@ -1,3 +1,23 @@
+<?php  
+
+$url = ($_SERVER['REQUEST_URI']); 
+  $url_final = explode("/", $url);
+    
+?>
+<?php if($url_final[1] == "dados"){ ?>
+
+<style>
+    .d_sele{        
+        float: left;
+        line-height: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #098aaa;
+    }
+</style>
+
+<?php }?>
+
 
 <div class="topo_pgs">
       <h1>Dados<h4>Uma coleção de informações importantes referente ao sistema</h4></h1>
