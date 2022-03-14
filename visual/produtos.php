@@ -384,9 +384,7 @@ tr{
     display: table-row;
 }
 
-tbody{
-   
-}
+
 
 </style>
     <div class="lista_produtos estoque_min_personalizado">
