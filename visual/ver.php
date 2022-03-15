@@ -1,20 +1,14 @@
 
+<div class="limites_emp_disp">
+  
+    <h5 class="estilo_h5_limite">  Cliente:   <?php echo " ". @$nota[0]['nome']; ?></h5>   
+    <h5 class="estilo_h5_limite">  Telefone:  <?php echo @$nota[0]['telefone']; ?> </h5>   
+    <h5 class="estilo_h5_limite">  Placa:     <?php echo @$nota[0]['placa']; ?> </h5>   
+    <h5 class="estilo_h5_limite">  Endereço:  <?php echo @$nota[0]['endereco']; ?> </h5>   
+    <h5 class="estilo_h5_limite">  Observação:<?php echo @$nota[0]['observacao']; ?> </h5>   
 
-    
-<div class="bt_voltar hvr-bounce-out">
-        <a href="<?php echo URL_BASE ?>clientes">Voltar</a> 
 </div>
 
-
-
-
-<div class="exibe_nome_clinte remover">
-    <h1>  Cliente:    <p><?php echo " ". @$nota[0]['nome']; ?></p> </h1>   
-    <h1>  Telefone:   <p><?php echo @$nota[0]['telefone']; ?></p> </h1>   
-    <h1>  Placa:      <p><?php echo @$nota[0]['placa']; ?></p> </h1>   
-    <h1>  Endereço:   <p><?php echo @$nota[0]['endereco']; ?></p> </h1>   
-    <h1>  Observação: <p><?php echo @$nota[0]['observacao']; ?></p> </h1>   
-</div>
 
 
 <br>

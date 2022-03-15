@@ -163,6 +163,7 @@ body { overflow-x: hidden; }
   float: left;
   min-height: 35px;
   margin-bottom: 10px;
+  background-color: #009999;
   
 
  
@@ -840,9 +841,7 @@ height: 15px;
     color:#fff;
 }
 
-.lista_clientes table{
-    margin-top: 20px;
-}
+
 
 .lista_clientes{
    width: 1000px;
@@ -851,10 +850,12 @@ height: 15px;
     
     }
     
-    .cor_lista_clientes{
-    
-    }
-    
+   
+    .lista_clientes table{
+        float: left;
+        margin-top: 20px;
+        border:1px solid #B8B9B9;
+    } 
   
   
 
@@ -866,28 +867,24 @@ height: 15px;
 .lista_clientes th {
   
      text-transform: uppercase;
-     font-weight: normal;
-     border-bottom: 12px solid #fff;
+     font-weight: normal;     
      font-size: 11px;
-     background-color:#009999 ;
-     color:#fff;
-     padding: 10px;
+     background-color:#B8B9B9;
+     color:rgb(6, 8, 107);
+     padding: 8px;
+     font-weight: bold;
+     font-family: cursive;
 }
 .lista_clientes td{
-     color:#3D018C;
+    color:#3D018C;
     font-size: 13px;
     padding: 10px;
-    background-color: #eee;
-    border-bottom: 10px solid #fff;
-}
-
-
-
-
-.lista_financa table{
-     
+    background-color: #fff;
+    border-bottom: 1px solid #B8B9B9;
    
 }
+
+
 
 .lista_financa{
    
@@ -941,118 +938,9 @@ height: 15px;
 
 
 
-/*
-.lista_clientes thead tr{   
-    height: 40px;
-    text-transform: uppercase;
-    font-style: normal;
 
 
 
-}
-
-.lista_clientes td a{
-    text-decoration: none;
-}
-
-.lista_clientes thead th{   
-    background-color: #660066;
-    color:#fff;
-
-}
-
-.lista_clientes tbody tr{    
-    height: 30px;
-    text-transform: uppercase;
-    font-size: 14px;
-    background-color: #eee;
-}
-
-
-
-
-
-*/
-
-
-
-
-
-/*
-.lista_produtos{ 
-  
-    margin-bottom: 50px;
-}
-
-.lista_produtos table{
-    width: 500px;
-        margin: auto;
-}
-
-.lista_produtos thead tr{
-    font-size: 11px; 
-    
-    height: 40px;
-    text-transform: uppercase;
-    font-style: normal;
-}
-
-
-.lista_produtos td {
-word-wrap: break-word;
-}
-
-.lista_produtos td a{
-  
-    text-decoration: none;
-     background-color: #fff;
-}
-.lista_clientes td{
-    background-color: #fff;
-}
-.lista_financa td{
-    background-color: #fff;
-}
-.lista_produtos td img , .lista_clientes td img , .lista_financa td img{
-width: 15px;
-height: 15px;
-}
-
-.diminuir{
-    padding: 0;  
-    font-size: 9px;
-}
-
-
-.lista_produtos td {
- 
-}
-
-.lista_produtos thead th{   
-    background-color: #660066;
-    color:#fff;
-   
-
-}
-
-.lista_produtos tbody tr{    
-    height: 30px;
-    text-transform: uppercase;
-    font-size: 12px;  	
-    border: 1px solid #ccc;
-}
-*/
-
-
-
-.exib_aplic{
-    
-}
-
-
-.exib_local{
-   
-}
 
 /* ------------------------PARTE DA NOTA--------------------------------------------*/
 
@@ -1109,15 +997,9 @@ height: 15px;
 .nota form input{
     
 }
-.bt_cli{
-   background-color: #22B731;
-   color:#fff;
-     
-}
-.mover_form{
-    border:1px solid #22B731;
-    margin-left: 165px;
-}
+  
+
+
 
 
 .nota_cliente input{      
@@ -1725,15 +1607,18 @@ label {
 
 .inserir_produto{
      border: 0px solid #840b0b; 
-height: 35px;
-    width: 1000px;
-    margin:  auto;
+     height: 35px;
+     width: 1000px;
+     margin-left: 167px;
+     float: left;
+     
   
  
 }
 .bt_inserir_n{
     color:#fff;
-    background-color: #352784;
+    background-color: #0C447C;
+    border-radius: 5px;
 }
 
 .inserir_produto input{
@@ -2744,26 +2629,8 @@ color: rgb(85, 85, 85);
     border-bottom: 1px solid red;
 }
 
-.opcoes_lst_prod{
-    text-align: center;
-    margin-bottom: 10px;
-   width: 100%;
- 
-  float: left;
-}
-.opcoes_lst_prod p{
-    margin: 0 auto;
-    width: 300px;
-   padding: 10px;  
-   background-color: #00C0EF;
-   color:#fff;
-  
-}
-.qtde_clientes{   
-    margin:0 auto;
-    width: 980px;
-    
-}
+
+
 
 .quadros_dados{      
     margin-top: 50px;
@@ -3261,7 +3128,7 @@ inputs_inser_caixa p{
 .estilo_h5_limite{
     
     background-color: #463c69;
-    color:rgb(165, 155, 155);
+    color:rgb(211, 201, 201);
 }
 
 .exibir_soma {

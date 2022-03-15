@@ -30,22 +30,6 @@ $url = ($_SERVER['REQUEST_URI']);
 <?php } ?>
 
 
-<div class="topo_pgs">
-    <h1>Produtos<h4>Para encontrar um produto no estoque realize uma pesquisa</h4></h1>
-
-
-    <div class="bt_voltar hvr-bounce-out">
-        <a href="<?php echo URL_BASE ?>arealogada">Voltar</a> 
-    </div>
-
-</div>
-<br>
-
-
-
-
-
-
 
 <div class="pesquisa_prod remover" >
     <form method="POST" action="<?php echo URL_BASE ?>produtos">

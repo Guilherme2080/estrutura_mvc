@@ -21,16 +21,6 @@ $url = ($_SERVER['REQUEST_URI']);
 
 
 
-<div class="topo_pgs">
-    <h1>Serviços</h1>
-
-
-    <div class="bt_voltar hvr-bounce-out">
-        <a href="<?php echo URL_BASE ?>arealogada">Voltar</a> 
-    </div>
-</div>
-
-
 
 <br>
 

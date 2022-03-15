@@ -19,13 +19,6 @@ $url = ($_SERVER['REQUEST_URI']);
 <?php }?>
 
 
-<div class="topo_pgs">
-      <h1>Dados<h4>Uma coleção de informações importantes referente ao sistema</h4></h1>
-    
-<div class="bt_voltar hvr-bounce-out">
-    <a href="<?php echo URL_BASE ?>arealogada">Voltar</a> 
-</div>
-</div>
 
    
 <div class="quadros_dados">
@@ -58,16 +51,7 @@ $url = ($_SERVER['REQUEST_URI']);
     -->
  </div> 
     
-    
-    
-    
-    
    
-    
-    
-    
-    
-    
     
     <div class="graficos">
         

@@ -19,13 +19,13 @@ $url_final = explode("/", $url);
 
 <?php }?>
 
-<div class="topo_pgs">
-        
-<div class="bt_voltar hvr-bounce-out">
-    <a href="<?php echo URL_BASE ?>arealogada">Voltar</a> 
+<div class="limites_emp_disp">
+    
+    <h5 class="estilo_h5_limite">Clientes Cadastrados: <?php if(isset($quantidade_clientes[0][0])){ echo $quantidade_clientes[0][0];} ?></h5>
+    
 </div>
-  
-</div>
+
+
 
 <div class="pesquisa_prod remover" >
     <form method="POST" action="<?php echo URL_BASE ?>clientes">
@@ -38,54 +38,45 @@ $url_final = explode("/", $url);
 
 <div class="clientes" >
     
- 
-     <label class="remover estilo_inserir" for="toggle-1">
-        <p>INSERIR</p>
-    </label>
-<input type="checkbox" id="toggle-1">
-<!--<div id="mostra2">
-       <input id="filtro-nome" placeholder="buscar por nome">
-       <input id="filtro-referencia" placeholder="buscar por placa">  
-</div>       
--->
    
     
     
  
     <?php  if (isset($excluir)): //se houver id siginifica que existira alteração  ?>
-    
-        <form  class="mover_form" method="POST" action="<?php URL_BASE ?>excluir?excluir=<?php echo $excluir ?>">
+        <div class="inserir_produto">
+            <form  method="POST" action="<?php URL_BASE ?>excluir?excluir=<?php echo $excluir ?>">
 
-            <input  required=""   name="nome" type="text" value="<?php echo $selecionar_cliente['nome'] ?>" placeholder="NOME DO CLIENTE">
-            <input  type="text"  name="telefone" value="<?php echo $selecionar_cliente['telefone'] ?>" placeholder="TELEFONE"><br>
-            <input  type="text"  name="cpf" value="<?php echo $selecionar_cliente['cpf'] ?>" placeholder="CPF"><br>
-            <input  type="text"  name="endereco"  value="<?php echo $selecionar_cliente['endereco'] ?>" placeholder="ENDEREÇO"><br>
-            <input  type="text"  name="placa" value="<?php echo $selecionar_cliente['placa'] ?>" placeholder="PLACA"><br>
-            <input  type="text"   name="observacao" value="<?php echo $selecionar_cliente['observacao'] ?>" placeholder="MAIS DETALHES"><br>
-            <input class="bt_cli"  type="submit" value="Excluir"><br>
+                <input  required=""   name="nome" type="text" value="<?php echo $selecionar_cliente['nome'] ?>" placeholder="NOME DO CLIENTE">
+                <input  type="text"  name="telefone" value="<?php echo $selecionar_cliente['telefone'] ?>" placeholder="TELEFONE"><br>
+                <input  type="text"  name="cpf" value="<?php echo $selecionar_cliente['cpf'] ?>" placeholder="CPF"><br>
+                <input  type="text"  name="endereco"  value="<?php echo $selecionar_cliente['endereco'] ?>" placeholder="ENDEREÇO"><br>
+                <input  type="text"  name="placa" value="<?php echo $selecionar_cliente['placa'] ?>" placeholder="PLACA"><br>
+                <input  type="text"   name="observacao" value="<?php echo $selecionar_cliente['observacao'] ?>" placeholder="MAIS DETALHES"><br>
+                <input class="bt_inserir_n"  type="submit" value="Excluir"><br>
 
 
-        </form>
-
+            </form>
+        </div>
     <?php endif; ?>
     
    
     
     <?php  if (isset($id)): //se houver id siginifica que existira alteração  ?>
     
-        <form class="mover_form" method="POST" action="<?php URL_BASE; ?>editar?id=<?php echo $id ?>">
+        <div class="inserir_produto">
+            <form method="POST" action="<?php URL_BASE; ?>editar?id=<?php echo $id ?>">
 
-            <input  required="" name="nome" type="text" value="<?php echo $selecionar_cliente['nome'] ?>"  placeholder="NOME DO CLIENTE">
-            <input  type="text" name="telefone" value="<?php echo $selecionar_cliente['telefone'] ?>" placeholder="TELEFONE"><br>
-            <input  type="text" name="cpf" value="<?php echo $selecionar_cliente['cpf'] ?>" placeholder="CPF"><br>
-            <input  type="text" name="endereco"  value="<?php echo $selecionar_cliente['endereco'] ?>" placeholder="ENDEREÇO"><br>
-            <input  type="text"  name="placa" value="<?php echo $selecionar_cliente['placa'] ?>" placeholder="PLACA"><br>
-            <input  type="text"  name="observacao" value="<?php echo $selecionar_cliente['observacao'] ?>" placeholder="MAIS DETALHES"><br>
-            <input class="bt_cli" type="submit" value="Atualizar"><br>
+                <input  required="" name="nome" type="text" value="<?php echo $selecionar_cliente['nome'] ?>"  placeholder="NOME DO CLIENTE">
+                <input  type="text" name="telefone" value="<?php echo $selecionar_cliente['telefone'] ?>" placeholder="TELEFONE"><br>
+                <input  type="text" name="cpf" value="<?php echo $selecionar_cliente['cpf'] ?>" placeholder="CPF"><br>
+                <input  type="text" name="endereco"  value="<?php echo $selecionar_cliente['endereco'] ?>" placeholder="ENDEREÇO"><br>
+                <input  type="text"  name="placa" value="<?php echo $selecionar_cliente['placa'] ?>" placeholder="PLACA"><br>
+                <input  type="text"  name="observacao" value="<?php echo $selecionar_cliente['observacao'] ?>" placeholder="MAIS DETALHES"><br>
+                <input class="bt_inserir_n" type="submit" value="Atualizar"><br>
 
 
-        </form>
-
+            </form>
+       </div>
     <?php endif; ?>
     
     
@@ -95,35 +86,34 @@ $url_final = explode("/", $url);
     
     <?php if (!isset($id) && !isset($excluir)): ?>
 
+        <div class="inserir_produto">
+            <form   method="POST" action="<?php URL_BASE ?>clientes">
+
+                <input  required="" name="nome" type="text" placeholder="NOME DO CLIENTE">
+                <input  type="text" name="telefone" placeholder="TELEFONE"><br>
+                <input  type="text" name="cpf" placeholder="CPF"><br>
+                <input  type="text" name="endereco"  placeholder="ENDEREÇO"><br>
+                <input  type="text"  name="placa" placeholder="PLACA"><br>
+                <input  type="text"  name="observacao" placeholder="MAIS DETALHES"><br>
+                <input class="bt_inserir_n"  type="submit" value="Cadastrar"><br>
 
 
-        <form class="mover_form" id="mostra1" method="POST" action="<?php URL_BASE ?>clientes">
+            </form>
+        </div>
+      
 
-            <input  required="" name="nome" type="text" placeholder="NOME DO CLIENTE">
-            <input  type="text" name="telefone" placeholder="TELEFONE"><br>
-            <input  type="text" name="cpf" placeholder="CPF"><br>
-            <input  type="text" name="endereco"  placeholder="ENDEREÇO"><br>
-            <input  type="text"  name="placa" placeholder="PLACA"><br>
-            <input  type="text"  name="observacao" placeholder="MAIS DETALHES"><br>
-            <input class="bt_cli"  type="submit" value="Cadastrar"><br>
-
-
-        </form>
-<br>
     <?php endif; ?>
     
     
     
     
     
-    <br>
-    
-    <div class="qtde_clientes opcoes_lst_prod">
-        <p>Clientes Cadastrados: <?php if(isset($quantidade_clientes[0][0])){ echo $quantidade_clientes[0][0];} ?></p> <br>   
-    </div>
+  
+ 
     
         <br>
         <div class="cor_lista_clientes">
+
         <div class="lista_clientes">
         <!-- TEM QUE FICAR ANTES DO FOREACH PRA NÃO FICAR REPETINDO  -->
          <table id="lista"  border="0" cellspacing="0">
