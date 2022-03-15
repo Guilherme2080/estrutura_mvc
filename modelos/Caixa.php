@@ -53,7 +53,7 @@ class caixa extends modelo{
 
 
         public function somaCaixa(){
-            $sql = "SELECT SUM(valor)FROM caixa";
+            $sql = "SELECT SUM(valor)FROM caixa WHERE tipo != 'nfe'";
             $sql = $this->banco->query($sql);
             $dados = array();
     

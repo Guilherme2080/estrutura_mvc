@@ -1,6 +1,6 @@
 
 <?php  
-@$maximo = 64.800;
+@$maximo = 64800;
 $url = ($_SERVER['REQUEST_URI']); 
   $url_final = explode("/", $url);
     
@@ -19,9 +19,14 @@ $url = ($_SERVER['REQUEST_URI']);
 
 <?php  }?>
 
-<h5>Restante Guilherme: R$<?php @print_r(number_format($somanfegui[0][0], 2, ',', '.')-$maximo); ?> </h5> 
-<h5>Restante Natalia: R$<?php @print_r(number_format($somanfenatt[0][0], 2, ',', '.')-$maximo); ?> </h5> 
-<h5>Restante Irani: R$<?php @print_r(number_format($somanfeirani[0][0], 2, ',', '.')-$maximo); ?> </h5> 
+<div class="limites_emp_disp">
+    <h5 class="estilo_h5_limite">Restante Guilherme: R$<?php @print_r($maximo - number_format($somanfegui[0][0], 2, ',', '.')); ?> </h5> 
+    <h5 class="estilo_h5_limite">Restante Natalia: R$<?php @print_r($maximo - number_format($somanfenatt[0][0], 3, ',', '.')); ?> </h5> 
+    <h5 class="estilo_h5_limite">Restante Irani: R$<?php @print_r($maximo - number_format($somanfeirani[0][0], 3, ',', '.')); ?> </h5> 
+    <h5 class="exibir_soma" <?php if($soma_caixa[0][0] < 0){ ?> id="exibir_soma_negativa"; style=".exibir_soma{display:none;}" <?php } ?> >Saldo em Caixa:  R$ <?php @print_r(number_format($soma_caixa[0][0], 2, ',', '.')); ?> </h5> 
+    
+</div>
+
 
 
 
@@ -109,10 +114,7 @@ $url = ($_SERVER['REQUEST_URI']);
 
 
         <!-- --------------------------------------------------EXIBIÇÃO DOS DADOS -----------------------------           -->
-        <div class="exibir_soma"  <?php if($soma_caixa[0][0] < 0){ ?> id="exibir_soma_negativa"; style=".exibir_soma{display:none;}" <?php } ?>  >
-            <p>Saldo em Caixa:  R$ <?php  echo $soma_caixa[0][0]; ?></p>
-        </div>
-
+       
 
         <div class="tabela_caixa cor_a_lancar_caixa estilo_componentes_alancar">
 
@@ -144,7 +146,9 @@ $url = ($_SERVER['REQUEST_URI']);
                                 <td style="border-radius: 4px 0px 0px 4px ;"> <?php echo $result_caixa_lanc['data']?> </td>
                                 <td> <?php echo $result_caixa_lanc['data_vencimento']?> </td>
                                 <td> <?php echo $result_caixa_lanc['descricao']?> </td>
-                                <td> <?php echo $result_caixa_lanc['valor']?> </td>
+
+                               <td>R$ <?php echo number_format($result_caixa_lanc['valor'], 2, ',', '.')?> </td>
+                                
                                 <td> <?php echo $result_caixa_lanc['tipo']?> </td>
                                 <!-- <td><a href="<?php echo URL_BASE;?>caixa/excluir?excluir=<?php echo $result_caixa['id']?>">Excluir</a></td>
                                 <a href="excluir.php" onclick="return confirm('Deseja excluir esse registro ?')">Excluir</a> -->
@@ -198,7 +202,7 @@ $url = ($_SERVER['REQUEST_URI']);
                                 <td> <?php echo $result_caixa['data']?> </td>
                                 <td> <?php echo $result_caixa['data_vencimento']?> </td>
                                 <td> <?php echo $result_caixa['descricao']?> </td>
-                                <td> <?php echo $result_caixa['valor']?> </td>
+                                <td>R$ <?php echo number_format($result_caixa['valor'], 2, ',', '.')?> </td>
                                 <td> <?php echo $result_caixa['tipo']?> </td>
                                 <!-- <td><a href="<?php echo URL_BASE;?>caixa/excluir?excluir=<?php echo $result_caixa['id']?>">Excluir</a></td>
                                 <a href="excluir.php" onclick="return confirm('Deseja excluir esse registro ?')">Excluir</a> -->
