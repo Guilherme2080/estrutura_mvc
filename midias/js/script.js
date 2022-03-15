@@ -5,14 +5,32 @@ function datas(){
     var dt_hoje = document.getElementById("data_hoje").value;
     var dt_vencimento = document.getElementById("d_vencimento").value;
     
-   
-        
+     
+
     if(dt_hoje < dt_vencimento ){
+    
+        var dt_venc_dia = dt_vencimento.split("-"); //esta explodindo os itens da data
+        var dt_dia = dt_hoje.split("-"); //esta explodindo os itens da data
+    
+    
+
+        if( dt_dia[2] < dt_venc_dia[2] && dt_dia[0] ){        
+            checked_lancamento.checked = true;
+
+        } else if(dt_dia[0] < dt_venc_dia[0] ){
+            checked_lancamento.checked = true;
+            
+        } else if(dt_dia[1] < dt_venc_dia[1]) {
+            checked_lancamento.checked = true;
+        }
         
+    
         checked_lancamento.checked = true;
         
-
-    } else{
+    }
+    
+    
+    else{
         checked_lancamento.checked = false;
     }
     

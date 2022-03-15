@@ -13,38 +13,45 @@ class caixaControle extends controle {
                  
                     if(isset($_POST['lancamento_futuro'])){
 
+                        
+                        $tipo_empresa = addslashes($_POST['tipo_empresa']);
                         $data_caixa = addslashes($_POST['data_caixa']);
                         $data_vencimento = addslashes($_POST['data_vencimento']);
                         $descricao_caixa = addslashes($_POST['descricao_caixa']);
                         $valor_caixa = addslashes($_POST['valor_caixa']);
                         $tipo = addslashes($_POST['tipo']);
                         
-                        $caixa->inserirCaixaLancamento($data_caixa, $data_vencimento, $descricao_caixa, $valor_caixa, $tipo);
+                        $caixa->inserirCaixaLancamento($tipo_empresa, $data_caixa, $data_vencimento, $descricao_caixa, $valor_caixa, $tipo);
                         
 
                     } else{
-
+                        
+                        $tipo_empresa = addslashes($_POST['tipo_empresa']);
                         $data_caixa = addslashes($_POST['data_caixa']);
                         $data_vencimento = addslashes($_POST['data_vencimento']);
                         $descricao_caixa = addslashes($_POST['descricao_caixa']);
                         $valor_caixa = addslashes($_POST['valor_caixa']);
                         $tipo = addslashes($_POST['tipo']);
                         
-                        $caixa->inserirCaixa($data_caixa, $data_vencimento, $descricao_caixa, $valor_caixa, $tipo);
+                        $caixa->inserirCaixa($tipo_empresa, $data_caixa, $data_vencimento, $descricao_caixa, $valor_caixa, $tipo);
                         
                     }
                 
-                
-                   
-                    
 
                 }
 
-                 
+            
+                
                 $resultado_caixa = $caixa->selecionarCaixa();
                 $resultado_caixa_lancamento = $caixa->selecionarCaixaLancamento();
-                 $soma_caixa = $caixa->somaCaixa();
+                $soma_caixa = $caixa->somaCaixa();
 
+                
+                $somanfegui = $caixa->somaNfeGui();
+                $somanfenatt = $caixa->somaNfeNatt();
+                $somanfeirani = $caixa->somaNfeIrani();
+                
+                
         
         } else {
             
@@ -54,9 +61,13 @@ class caixaControle extends controle {
         }
       
         $dados = array(
+
           'resultado_caixa' => @$resultado_caixa,
           'resultado_caixa_lancamento' => @$resultado_caixa_lancamento,
-          'soma_caixa' => @$soma_caixa
+          'soma_caixa' => @$soma_caixa,
+          'somanfegui' =>$somanfegui,
+          'somanfenatt' =>$somanfenatt,
+          'somanfeirani' =>$somanfeirani,
         );
         //onde é feito o carregamento do visual
         $this->carregarModelo('caixa', $dados);
@@ -127,14 +138,7 @@ class caixaControle extends controle {
             }
 
 
-                    
-
-
-
-
-
-
-
+            
 
 
             $dados = array(

@@ -1,6 +1,6 @@
 
 <?php  
-
+@$maximo = 64.800;
 $url = ($_SERVER['REQUEST_URI']); 
   $url_final = explode("/", $url);
     
@@ -17,7 +17,12 @@ $url = ($_SERVER['REQUEST_URI']);
     }
 </style>
 
-<?php }?>
+<?php  }?>
+
+<h5>Restante Guilherme: R$<?php @print_r(number_format($somanfegui[0][0], 2, ',', '.')-$maximo); ?> </h5> 
+<h5>Restante Natalia: R$<?php @print_r(number_format($somanfenatt[0][0], 2, ',', '.')-$maximo); ?> </h5> 
+<h5>Restante Irani: R$<?php @print_r(number_format($somanfeirani[0][0], 2, ',', '.')-$maximo); ?> </h5> 
+
 
 
 <div class="pg_caixa">
@@ -27,13 +32,42 @@ $url = ($_SERVER['REQUEST_URI']);
         <div class="manter_layout_caixa">
         <form method="POST"  action="<?php URL_BASE ?>caixa">
 
+        <div class="option_caixa alinha_inputs_data" id="selecionar_tipo">
+                    <p>tipo</p>
+                    
+                    <select onchange="inserirSinal(this)"  name="tipo" >
+                    <option>Escolha um tipo</option>
+                    
+                    <option value="nfe">NFE de Compra</option>
+                    <option  value="dinheiro">Dinheiro</option>
+                    <option value="cartao">Cartao</option>
+                    <option value="boleto">Boleto pra pagar</option>
+                    
+
+                </select>
+        </div>
+
+        <div class="option_caixa alinha_inputs_data">
+                    <p>Empresa</p>
+                    
+                    <select  name="tipo_empresa" >
+                        <option>Escolha a empresa</option>
+                        
+                        <option value="gui">Guilherme</option>
+                        <option  value="irani">Irani</option>
+                        <option value="natt">Natalia</option>
+                                        
+                    </select>
+        </div>
+
+
             <div class="data_caixa alinha_inputs_data inputs_inser_caixa">
-                <p>Data Cadastro</p>
+                <p>Data de hoje</p>
                 <input type="text" name="data_caixa" id="data_hoje" value="<?php  echo date("d-m-Y") ?>">
             </div>
             
             <div class="data_vencimento alinha_inputs_data inputs_inser_caixa" id="data_vencimento">
-                <p>Data vencimento</p>
+                <p>Data do documento</p>
                 <input type="text" onchange="datas()" name="data_vencimento" id="d_vencimento" value="<?php  echo date("d-m-Y") ?>">
             </div>
         
@@ -42,17 +76,7 @@ $url = ($_SERVER['REQUEST_URI']);
                 <input type="text" name="valor_caixa" id="valor_caixa">
             </div>
 
-            <div class="option_caixa alinha_inputs_data" id="selecionar_tipo">
-                    <p>tipo</p>
             
-                    <select onchange="inserirSinal(this)"  name="tipo" >
-                    <option>Escolha um tipo</option>
-                    <option  value="dinheiro">Dinheiro</option>
-                    <option value="cartao">Cartao</option>
-                    <option value="boleto">Boleto pra pagar</option>
-
-                </select>
-            </div>
             <div class="desc_caixa alinha_inputs_data inputs_inser_caixa">
                 <p>descrição </p>
                 <input  type="text" name="descricao_caixa">
@@ -97,6 +121,7 @@ $url = ($_SERVER['REQUEST_URI']);
                         <thead>
                             <tr>
 
+                                <th>Empresa</th>
                                 <th>data</th>
                                 <th>data vencimento</th>
                                 <th>descricao</th>
@@ -115,6 +140,7 @@ $url = ($_SERVER['REQUEST_URI']);
             
                         <tbody>
                             <tr  align=center>
+                                <td> <?php echo $result_caixa_lanc['tipo_empresa']?> </td>
                                 <td style="border-radius: 4px 0px 0px 4px ;"> <?php echo $result_caixa_lanc['data']?> </td>
                                 <td> <?php echo $result_caixa_lanc['data_vencimento']?> </td>
                                 <td> <?php echo $result_caixa_lanc['descricao']?> </td>
@@ -149,6 +175,7 @@ $url = ($_SERVER['REQUEST_URI']);
                         <thead>
                             <tr>
 
+                                <th>empresa</th>
                                 <th>data</th>
                                 <th>data vencimento</th>
                                 <th>descricao</th>
@@ -166,6 +193,8 @@ $url = ($_SERVER['REQUEST_URI']);
             
                         <tbody>
                             <tr  align=center>
+
+                                <td> <?php echo $result_caixa['tipo_empresa']?> </td>
                                 <td> <?php echo $result_caixa['data']?> </td>
                                 <td> <?php echo $result_caixa['data_vencimento']?> </td>
                                 <td> <?php echo $result_caixa['descricao']?> </td>
