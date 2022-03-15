@@ -21,8 +21,8 @@
 
 <div class="pesquisa_prod remover">
  <form method="POST" action="<?php echo URL_BASE ?>clientes/ver?ver=<?php echo $ver ?>">
-     <input class="ip_pe" name="pesquisa1" placeholder="PESQUISAR PRODUTO/REFERENCIA/APLICAÇÃO">
- <input class="bt_pe" type="submit" value="Encontrar"><br>
+     <input class="ip_pe" name="pesquisa1" placeholder="Pesquise por Nome do Produto, Referencia ou Aplicação">
+ <input class="bt_pe" type="submit" value=""><br>
  </form> 
 </div>
 

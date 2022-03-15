@@ -44,20 +44,21 @@ $url = ($_SERVER['REQUEST_URI']);
 
 
 
-<label class="remover estilo_inserir" for="toggle-1">
-    <p>INSERIR</p>
-</label>
-<input type="checkbox" id="toggle-1">
+
 
 
 <div class="pesquisa_prod remover" >
     <form method="POST" action="<?php echo URL_BASE ?>produtos">
-        <input class="ip_pe" name="pesquisa_prod" placeholder="DIGITE O PRODUTO/REFERENCIA/APLICAÇÃO PRESSIONE ENTER APÓS">
-        <input class="bt_pe" type="submit" value="Buscar"><br>
+        <input class="ip_pe" name="pesquisa_prod" placeholder="Pesquise por Nome do Produto, Referencia ou Aplicação">
+        <input class="bt_pe" type="submit" value=""><br>
     </form> 
     <br>
 </div>   
 
+<label class="remover estilo_inserir" for="toggle-1">
+    <p>INSERIR</p>
+</label>
+<input type="checkbox" id="toggle-1">
 <!-- -----------------DIV QUE CONTEM TODOS BOTOES DE PESQUISA DE ESTOQUE------------ -->
 <div class="estoq_ab">
 <!------------------------------ INICIO BOTAO DE ESTOQUE BAIXO-------------------------------- -->

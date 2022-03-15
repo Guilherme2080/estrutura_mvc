@@ -20,9 +20,10 @@ $url = ($_SERVER['REQUEST_URI']);
 <?php  }?>
 
 <div class="limites_emp_disp">
-    <h5 class="estilo_h5_limite">Restante Guilherme: R$<?php @print_r($maximo - number_format($somanfegui[0][0], 2, ',', '.')); ?> </h5> 
-    <h5 class="estilo_h5_limite">Restante Natalia: R$<?php @print_r($maximo - number_format($somanfenatt[0][0], 3, ',', '.')); ?> </h5> 
-    <h5 class="estilo_h5_limite">Restante Irani: R$<?php @print_r($maximo - number_format($somanfeirani[0][0], 3, ',', '.')); ?> </h5> 
+    
+    <h5 class="estilo_h5_limite">Restante Gui: R$<?php @print_r (number_format($maximo - $somanfegui[0][0], 2, ',', '.')); ?> </h5> 
+    <h5 class="estilo_h5_limite">Restante Natalia: R$<?php @print_r (number_format($maximo - $somanfenatt[0][0], 2, ',', '.')); ?> </h5> 
+    <h5 class="estilo_h5_limite">Restante Irani: R$<?php @print_r (number_format($maximo - $somanfeirani[0][0], 2, ',', '.')); ?> </h5> 
     <h5 class="exibir_soma" <?php if($soma_caixa[0][0] < 0){ ?> id="exibir_soma_negativa"; style=".exibir_soma{display:none;}" <?php } ?> >Saldo em Caixa:  R$ <?php @print_r(number_format($soma_caixa[0][0], 2, ',', '.')); ?> </h5> 
     
 </div>

@@ -29,8 +29,8 @@ $url_final = explode("/", $url);
 
 <div class="pesquisa_prod remover" >
     <form method="POST" action="<?php echo URL_BASE ?>clientes">
-        <input class="ip_pe" name="pesquisa" placeholder="DIGITE O NOME DO CLIENTE">
-        <input class="bt_pe" type="submit" value="Buscar"><br>
+        <input class="ip_pe" name="pesquisa" placeholder="Pesquise por Nome do Cliente">
+        <input class="bt_pe" type="submit" value=""><br>
     </form> 
     <br>
 </div>  
