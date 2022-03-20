@@ -37,65 +37,62 @@
     </style>
 
 
-        <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>QTDE</th>
-                       <!-- <th>nome tecnico</th> -->
-                        <th>local</th>
-                        <th>preco</th>                     
-                        <th>referencia</th>
-                        <th>aplicaçao</th> 
-                        <!-- <th>fornecedor</th>-->
-                       
-                    </tr>
-            
-        </thead>
         
-   <?php } ?>
+<?php } ?>
+
+<!-- --------------------------AQUI É FEITO A PESQUISA PARA INSERÇÃO ----------------------------- -->
 <?php   if(isset($pesquisa1)){  
+
+    echo "
+        <h4 class='mensagem_inser_prod1'>
+           * O Numero de ID é clicavel, 
+            ao clicar nele os campos serõa 
+            preenchidos automaticamente restando
+            apenas o preenchimento da quantidade 
+        </h4>
+        <h6 class='mensagem_inser_prod2'>
+           * O Nome do produto é clicavel, 
+            ao clicar nele será aberto a página 
+            do produto
+        </h6>
+
+        ";
+
     foreach($pesquisa1 as $pesquisa):?>
-               
-      
+            
+    
                 <tbody >
                     <tr align=center>
-                        <td  onclick="enviar(<?php echo $pesquisa['id'] ?>, '<?php echo $pesquisa['nome'] ?>',<?php echo $pesquisa['preco'] ?>)" > <?php echo $pesquisa['id']?> </td>
-                        <td  > <?php echo $pesquisa['nome']?> </td>
+                        <td class="passar_mouse" onclick="enviar(<?php echo $pesquisa['id'] ?>, '<?php echo $pesquisa['nome'] ?>',<?php echo $pesquisa['preco'] ?>)" > <?php echo $pesquisa['id']?> </td>
+                        
+                       <td><a href="<?php echo URL_BASE; ?>produtos/ver?ver=<?php echo $pesquisa['id'] ?>" target="_blank" title="Clique para ver a página do produto"> <?php echo $pesquisa['nome']?> </a> </td>
                         <td id="nome_prod" > <?php echo $pesquisa['quantidade']?> </td>
-                        <!--<td> <?php// echo $pesquisa['nome_tecnico']?> </td> -->
+                        
                         <td id="pequenar" > <?php echo $pesquisa['local']?> </td>
                         <td id="p_preco" onclick="enviar(<?php echo $pesquisa['preco']?>)"> <?php echo $pesquisa['preco']?> </td>                      
                         <td id="pequenar"> <?php echo $pesquisa['referencia']?> </td>
                         <td id="pequenar"> <?php echo $pesquisa['aplicacao']?> </td> 
-                       <!-- <td> <?php// echo $pesquisa['fornecedor']?> </td>  -->
+                    
                         
                     </tr>
-                     
-               </tbody>
-               
-           
+                    
+                </tbody>
+            
+        
 <?php endforeach; }?>
 
     </table>
     </div> 
 <br>
+<!-- --------------------------AQUI PRA CIMA É FEITO A PESQUISA PARA INSERÇÃO ----------------------------- -->
 
 
-               
-             
-               
-               
-               
-               
-               
-               
-               
-               
-               
-               
+
+
+
 <div class="nota_cliente">    
     
+
 
 <!-- Exibe o nome do cliente que é recebido na funcao public function ver() no arquivo clientesControle
 lá também é atribuida a variavel e enviada dentro do array, a configuracao do mvc
@@ -118,7 +115,7 @@ uma edição, nesse caso ela está vazia , logo será feita a inserção e não 
     
 
 <form method="POST" action="<?php echo URL_BASE ?>clientes/ver?ver=<?php echo $ver ?>">
-       
+
     <input id="recebe_nome" name="nome_produto" type="text"  placeholder="NOME DO PRODUTO">    
     <input id="recebe_id" name="id_produto" type="text"  placeholder="N. DE ID DO PRODUTO">
     <input type="text"  name="quantidade"  placeholder="QUANTIDADE">
@@ -128,7 +125,7 @@ uma edição, nesse caso ela está vazia , logo será feita a inserção e não 
 
 </form>
 
-     <br> 
+    <br> 
 </div>
 
     
@@ -268,18 +265,13 @@ uma edição, nesse caso ela está vazia , logo será feita a inserção e não 
 
 </div>
 
-<input class="remover bt_imprimir" type="button" value="IMPRIMIR FOLHA" onClick="window.print()"/>
-<a class="remover bt_imp_cupom" href="<?php echo URL_BASE;?>cupom?ver=<?php echo $ver ?>">IMPRIMIR CUPOM</a>
+<input class="remover bt_imprimir" type="button" value="IMPRIMIR" onClick="window.print()"/>
+<a class="remover bt_imp_cupom" href="<?php echo URL_BASE;?>cupom?ver=<?php echo $ver ?>">CUPOM</a>
     
 
 
-<label class="remover bt_historico" for="toggle-1">
-        VER HISTORICO
-</label>
-<input type="checkbox" id="toggle-1">
 
-
-<div class="historico" id="mostra">
+<!-- <div class="historico" id="mostra">
         
         <table width="70%"  align=center>
             <thead>
@@ -328,8 +320,79 @@ uma edição, nesse caso ela está vazia , logo será feita a inserção e não 
      
 
     
-</div>
+</div> -->
 
    
    
  
+
+
+
+
+
+
+
+<a class="bt_historico remover" href="#abrirModal">Historico do cliente</a>
+<div id="abrirModal" class="modal">
+  <a href="#fechar" title="Fechar" class="fechar">X</a>
+
+        <div class="historico">
+                
+                <table align=center>
+                    <thead>
+                    <tr >
+                                <th>DESCRIÇÃO</th>
+                                <th>QTDE</th>
+                                <th>VALOR</th>
+                                <th>V.TOTAL</th>
+                                <th>DATA</th>                       
+                            
+                    </tr>
+                </thead>
+                
+            
+            
+                <h4 class="n_historico"> HISTORICO</h4>
+                
+                <div class="total_geral">          
+                    <?php  echo "TOTAL DO HISTORICO ".' R$ ' . number_format($soma_geral_historico['total_geral_historico'], 2, ',', '.') ?>
+                </div>
+                
+                
+                    <?php
+                    if (isset($nota_historico)) {
+                        foreach ($nota_historico as $nota):
+                            ?>  
+
+                
+                <tbody>
+        
+                                <tr align="center">
+                                    <td class="tm_desc"><?php echo $nota['nome_produto'] ?> </td>
+                                    <td> <?php echo $nota['quantidade'] ?>  </td>
+                                    <td>   <?php echo $nota['preco'] ?>          </td>
+                                    <td> <?php echo 'R$' . number_format($nota['valor_total'], 2, ',', '.') ?> </td>
+                                    <td> <?php echo date("d/m/Y H:i:s", strtotime($nota['data'])); ?>  </td>
+                                    
+                                </tr>
+            
+                </tbody>
+            
+        <?php endforeach; } ?>  
+                </table>
+
+        
+            
+
+            
+        </div>
+
+
+
+
+
+
+
+
+
+</div>

@@ -543,7 +543,10 @@ tr{
 <!-- 
 AQUI INICIA A LISTAGEM DE PRODUTOS PARA O TERMO PESQUISADO ----- EM QUADRADOS -->
 <?php if (isset($pesquisa_prod)) { ?>  
- <div class="lista_prod_novo">
+ 
+    <a href="<?php echo URL_BASE; ?>produtos/ver?ver=<?php echo $exibir_p['id'] ?>" 
+                target="_blank">
+    <div class="lista_prod_novo">
     <div class="comtem_quadros">
          
           <style>
@@ -572,7 +575,8 @@ AQUI INICIA A LISTAGEM DE PRODUTOS PARA O TERMO PESQUISADO ----- EM QUADRADOS --
                         
                         <td><a href="<?php echo URL_BASE;?>produtos/excluir?excluir=<?php echo $exibir_p['id']?>" onclick="return confirm('Deseja excluir o registro : <?php echo $exibir_p['nome'] ?>')"><img src="<?php echo URL_BASE;?>midias/imagens/excluir.png"></a></td> 
                     </div>
-                    <img src="<?php echo URL_BASE; ?>midias/imagens/produtos/<?php echo $exibir_p['imagem']; ?>.jpg"">
+                    <a href="<?php echo URL_BASE; ?>produtos/ver?ver=<?php echo $exibir_p['id'] ?>" 
+                target="_blank">  <img src="<?php echo URL_BASE; ?>midias/imagens/produtos/<?php echo $exibir_p['imagem']; ?>.jpg""></a>
                 </div>
            
           
@@ -587,15 +591,15 @@ AQUI INICIA A LISTAGEM DE PRODUTOS PARA O TERMO PESQUISADO ----- EM QUADRADOS --
                     
          
          </div>
-        
+         </a>
 
         <?php endforeach; ?>
-        </a>
+        
         </div>
         
         <?php } ?>
     </div>
- 
+        </a>
 
     <!-- AQUI TERMINA A LISTAGEM DE PRODUTOS PARA O TERMO PESQUISADO ----- EM QUADRADOS -->
 

@@ -6,17 +6,38 @@ body { overflow-x: hidden; }
 }
 
 .bt_imprimir{
+    transition: 1s;
     margin-top: 40px;
     color:#fff;
-    background-color: #96ad03;
+    background-color: #0060ce;
     margin-left: 400px;
     padding: 5px;
-    border: 1.5px solid #96ad03;
-    width: 200px;
+    border: 1.5px solid #0060ce;;
+    width: 100px;
+    height: 35px;
     float: left;
     cursor: pointer;
+    border-radius: 5px;
         
 }
+.bt_imprimir:hover{
+
+    margin-top: 40px;
+    color:#0060ce;
+    background-color: #ffffff;
+    margin-left: 400px;
+    padding: 5px;
+    border: 1.5px solid #0060ce;
+    transition: 1s;
+    width: 100px;
+    height: 35px;
+    float: left;
+    cursor: pointer;
+    border-radius: 5px;
+        
+}
+
+
 .tamanho_caracteres{
   max-width: 25ch;
   overflow: hidden;
@@ -32,9 +53,19 @@ body { overflow-x: hidden; }
 
 
 .bt_historico{
+    margin-top: 65px;
+    float: left;
+    margin-left: 100px;
+    text-transform: capitalize;
+    font-family: cursive;
+    text-decoration: none;
     margin-top: 40px;
-    background-color: #376355;
+    background-color: #414242;
+    border-radius: 4px;
     color:#fff;
+    padding: 3px;
+    height: 29px;
+    margin-bottom: 10px;
 }
 
 .n_meio{
@@ -43,15 +74,39 @@ body { overflow-x: hidden; }
 }
 
 .bt_imp_cupom{
+    transition: 1s;
     margin-top: 40px;
+    line-height: 33px;
     text-align: center;
-      border:0;
+    border:1px solid #83989c ;
+    height: 33px;
     float: left;
     color:#fff;
-    background-color: #0f6677;
+    background-color: #83989c;
     text-decoration: none;
-    width: 200px;
-    padding: 5px;
+    width: 100px;
+    border-radius: 4px;    
+    margin-left: 10px;
+    font-family: cursive;
+    font-size: 14px;
+    
+}
+.bt_imp_cupom:hover{
+    transition: 1s;
+    margin-top: 40px;
+    line-height: 33px;
+    text-align: center;
+    border:1px solid #83989c ;
+    height: 33px;
+    float: left;
+    color:#83989c;
+    background-color: #fff;
+    text-decoration: none;
+    width: 100px;
+    border-radius: 4px;    
+    margin-left: 10px;
+    font-family: cursive;
+    font-size: 14px;
     
 }
 
@@ -578,14 +633,15 @@ table{
 }
 .n_f_n_p{
     max-height: 4ch;
-    background-color: #06532a;
+    font-family: cursive;
     text-transform: uppercase;
-    color:#fff;
+    color:rgb(255, 255, 255);
     max-width: 500px;     
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis; 
-     font-size: 12px; 
+     font-size: 14px; 
+     background-color: #107994;
      text-transform: uppercase;
      padding: 5px;
     
@@ -593,26 +649,25 @@ table{
 .n_f_nt_p{
     padding: 5px;
     max-height: 4ch;
-    background-color: #587c44;
+    background-color: #107994;
     text-transform: uppercase;  
-    color:#fff;
+    color:rgb(255, 255, 255);
     max-width: 500px;     
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis; 
-     font-size: 10px; 
+     font-size: 12px; 
      text-transform: uppercase;
 }
 
 .preco_estilo_prod{
-    margin-top: 2px;
-    margin-left: 20px;
-    background-color: #0fbd3a;
+    margin-top: -70px;
+    background-color: #85a78e;
     color:#fff;
     font-size: 16px;
-    padding: 5px;
-    border-radius: 2px;
-    width: 150px;
+    padding: 5px;    
+    width: 130px;
+    border-top-right-radius: 5px;
 }
 .estilo_ref{
     color:#840b0b;
@@ -628,10 +683,12 @@ table{
 .estilo_aplic_p{
     background-color: #dadada;
     color:#030442;
-    max-width: 500px;     
-   white-space: nowrap; 
-   overflow: hidden; 
-   text-overflow: ellipsis; 
+   width: 198px;     
+   padding-top: 3px;
+   padding-bottom: 3px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
     font-size: 12px; 
     text-transform: uppercase;
 }
@@ -655,7 +712,7 @@ table{
    /* background-color: #0ECC66;  */
     width: 196px;
     float: left;
-    height: 340px;
+    height: 320px;
     margin-bottom: 10px;
     margin-left: 2px;
     border-radius: 5px;
@@ -1362,8 +1419,8 @@ background-color: #fff;
     text-align: center;
 }
 .historico{   
-    color:#0F6677;
-   width: 960px;
+    color:#ffffff;
+    width: 960px;
     margin: 20px auto;
     border-radius: 4px;
    
@@ -1372,8 +1429,8 @@ background-color: #fff;
 }
 
 .historico table{
-    
-    margin: 0  auto;
+    border:1px solid #fff;
+     margin: 0  auto;
    
 }
 .historico tr{
@@ -1381,15 +1438,16 @@ background-color: #fff;
    
 }
 .historico th{
-    color:#4f074f;
-    background-color: #08ad55;
+    color:#c2b0c2;
+    
   padding: 5px;
    
 }
 .historico td{
     text-transform: uppercase;
-  color:#4f074f;
-   background-color: #0ecc66;
+  color:#c5c1c1;
+  padding: 10px;
+   
 }
 
 
@@ -3153,3 +3211,84 @@ inputs_inser_caixa p{
     color:#fff;
     
 }
+.passar_mouse{
+    cursor: pointer;
+}
+
+.pesquisa_produto td a{
+    text-decoration: none;
+    color:#000;
+}
+
+.mensagem_inser_prod1{
+    text-align: center;
+    color:#020574;
+    padding: 2px;
+    text-align: left;
+    margin-bottom: 2px;
+    font-family: cursive;
+
+}
+.mensagem_inser_prod2{
+    text-align: left;
+    color:#020574;
+    padding: 2px;
+    
+    font-size: 14px;
+    font-family: cursive;
+}
+
+
+
+.modal {
+    position: absolute;
+    top: 0;
+    overflow: visible;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+  }
+
+  .modal:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .modal > div {
+    width:90%;
+    margin-bottom: 100px;
+    height: auto;
+    margin: 10px auto;
+    padding: 15px 20px;
+    background: rgb(51, 62, 134);
+    
+  }
+
+  .fechar {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: -15px;
+    top: -20px;
+    text-decoration: none;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 25px;
+    background: #ff4545;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #8d0000;
+  }
+
+  .tm_desc{
+      width: 400px;
+  }

@@ -25,7 +25,7 @@ class entrarControle extends controle {
         
 
         if (isset($_SESSION['entrar']) && !empty($_SESSION['entrar'])) {
-            header("Location: " . URL_BASE . "arealogada");
+            header("Location: " . URL_BASE . "produtos");
         } else {
 
           // header("Location: " . URL_BASE . "entrar");
