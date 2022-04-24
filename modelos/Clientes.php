@@ -304,6 +304,13 @@ class clientes extends modelo {
         $sql = "DELETE FROM nota WHERE id = '$excluir' ";
         $sql = $this->banco->query($sql);
     }
+
+
+    public function excluirTodaNota($excluir_tudo) {
+        
+        $sql = "DELETE FROM nota WHERE id_cliente = '$excluir_tudo' ";
+        $sql = $this->banco->query($sql);
+    }
     
     
     

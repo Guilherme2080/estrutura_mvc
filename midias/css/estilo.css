@@ -91,6 +91,26 @@ body { overflow-x: hidden; }
     font-size: 14px;
     
 }
+
+.bt_apagar{
+    transition: 1s;
+    margin-top: 40px;
+    line-height: 33px;
+    text-align: center;
+    border:1px solid #fe0000 ;
+    height: 33px;
+    float: left;
+    color:#fff;
+    background-color: #c12105;
+    text-decoration: none;
+    width: 100px;
+    border-radius: 4px;    
+    margin-left: 10px;
+    font-family: cursive;
+    font-size: 14px;
+    
+}
+
 .bt_imp_cupom:hover{
     transition: 1s;
     margin-top: 40px;
