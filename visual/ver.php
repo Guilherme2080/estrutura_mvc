@@ -240,25 +240,72 @@ uma edição, nesse caso ela está vazia , logo será feita a inserção e não 
         </div>
 
     </div>
+
     <div class="nt_topo">
 
 
         <p>
 
-            A GARANTIA PARA PEÇAS E SERVIÇOS É DE 90 DIAS,
-            INDEPENDENTEMENTE DE PROBLEMAS PESSOAIS,viagens etc..
-            É NECESSARIO APRESENTAR A NOTA NO PRAZO !!!
+            A GARANTIA PARA PEÇAS E SERVIÇOS É DE 90 DIAS !!!
+            INDEPENDENTEMENTE DE QUALQUER COISA..
+            ** É NECESSARIO APRESENTAR A NOTA NO PRAZO !!!
             OBS: Garantia ou troca Somente com apresentação desta Nota !!!
+
         </p>
 
         <div>
             Código de Defesa do Consumidor – Lei 8.078/90
 
         </div>
+        <br>
+
+    </div>
+    <div  class="tipo_d_nota n_imprimir">
+
+        <label for="marcas">QUE TIPO É ESSA NOTA ?:</label>
+
+        <select onchange="tipo()" name="marcas" id="tipodenota">
+            <option selected value="">SELECIONE</option>
+            <option value="pag">JÁ PAGA</option>
+            <option value="orc">ORCAMENTO</option>
+            <option value="dev">FIADO</option>
+
+        </select>
+
+    </div>
+
+
+    <div class="carimbo">
+            <br>
+        <h3> TOTALMENTE PAGO</h3>
+        <h4><?php echo date("d/m/Y"); ?></h4>
+        <h5>Assinatura do conferente____________________</h5>
+        
+    </div>
+    
+
+
+    <div class="carimbo1">
+
+
+        <h3>
+            * atenção!! Isso é um orçamento os valores podem ser alterados
+            hojé é dia: <?php echo date("d/m/Y"); ?>
+
+        </h3>
+
 
 
     </div>
 
+    <div class="carimbo2">
+
+        <h3>Venda a prazo</h3>
+        <h4>Assinatura do devedor__________________________________________________________________________________________________________________________________
+        </h4>
+
+
+    </div>
 
 
 </div>
@@ -355,8 +402,8 @@ uma edição, nesse caso ela está vazia , logo será feita a inserção e não 
 
             <h4 class="n_historico">
 
-                <?php echo "<p>Comprou conosco" . 
-                '<br> R$ ' . number_format($soma_geral_historico['total_geral_historico'], 2, ',', '.').'</p> ' ?>
+                <?php echo "<p>Comprou conosco" .
+                    '<br> R$ ' . number_format($soma_geral_historico['total_geral_historico'], 2, ',', '.') . '</p> ' ?>
 
             </h4>
 
