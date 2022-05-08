@@ -1,4 +1,3 @@
-
 <div class="limites_emp_disp">
 
     <h5 class="estilo_h5_limite"> Cliente: <?php echo " " . @$nota[0]['nome']; ?></h5>
@@ -235,11 +234,6 @@ uma edição, nesse caso ela está vazia , logo será feita a inserção e não 
 
 
 
-
-
-
-
-
         </table>
         <div class="total_geral n_meio">
             <?php echo "TOTAL DA NOTA " . ' R$ ' . number_format($soma_geral['total_geral'], 2, ',', '.') ?>
@@ -261,6 +255,8 @@ uma edição, nesse caso ela está vazia , logo será feita a inserção e não 
             Código de Defesa do Consumidor – Lei 8.078/90
 
         </div>
+
+
     </div>
 
 
@@ -340,8 +336,7 @@ uma edição, nesse caso ela está vazia , logo será feita a inserção e não 
 
 <a class="bt_historico remover" href="#abrirModal">Historico do cliente</a>
 <div id="abrirModal" class="modal">
-    <a href="#fechar" title="Fechar" class="fechar">X</a>
-
+    <a href="#fechar" title="Fechar" class="fechar">X</a><br>
     <div class="historico">
 
         <table align=center>
@@ -358,11 +353,14 @@ uma edição, nesse caso ela está vazia , logo será feita a inserção e não 
 
 
 
-            <h4 class="n_historico"> HISTORICO</h4>
+            <h4 class="n_historico">
 
-            <div class="total_geral">
-                <?php echo "TOTAL DO HISTORICO " . ' R$ ' . number_format($soma_geral_historico['total_geral_historico'], 2, ',', '.') ?>
-            </div>
+                <?php echo "<p>Comprou conosco" . 
+                '<br> R$ ' . number_format($soma_geral_historico['total_geral_historico'], 2, ',', '.').'</p> ' ?>
+
+            </h4>
+
+
 
 
             <?php
@@ -390,7 +388,7 @@ uma edição, nesse caso ela está vazia , logo será feita a inserção e não 
 
 
 
-        
+
 
     </div>
 
