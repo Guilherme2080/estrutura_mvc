@@ -49,6 +49,18 @@ class caixa extends modelo{
                 return $dados;
             }
         }
+        public function somaLancFuturo(){
+            $sql = "SELECT SUM(valor)FROM lancar_caixa";
+            $sql = $this->banco->query($sql);
+            $dados = array();
+    
+            if ($sql->rowCount() > 0) {
+                $sql = $sql->fetchAll();
+    
+                $dados = $sql;
+                return $dados;
+            }
+        }
 
 
 

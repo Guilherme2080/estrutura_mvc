@@ -118,8 +118,8 @@ $url = ($_SERVER['REQUEST_URI']);
        
 
         <div class="tabela_caixa cor_a_lancar_caixa estilo_componentes_alancar">
-
-         <h3 class="h3_tabel_a_lancar">Itens Aguardando a data de lançamento</h3>
+       
+         <h3 class="h3_tabel_a_lancar">Itens Aguardando lançamento <b>r$ <?php echo ($soma_lanc_fut[0][0]) ?></b></></h3>
          <table id="lista"  border="0" cellspacing="0">
                         <thead>
                             <tr>

@@ -45,6 +45,7 @@ class caixaControle extends controle {
                 $resultado_caixa = $caixa->selecionarCaixa();
                 $resultado_caixa_lancamento = $caixa->selecionarCaixaLancamento();
                 $soma_caixa = $caixa->somaCaixa();
+                $soma_lanc_fut = $caixa->somaLancFuturo();
 
                 
                 $somanfegui = $caixa->somaNfeGui();
@@ -68,6 +69,8 @@ class caixaControle extends controle {
           'somanfegui' =>$somanfegui,
           'somanfenatt' =>$somanfenatt,
           'somanfeirani' =>$somanfeirani,
+          'soma_lanc_fut' => $soma_lanc_fut
+          
         );
         //onde é feito o carregamento do visual
         $this->carregarModelo('caixa', $dados);
